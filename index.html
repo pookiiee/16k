@@ -2,305 +2,243 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Pookie Animated Chibi ✨ 16K</title>
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;700&family=Tajawal:wght@700;900&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎀 Pookie Chibi Dress Up 🎀</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=Tajawal:wght@700;900&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --baby-pink: #ffd6e0;
-            --soft-pink: #ffb3c6;
-            --dark-pink: #ff5d8f;
-            --accent-pink: #ff477e;
-            --text-dark: #4a2840;
-        }
-
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-            font-family: 'Fredoka', 'Tajawal', cursive, sans-serif;
+            font-family: 'Fredoka', 'Tajawal', sans-serif;
             -webkit-tap-highlight-color: transparent;
         }
 
         body {
-            background-color: var(--baby-pink);
-            background-image: 
-                radial-gradient(#ff9ebb 1.5px, transparent 1.5px),
-                radial-gradient(#ffffff 1.5px, transparent 1.5px);
-            background-size: 24px 24px;
-            background-position: 0 0, 12px 12px;
+            background-color: #ffd6e0;
+            background-image: radial-gradient(#ff9ebb 1.5px, transparent 1.5px);
+            background-size: 20px 20px;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
             align-items: center;
             padding: 15px;
-            color: var(--text-dark);
+            color: #4a2840;
         }
 
         header {
             text-align: center;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
         }
 
         h1 {
-            font-size: 2.1rem;
+            font-size: 2.2rem;
             color: #fff;
-            text-shadow: 
-                3px 3px 0px var(--dark-pink),
-                -1px -1px 0 var(--dark-pink),  
-                1px -1px 0 var(--dark-pink),
-                -1px 1px 0 var(--dark-pink),
-                1px 1px 0 var(--dark-pink);
+            text-shadow: 2.5px 2.5px 0 #ff5d8f, -1px -1px 0 #ff5d8f, 1px -1px 0 #ff5d8f, -1px 1px 0 #ff5d8f;
         }
 
-        .celebration-pill {
-            display: inline-block;
+        .badge {
             background: #fff;
-            color: var(--dark-pink);
-            font-weight: 800;
-            font-size: 0.9rem;
-            padding: 5px 16px;
+            color: #ff5d8f;
+            padding: 5px 18px;
             border-radius: 20px;
-            margin-top: 6px;
-            box-shadow: 0 4px 12px rgba(255, 93, 143, 0.25);
-            border: 2px dashed var(--soft-pink);
+            font-weight: 800;
+            font-size: 0.85rem;
+            display: inline-block;
+            margin-top: 4px;
+            border: 2px dashed #ffb3c6;
+            box-shadow: 0 4px 10px rgba(255, 93, 143, 0.2);
         }
 
-        .game-box {
-            background: rgba(255, 255, 255, 0.96);
-            border-radius: 32px;
-            padding: 20px;
-            box-shadow: 0 20px 45px rgba(255, 93, 143, 0.18);
+        .main-card {
+            background: #ffffff;
+            border-radius: 28px;
+            padding: 22px;
+            box-shadow: 0 15px 35px rgba(255, 93, 143, 0.2);
             display: flex;
-            gap: 25px;
-            max-width: 920px;
+            flex-direction: row;
+            gap: 22px;
+            max-width: 900px;
             width: 100%;
-            border: 5px solid #fff;
-            position: relative;
-            z-index: 1;
+            border: 4px solid #fff;
         }
 
-        /* مسرح الشخصية */
-        .stage-card {
+        .stage {
             flex: 1;
-            background: linear-gradient(180deg, #fff2f6 0%, #ffe0e9 100%);
-            border-radius: 26px;
+            background: linear-gradient(180deg, #fff2f6 0%, #ffdbe4 100%);
+            border-radius: 24px;
             border: 3px solid #ffcad4;
             display: flex;
-            flex-direction: column;
             align-items: center;
             justify-content: center;
-            padding: 15px;
-            min-height: 440px;
+            min-height: 420px;
             position: relative;
-            overflow: hidden;
-            pointer-events: none; /* لمنع حجب أي نقرات إطلاقاً */
         }
 
-        @keyframes gentleBounce {
-            0%, 100% {
-                transform: translateY(0px);
-            }
-            50% {
-                transform: translateY(-8px);
-            }
+        @keyframes chibiFloat {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-7px); }
         }
 
-        .doll-canvas {
+        .chibi-box {
             position: relative;
-            width: 250px;
-            height: 360px;
-            animation: gentleBounce 3.2s ease-in-out infinite;
+            width: 270px;
+            height: 380px;
+            animation: chibiFloat 3.2s ease-in-out infinite;
         }
 
-        .doll-layer {
-            position: absolute;
-            top: 0;
-            left: 0;
+        .chibi-box svg {
             width: 100%;
             height: 100%;
-            pointer-events: none;
         }
 
-        /* حركة رمش العينين */
-        @keyframes blinkEyes {
-            0%, 94%, 100% {
-                transform: scaleY(1);
-            }
-            96%, 98% {
-                transform: scaleY(0.08);
-            }
+        @keyframes blinkAnime {
+            0%, 94%, 100% { transform: scaleY(1); }
+            96%, 98% { transform: scaleY(0.08); }
         }
 
-        .chibi-eye-group {
-            transform-origin: 125px 105px;
-            animation: blinkEyes 3.6s infinite;
+        .eyes-group {
+            transform-origin: 135px 115px;
+            animation: blinkAnime 3.6s infinite;
         }
 
-        /* لوحة التحكم والأزرار */
-        .editor-card {
-            flex: 1.3;
+        .controls {
+            flex: 1.25;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            position: relative;
-            z-index: 10;
         }
 
-        .nav-tabs {
+        .tab-bar {
             display: flex;
             gap: 6px;
+            margin-bottom: 12px;
             flex-wrap: wrap;
-            margin-bottom: 15px;
-            position: relative;
-            z-index: 20;
         }
 
-        .tab-button {
+        .tab-btn {
             background: #fff;
-            border: 2.5px solid var(--soft-pink);
-            color: var(--text-dark);
-            padding: 8px 14px;
-            border-radius: 16px;
-            font-size: 0.9rem;
+            border: 2px solid #ffb3c6;
+            color: #4a2840;
+            padding: 7px 13px;
+            border-radius: 14px;
             font-weight: 800;
-            cursor: pointer !important;
-            transition: all 0.15s;
-            outline: none;
-            pointer-events: auto !important;
-            user-select: none;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: 0.15s;
         }
 
-        .tab-button:active {
-            transform: scale(0.95);
-        }
-
-        .tab-button.active {
-            background: var(--dark-pink) !important;
+        .tab-btn.active {
+            background: #ff5d8f !important;
             color: #fff !important;
-            border-color: var(--dark-pink) !important;
-            box-shadow: 0 4px 10px rgba(255, 93, 143, 0.35);
+            border-color: #ff5d8f !important;
         }
 
-        .items-viewport {
-            display: grid;
+        .tab-panel {
+            display: none;
             grid-template-columns: repeat(3, 1fr);
-            gap: 12px;
-            max-height: 290px;
+            gap: 10px;
+            min-height: 250px;
+            max-height: 280px;
             overflow-y: auto;
-            padding: 6px;
-            position: relative;
-            z-index: 20;
+            padding: 5px;
         }
 
-        .items-viewport::-webkit-scrollbar {
-            width: 6px;
-        }
-        .items-viewport::-webkit-scrollbar-thumb {
-            background: var(--soft-pink);
-            border-radius: 10px;
+        .tab-panel.active {
+            display: grid !important;
         }
 
-        .choice-btn {
+        .opt-btn {
             background: #fff;
-            border: 2.5px solid #ffe5ec;
-            border-radius: 18px;
-            padding: 12px 6px;
+            border: 2px solid #ffe5ec;
+            border-radius: 16px;
+            padding: 10px 4px;
             text-align: center;
-            cursor: pointer !important;
+            cursor: pointer;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            gap: 6px;
-            outline: none;
-            pointer-events: auto !important;
-            transition: transform 0.1s, border-color 0.15s, background-color 0.15s;
+            gap: 5px;
             user-select: none;
+            transition: 0.15s;
         }
 
-        .choice-btn:active {
-            transform: scale(0.93) !important;
+        .opt-btn:active {
+            transform: scale(0.93);
         }
 
-        .choice-btn.selected {
-            border-color: var(--dark-pink) !important;
+        .opt-btn.selected {
+            border-color: #ff5d8f !important;
             background: #fff0f3 !important;
-            box-shadow: 0 0 0 2px var(--dark-pink);
+            box-shadow: 0 0 0 2px #ff5d8f;
         }
 
-        .choice-btn span.emoji {
-            font-size: 1.9rem;
+        .opt-btn .emoji {
+            font-size: 1.8rem;
             line-height: 1;
             pointer-events: none;
         }
 
-        .choice-btn span.label {
-            font-size: 0.8rem;
+        .opt-btn .txt {
+            font-size: 0.78rem;
             font-weight: 800;
-            color: var(--text-dark);
             pointer-events: none;
         }
 
-        .color-dot {
+        .color-circle {
             width: 32px;
             height: 32px;
             border-radius: 50%;
-            border: 2.5px solid #fff;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-            display: inline-block;
+            border: 2px solid #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.15);
             pointer-events: none;
         }
 
-        .bottom-actions {
+        .action-bar {
             display: flex;
             gap: 10px;
             margin-top: 15px;
-            position: relative;
-            z-index: 20;
         }
 
-        .btn-action {
+        .act-btn {
             flex: 1;
             padding: 12px;
-            border-radius: 20px;
+            border-radius: 18px;
             border: none;
             font-weight: 800;
             font-size: 0.95rem;
-            cursor: pointer !important;
-            transition: transform 0.1s, box-shadow 0.2s;
-            pointer-events: auto !important;
-            user-select: none;
+            cursor: pointer;
         }
 
-        .btn-action:active {
-            transform: scale(0.95);
+        .act-btn:active {
+            transform: scale(0.96);
         }
 
-        .btn-random {
+        .btn-rand {
             background: #ffe5ec;
-            color: var(--text-dark);
+            color: #4a2840;
         }
 
-        .btn-download {
-            background: var(--dark-pink);
+        .btn-save {
+            background: #ff5d8f;
             color: #fff;
-            box-shadow: 0 6px 15px rgba(255, 93, 143, 0.4);
+            box-shadow: 0 5px 12px rgba(255, 93, 143, 0.35);
         }
 
         #toast {
             position: fixed;
-            bottom: 20px;
+            bottom: 25px;
             background: #321e28;
             color: #fff;
-            padding: 10px 22px;
-            border-radius: 25px;
-            font-size: 0.9rem;
+            padding: 10px 24px;
+            border-radius: 20px;
             font-weight: 700;
+            font-size: 0.9rem;
             opacity: 0;
-            pointer-events: none;
             transition: opacity 0.3s;
-            z-index: 9999;
+            pointer-events: none;
+            z-index: 99;
         }
 
         #toast.show {
@@ -308,10 +246,10 @@
         }
 
         @media (max-width: 768px) {
-            .game-box {
+            .main-card {
                 flex-direction: column;
             }
-            .items-viewport {
+            .tab-panel {
                 grid-template-columns: repeat(3, 1fr);
             }
         }
@@ -320,418 +258,479 @@
 <body>
 
     <header>
-        <h1>🎀 Pookie Animated Chibi 🎀</h1>
-        <div class="celebration-pill">💖 احتفالاً بـ 16,000 عضوة في السيرفر 💖</div>
+        <h1>🎀 Pookie Chibi 🎀</h1>
+        <div class="badge">💖 احتفالاً بـ 16,000 عضوة في السيرفر 💖</div>
     </header>
 
-    <div class="game-box">
-        <!-- مسرح الشبيهة Chibi -->
-        <div class="stage-card">
-            <div class="doll-canvas">
-                <!-- خلفية الشعر -->
-                <svg id="svg-hair-back" class="doll-layer" viewBox="0 0 250 360"></svg>
+    <div class="main-card">
+        <!-- مسرح الرسم التشيبي المتناسق -->
+        <div class="stage">
+            <div class="chibi-box">
+                <svg id="main-svg" viewBox="0 0 270 380">
+                    <!-- 1. الشعر الخلفي -->
+                    <g id="slot-hair-back"></g>
 
-                <!-- الجسم بستايل Chibi -->
-                <svg id="svg-body" class="doll-layer" viewBox="0 0 250 360">
-                    <rect id="skin-neck" x="117" y="150" width="16" height="15" rx="5" fill="#ffdfd3"/>
-                    <path id="skin-torso" d="M 105 160 Q 125 158 145 160 L 142 205 Q 125 210 108 205 Z" fill="#ffdfd3"/>
-                    <rect id="skin-leg-l" x="108" y="200" width="14" height="42" rx="7" fill="#ffdfd3"/>
-                    <rect id="skin-leg-r" x="128" y="200" width="14" height="42" rx="7" fill="#ffdfd3"/>
-                    <ellipse id="skin-arm-l" cx="98" cy="180" rx="7" ry="18" transform="rotate(15 98 180)" fill="#ffdfd3"/>
-                    <ellipse id="skin-arm-r" cx="152" cy="180" rx="7" ry="18" transform="rotate(-15 152 180)" fill="#ffdfd3"/>
+                    <!-- 2. جسم الشخصية والوجه الدائري المتناسق -->
+                    <g id="slot-body">
+                        <!-- رقبة -->
+                        <rect id="skin-neck" x="127" y="162" width="16" height="18" rx="5" fill="#ffdfd3"/>
+                        
+                        <!-- أرجل صغيرة كيوت -->
+                        <rect id="skin-leg1" x="114" y="225" width="16" height="48" rx="8" fill="#ffdfd3"/>
+                        <rect id="skin-leg2" x="140" y="225" width="16" height="48" rx="8" fill="#ffdfd3"/>
+                        <!-- أحذية لطيفة بيضاء مدمجة كطبقة أساسية -->
+                        <ellipse cx="122" cy="272" rx="10" ry="5" fill="#ffffff"/>
+                        <ellipse cx="148" cy="272" rx="10" ry="5" fill="#ffffff"/>
 
-                    <!-- رأس تشيبي -->
-                    <ellipse id="skin-head" cx="125" cy="100" rx="58" ry="52" fill="#ffdfd3"/>
+                        <!-- جذع الجسم -->
+                        <path id="skin-body-torso" d="M 112 175 Q 135 172 158 175 L 155 230 Q 135 235 115 230 Z" fill="#ffdfd3"/>
 
-                    <!-- الخدود -->
-                    <ellipse cx="94" cy="115" rx="9" ry="5.5" fill="#ff8aa6" opacity="0.65"/>
-                    <ellipse cx="156" cy="115" rx="9" ry="5.5" fill="#ff8aa6" opacity="0.65"/>
+                        <!-- أيدي تشيبي ناعمة -->
+                        <ellipse id="skin-arm1" cx="104" cy="198" rx="8" ry="22" transform="rotate(18 104 198)" fill="#ffdfd3"/>
+                        <ellipse id="skin-arm2" cx="166" cy="198" rx="8" ry="22" transform="rotate(-18 166 198)" fill="#ffdfd3"/>
 
-                    <!-- العيون مع حركة الرمش -->
-                    <g class="chibi-eye-group">
-                        <ellipse cx="100" cy="102" rx="12" ry="16" fill="#321e28"/>
-                        <ellipse cx="100" cy="107" rx="9" ry="9" fill="#7a3e65"/>
-                        <circle cx="96" cy="95" r="5" fill="#ffffff"/>
-                        <circle cx="104" cy="108" r="2.5" fill="#ffffff"/>
-                        <path d="M 86 90 Q 98 84 112 91" stroke="#321e28" stroke-width="3" stroke-linecap="round" fill="none"/>
-                        <path d="M 85 91 L 81 87" stroke="#321e28" stroke-width="2.5" stroke-linecap="round"/>
+                        <!-- رأس التشيبي المحكم والدائري -->
+                        <ellipse id="skin-head" cx="135" cy="108" rx="64" ry="58" fill="#ffdfd3"/>
 
-                        <ellipse cx="150" cy="102" rx="12" ry="16" fill="#321e28"/>
-                        <ellipse cx="150" cy="107" rx="9" ry="9" fill="#7a3e65"/>
-                        <circle cx="146" cy="95" r="5" fill="#ffffff"/>
-                        <circle cx="154" cy="108" r="2.5" fill="#ffffff"/>
-                        <path d="M 138 91 Q 152 84 164 90" stroke="#321e28" stroke-width="3" stroke-linecap="round" fill="none"/>
-                        <path d="M 165 91 L 169 87" stroke="#321e28" stroke-width="2.5" stroke-linecap="round"/>
+                        <!-- الخدود الكاواي بلون وردي ناعم وتأثير البلاش -->
+                        <ellipse cx="98" cy="125" rx="11" ry="6.5" fill="#ff8aa6" opacity="0.6"/>
+                        <line x1="94" y1="123" x2="92" y2="127" stroke="#ff477e" stroke-width="1.2" stroke-linecap="round"/>
+                        <line x1="98" y1="123" x2="96" y2="127" stroke="#ff477e" stroke-width="1.2" stroke-linecap="round"/>
+                        <line x1="102" y1="123" x2="100" y2="127" stroke="#ff477e" stroke-width="1.2" stroke-linecap="round"/>
+
+                        <ellipse cx="172" cy="125" rx="11" ry="6.5" fill="#ff8aa6" opacity="0.6"/>
+                        <line x1="168" y1="123" x2="166" y2="127" stroke="#ff477e" stroke-width="1.2" stroke-linecap="round"/>
+                        <line x1="172" y1="123" x2="170" y2="127" stroke="#ff477e" stroke-width="1.2" stroke-linecap="round"/>
+                        <line x1="176" y1="123" x2="174" y2="127" stroke="#ff477e" stroke-width="1.2" stroke-linecap="round"/>
+
+                        <!-- عيون أنمي واسعة ومشرقة -->
+                        <g class="eyes-group">
+                            <!-- العين اليسرى -->
+                            <ellipse cx="108" cy="112" rx="13" ry="16" fill="#2d132c"/>
+                            <ellipse cx="108" cy="118" rx="9.5" ry="9.5" fill="#801336"/>
+                            <ellipse cx="108" cy="121" rx="6" ry="6" fill="#c72c41"/>
+                            <circle cx="104" cy="104" r="5" fill="#ffffff"/>
+                            <circle cx="112" cy="118" r="2.5" fill="#ffffff"/>
+                            <path d="M 94 100 Q 106 93 119 100" stroke="#2d132c" stroke-width="3" fill="none" stroke-linecap="round"/>
+                            <path d="M 93 100 L 89 96" stroke="#2d132c" stroke-width="2.5" stroke-linecap="round"/>
+
+                            <!-- العين اليمنى -->
+                            <ellipse cx="162" cy="112" rx="13" ry="16" fill="#2d132c"/>
+                            <ellipse cx="162" cy="118" rx="9.5" ry="9.5" fill="#801336"/>
+                            <ellipse cx="162" cy="121" rx="6" ry="6" fill="#c72c41"/>
+                            <circle cx="158" cy="104" r="5" fill="#ffffff"/>
+                            <circle cx="166" cy="118" r="2.5" fill="#ffffff"/>
+                            <path d="M 151 100 Q 164 93 176 100" stroke="#2d132c" stroke-width="3" fill="none" stroke-linecap="round"/>
+                            <path d="M 177 100 L 181 96" stroke="#2d132c" stroke-width="2.5" stroke-linecap="round"/>
+                        </g>
+
+                        <!-- فم قطة لطيف (ω) -->
+                        <path d="M 130 132 Q 133 136 135 133 Q 137 136 140 132" stroke="#e05263" stroke-width="2.5" fill="none" stroke-linecap="round"/>
                     </g>
 
-                    <path d="M 121 122 Q 125 127 129 122" stroke="#e76f51" stroke-width="2.5" stroke-linecap="round" fill="none"/>
-                </svg>
+                    <!-- 3. طبقة الملابس -->
+                    <g id="slot-outfit"></g>
 
-                <svg id="svg-outfit" class="doll-layer" viewBox="0 0 250 360"></svg>
-                <svg id="svg-hair-front" class="doll-layer" viewBox="0 0 250 360"></svg>
-                <svg id="svg-acc" class="doll-layer" viewBox="0 0 250 360"></svg>
+                    <!-- 4. طبقة الشعر الأمامي والغرة -->
+                    <g id="slot-hair-front"></g>
+
+                    <!-- 5. طبقة الإكسسوارات -->
+                    <g id="slot-acc"></g>
+                </svg>
             </div>
         </div>
 
-        <!-- لوحة الاختيارات -->
-        <div class="editor-card">
-            <div>
-                <div class="nav-tabs">
-                    <button type="button" class="tab-button active" onclick="setTab('hair')">💇‍♀️ التسريحة</button>
-                    <button type="button" class="tab-button" onclick="setTab('hairColor')">🎨 لون الشعر</button>
-                    <button type="button" class="tab-button" onclick="setTab('outfit')">👗 اللبس</button>
-                    <button type="button" class="tab-button" onclick="setTab('acc')">✨ إكسسوار</button>
-                    <button type="button" class="tab-button" onclick="setTab('skin')">🌸 البشرة</button>
-                </div>
-
-                <div class="items-viewport" id="options-grid"></div>
+        <!-- لوحة الاختيارات والتنسيق -->
+        <div class="controls">
+            <div class="tab-bar">
+                <button type="button" class="tab-btn active" data-target="panel-hair">💇‍♀️ التسريحة</button>
+                <button type="button" class="tab-btn" data-target="panel-hcolor">🎨 لون الشعر</button>
+                <button type="button" class="tab-btn" data-target="panel-outfit">👗 الأزياء</button>
+                <button type="button" class="tab-btn" data-target="panel-acc">✨ إكسسوار</button>
+                <button type="button" class="tab-btn" data-target="panel-skin">🌸 البشرة</button>
             </div>
 
-            <div class="bottom-actions">
-                <button type="button" class="btn-action btn-random" onclick="triggerRandom()">🎲 عشوائي</button>
-                <button type="button" class="btn-action btn-download" onclick="triggerDownload()">💾 تنزيل بجهازي</button>
+            <!-- تسريحات الشعر الستة -->
+            <div id="panel-hair" class="tab-panel active">
+                <div class="opt-btn selected" data-type="hair" data-val="0"><span class="emoji">🎀</span><span class="txt">ويفي طويل</span></div>
+                <div class="opt-btn" data-type="hair" data-val="1"><span class="emoji">👱‍♀️</span><span class="txt">كعكتين أنمي</span></div>
+                <div class="opt-btn" data-type="hair" data-val="2"><span class="emoji">👧</span><span class="txt">توين تيل غيمة</span></div>
+                <div class="opt-btn" data-type="hair" data-val="3"><span class="emoji">💇‍♀️</span><span class="txt">بوب كاواي</span></div>
+                <div class="opt-btn" data-type="hair" data-val="4"><span class="emoji">👩‍🦱</span><span class="txt">كيرلي لطيف</span></div>
+                <div class="opt-btn" data-type="hair" data-val="5"><span class="emoji">✨</span><span class="txt">بوي ناعم</span></div>
+            </div>
+
+            <!-- ألوان الشعر -->
+            <div id="panel-hcolor" class="tab-panel">
+                <div class="opt-btn selected" data-type="color" data-val="#422518"><span class="color-circle" style="background:#422518"></span><span class="txt">بني غامق</span></div>
+                <div class="opt-btn" data-type="color" data-val="#1c1a24"><span class="color-circle" style="background:#1c1a24"></span><span class="txt">أسود ناعم</span></div>
+                <div class="opt-btn" data-type="color" data-val="#ff7aa2"><span class="color-circle" style="background:#ff7aa2"></span><span class="txt">بيبي بينك</span></div>
+                <div class="opt-btn" data-type="color" data-val="#baa0f8"><span class="color-circle" style="background:#baa0f8"></span><span class="txt">لافندر حالم</span></div>
+                <div class="opt-btn" data-type="color" data-val="#ffd166"><span class="color-circle" style="background:#ffd166"></span><span class="txt">أشقر باستيل</span></div>
+                <div class="opt-btn" data-type="color" data-val="#e76f51"><span class="color-circle" style="background:#e76f51"></span><span class="txt">كراميل وردي</span></div>
+            </div>
+
+            <!-- تصاميم الأزياء الستة الفخمة -->
+            <div id="panel-outfit" class="tab-panel">
+                <div class="opt-btn selected" data-type="outfit" data-val="0"><span class="emoji">🎀</span><span class="txt">فستان لوليتا</span></div>
+                <div class="opt-btn" data-type="outfit" data-val="1"><span class="emoji">🐱</span><span class="txt">هودي قطة</span></div>
+                <div class="opt-btn" data-type="outfit" data-val="2"><span class="emoji">🏫</span><span class="txt">مريول سيلور</span></div>
+                <div class="opt-btn" data-type="outfit" data-val="3"><span class="emoji">✨</span><span class="txt">طقم كاجوال</span></div>
+                <div class="opt-btn" data-type="outfit" data-val="4"><span class="emoji">👑</span><span class="txt">فستان أميرة</span></div>
+                <div class="opt-btn" data-type="outfit" data-val="5"><span class="emoji">🌸</span><span class="txt">كيتي باستيل</span></div>
+            </div>
+
+            <!-- الإكسسوارات الستة -->
+            <div id="panel-acc" class="tab-panel">
+                <div class="opt-btn selected" data-type="acc" data-val="0"><span class="emoji">🐱</span><span class="txt">آذان قطة</span></div>
+                <div class="opt-btn" data-type="acc" data-val="1"><span class="emoji">🎀</span><span class="txt">فيونكة ضخمة</span></div>
+                <div class="opt-btn" data-type="acc" data-val="2"><span class="emoji">👑</span><span class="txt">تاج ملكي 16K</span></div>
+                <div class="opt-btn" data-type="acc" data-val="3"><span class="emoji">🎧</span><span class="txt">سماعات قطة</span></div>
+                <div class="opt-btn" data-type="acc" data-val="4"><span class="emoji">👓</span><span class="txt">نظارات كيوت</span></div>
+                <div class="opt-btn" data-type="acc" data-val="5"><span class="emoji">❌</span><span class="txt">بدون</span></div>
+            </div>
+
+            <!-- ألوان البشرة -->
+            <div id="panel-skin" class="tab-panel">
+                <div class="opt-btn selected" data-type="skin" data-val="#ffdfd3"><span class="color-circle" style="background:#ffdfd3"></span><span class="txt">فاتح كوري</span></div>
+                <div class="opt-btn" data-type="skin" data-val="#fcd0b0"><span class="color-circle" style="background:#fcd0b0"></span><span class="txt">خوخي دافئ</span></div>
+                <div class="opt-btn" data-type="skin" data-val="#dca074"><span class="color-circle" style="background:#dca074"></span><span class="txt">حنطي ناعم</span></div>
+                <div class="opt-btn" data-type="skin" data-val="#8a5836"><span class="color-circle" style="background:#8a5836"></span><span class="txt">برونزي عميق</span></div>
+            </div>
+
+            <div class="action-bar">
+                <button type="button" class="act-btn btn-rand" id="btn-rand">🎲 عشوائي</button>
+                <button type="button" class="act-btn btn-save" id="btn-save">💾 تنزيل بجهازي</button>
             </div>
         </div>
     </div>
 
-    <div id="toast">تم تنزيل شخصيتك بنجاح! 💖</div>
+    <div id="toast">تم تنزيل شخصيتك الفخمة بنجاح! 💖</div>
 
     <script>
-        const STORAGE_KEY = "pookie_chibi_saved_state_16k_v2";
-
-        const dataHairStyles = [
-            { id: 0, name: "توين تيل", icon: "👧" },
-            { id: 1, name: "كعكتين", icon: "👱‍♀️" },
-            { id: 2, name: "طويل ناعم", icon: "👩" },
-            { id: 3, name: "بوب قصير", icon: "💇‍♀️" }
-        ];
-
-        const dataHairColors = [
-            { color: '#49281a', name: 'بني شوكولا' },
-            { color: '#1a181b', name: 'أسود ليلي' },
-            { color: '#ff758f', name: 'بيبي بينك' },
-            { color: '#b5838d', name: 'موف باستيل' },
-            { color: '#ffb703', name: 'أشقر عسلي' },
-            { color: '#e07a5f', name: 'جينجر دافئ' }
-        ];
-
-        const dataOutfits = [
-            { id: 0, name: "فستان Pookie", icon: "🎀" },
-            { id: 1, name: "مريول مدرسي", icon: "🎒" },
-            { id: 2, name: "هودي بنفسجي", icon: "✨" },
-            { id: 3, name: "فستان لوليتا", icon: "👗" }
-        ];
-
-        const dataAccessories = [
-            { id: 0, name: "فيونكة وردية", icon: "🎀" },
-            { id: 1, name: "تاج 16K", icon: "👑" },
-            { id: 2, name: "دبابيس نجوم", icon: "⭐" },
-            { id: 3, name: "نظارة أنمي", icon: "👓" },
-            { id: 4, name: "بدون إكسسوار", icon: "❌" }
-        ];
-
-        const dataSkins = [
-            { color: "#ffdfd3", name: "فاتح كلاسيك" },
-            { color: "#fcd5b8", name: "خوخي طبيعي" },
-            { color: "#dca074", name: "حنطي تان" },
-            { color: "#8a5836", name: "برونزي عميق" }
-        ];
-
-        let appState = {
-            hairStyle: 0,
-            hairColor: '#49281a',
+        const appState = {
+            hair: 0,
+            hairColor: '#422518',
             outfit: 0,
-            accessory: 0,
+            acc: 0,
             skin: '#ffdfd3'
         };
 
-        try {
-            const saved = localStorage.getItem(STORAGE_KEY);
-            if (saved) {
-                appState = Object.assign(appState, JSON.parse(saved));
-            }
-        } catch (e) {}
-
-        function persistState() {
-            try {
-                localStorage.setItem(STORAGE_KEY, JSON.stringify(appState));
-            } catch (e) {}
-        }
-
-        let currentActiveTab = 'hair';
-
-        function setTab(tabName) {
-            currentActiveTab = tabName;
-            document.querySelectorAll('.tab-button').forEach(btn => {
-                if (btn.getAttribute('onclick').includes(tabName)) {
-                    btn.classList.add('active');
-                } else {
-                    btn.classList.remove('active');
-                }
+        // التبديل بين القوائم
+        document.querySelectorAll('.tab-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+                document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+                
+                button.classList.add('active');
+                const targetId = button.getAttribute('data-target');
+                const panel = document.getElementById(targetId);
+                if (panel) panel.classList.add('active');
             });
-            renderOptions();
-        }
+        });
 
-        function renderOptions() {
-            const grid = document.getElementById('options-grid');
-            grid.innerHTML = '';
+        // النقر على الأزرار
+        document.querySelectorAll('.opt-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const type = btn.getAttribute('data-type');
+                const val = btn.getAttribute('data-val');
 
-            if (currentActiveTab === 'hair') {
-                dataHairStyles.forEach(item => {
-                    const btn = document.createElement('button');
-                    btn.type = 'button';
-                    btn.className = `choice-btn ${appState.hairStyle === item.id ? 'selected' : ''}`;
-                    btn.innerHTML = `<span class="emoji">${item.icon}</span><span class="label">${item.name}</span>`;
-                    btn.onclick = (e) => {
-                        e.stopPropagation();
-                        appState.hairStyle = item.id;
-                        persistState();
-                        updateChibi();
-                        renderOptions();
-                    };
-                    grid.appendChild(btn);
-                });
-            } else if (currentActiveTab === 'hairColor') {
-                dataHairColors.forEach(item => {
-                    const btn = document.createElement('button');
-                    btn.type = 'button';
-                    btn.className = `choice-btn ${appState.hairColor === item.color ? 'selected' : ''}`;
-                    btn.innerHTML = `<span class="color-dot" style="background:${item.color};"></span><span class="label">${item.name}</span>`;
-                    btn.onclick = (e) => {
-                        e.stopPropagation();
-                        appState.hairColor = item.color;
-                        persistState();
-                        updateChibi();
-                        renderOptions();
-                    };
-                    grid.appendChild(btn);
-                });
-            } else if (currentActiveTab === 'outfit') {
-                dataOutfits.forEach(item => {
-                    const btn = document.createElement('button');
-                    btn.type = 'button';
-                    btn.className = `choice-btn ${appState.outfit === item.id ? 'selected' : ''}`;
-                    btn.innerHTML = `<span class="emoji">${item.icon}</span><span class="label">${item.name}</span>`;
-                    btn.onclick = (e) => {
-                        e.stopPropagation();
-                        appState.outfit = item.id;
-                        persistState();
-                        updateChibi();
-                        renderOptions();
-                    };
-                    grid.appendChild(btn);
-                });
-            } else if (currentActiveTab === 'acc') {
-                dataAccessories.forEach(item => {
-                    const btn = document.createElement('button');
-                    btn.type = 'button';
-                    btn.className = `choice-btn ${appState.accessory === item.id ? 'selected' : ''}`;
-                    btn.innerHTML = `<span class="emoji">${item.icon}</span><span class="label">${item.name}</span>`;
-                    btn.onclick = (e) => {
-                        e.stopPropagation();
-                        appState.accessory = item.id;
-                        persistState();
-                        updateChibi();
-                        renderOptions();
-                    };
-                    grid.appendChild(btn);
-                });
-            } else if (currentActiveTab === 'skin') {
-                dataSkins.forEach(item => {
-                    const btn = document.createElement('button');
-                    btn.type = 'button';
-                    btn.className = `choice-btn ${appState.skin === item.color ? 'selected' : ''}`;
-                    btn.innerHTML = `<span class="color-dot" style="background:${item.color};"></span><span class="label">${item.name}</span>`;
-                    btn.onclick = (e) => {
-                        e.stopPropagation();
-                        appState.skin = item.color;
-                        persistState();
-                        updateChibi();
-                        renderOptions();
-                    };
-                    grid.appendChild(btn);
-                });
-            }
-        }
+                const siblings = btn.parentElement.querySelectorAll('.opt-btn');
+                siblings.forEach(s => s.classList.remove('selected'));
+                btn.classList.add('selected');
 
-        function updateChibi() {
-            ['skin-neck', 'skin-torso', 'skin-leg-l', 'skin-leg-r', 'skin-arm-l', 'skin-arm-r', 'skin-head'].forEach(id => {
+                if (type === 'hair') appState.hair = parseInt(val, 10);
+                if (type === 'color') appState.hairColor = val;
+                if (type === 'outfit') appState.outfit = parseInt(val, 10);
+                if (type === 'acc') appState.acc = parseInt(val, 10);
+                if (type === 'skin') appState.skin = val;
+
+                drawChibi();
+            });
+        });
+
+        function drawChibi() {
+            // تحديث درجات البشرة
+            ['skin-neck', 'skin-body-torso', 'skin-leg1', 'skin-leg2', 'skin-arm1', 'skin-arm2', 'skin-head'].forEach(id => {
                 const el = document.getElementById(id);
                 if (el) el.setAttribute('fill', appState.skin);
             });
 
-            const hairBack = document.getElementById('svg-hair-back');
-            const hairFront = document.getElementById('svg-hair-front');
-            hairBack.innerHTML = '';
-            hairFront.innerHTML = '';
+            const hb = document.getElementById('slot-hair-back');
+            const hf = document.getElementById('slot-hair-front');
+            const out = document.getElementById('slot-outfit');
+            const acc = document.getElementById('slot-acc');
 
             const c = appState.hairColor;
 
-            if (appState.hairStyle === 0) {
-                hairBack.innerHTML = `
-                    <path d="M 65 95 C 30 110 20 180 45 220 C 55 180 65 140 75 115 Z" fill="${c}"/>
-                    <path d="M 185 95 C 220 110 230 180 205 220 C 195 180 185 140 175 115 Z" fill="${c}"/>
+            // =========================
+            // رسم تسريحات الشعر الفخمة
+            // =========================
+            if (appState.hair === 0) { // ويفي طويل مع خصل منسدلة
+                hb.innerHTML = `
+                    <path d="M 66 100 C 40 170 50 290 85 320 C 100 290 100 240 92 180 Z" fill="${c}"/>
+                    <path d="M 204 100 C 230 170 220 290 185 320 C 170 290 170 240 178 180 Z" fill="${c}"/>
+                    <path d="M 80 110 C 65 200 80 300 135 330 C 190 300 205 200 190 110 Z" fill="${c}" opacity="0.95"/>
                 `;
-                hairFront.innerHTML = `
-                    <path d="M 68 85 Q 125 45 182 85 C 185 100 175 110 160 95 C 145 115 135 90 125 90 C 115 90 105 115 90 95 C 75 110 65 100 68 85 Z" fill="${c}"/>
-                    <ellipse cx="66" cy="100" rx="5" ry="7" fill="#ff758f"/>
-                    <ellipse cx="184" cy="100" rx="5" ry="7" fill="#ff758f"/>
+                hf.innerHTML = `
+                    <!-- قبعة الشعر العلوية تغطي الرأس بالكامل -->
+                    <path d="M 68 115 C 62 48 208 48 202 115 C 195 140 185 155 178 130 C 160 145 148 118 135 118 C 122 118 110 145 92 130 C 85 155 75 140 68 115 Z" fill="${c}"/>
+                    <!-- خصلة جانبية يمنى ويسرى فوق الأكتاف -->
+                    <path d="M 72 115 Q 65 170 82 205 Q 88 170 82 130 Z" fill="${c}"/>
+                    <path d="M 198 115 Q 205 170 188 205 Q 182 170 188 130 Z" fill="${c}"/>
+                    <!-- لمعة أنمي بيضاوية ناعمة -->
+                    <ellipse cx="135" cy="72" rx="42" ry="5" fill="#ffffff" opacity="0.35"/>
                 `;
-            } else if (appState.hairStyle === 1) {
-                hairBack.innerHTML = `
-                    <circle cx="62" cy="62" r="22" fill="${c}"/>
-                    <circle cx="188" cy="62" r="22" fill="${c}"/>
+            } else if (appState.hair === 1) { // كعكتين أنمي مرتفعتين
+                hb.innerHTML = `
+                    <circle cx="68" cy="62" r="28" fill="${c}"/>
+                    <circle cx="202" cy="62" r="28" fill="${c}"/>
+                    <!-- خصلات نازلة خلف الظهر -->
+                    <path d="M 68 85 Q 52 160 70 200 Q 78 150 78 95 Z" fill="${c}"/>
+                    <path d="M 202 85 Q 218 160 200 200 Q 192 150 192 95 Z" fill="${c}"/>
                 `;
-                hairFront.innerHTML = `
-                    <path d="M 70 85 Q 125 50 180 85 C 175 105 155 95 140 92 Q 125 105 110 92 C 95 95 75 105 70 85 Z" fill="${c}"/>
+                hf.innerHTML = `
+                    <!-- خوذة الرأس -->
+                    <path d="M 69 115 C 65 48 205 48 201 115 C 195 105 170 102 155 118 C 145 102 125 102 115 118 C 100 102 75 105 69 115 Z" fill="${c}"/>
+                    <!-- فيونكات صغيرة تحت الكعكات -->
+                    <circle cx="70" cy="75" r="7" fill="#ff7aa2"/>
+                    <circle cx="200" cy="75" r="7" fill="#ff7aa2"/>
+                    <ellipse cx="135" cy="74" rx="35" ry="4.5" fill="#ffffff" opacity="0.3"/>
                 `;
-            } else if (appState.hairStyle === 2) {
-                hairBack.innerHTML = `
-                    <path d="M 60 90 C 40 160 50 240 75 270 L 175 270 C 200 240 210 160 190 90 Z" fill="${c}"/>
+            } else if (appState.hair === 2) { // توين تيل غيمة كثيفة
+                hb.innerHTML = `
+                    <path d="M 68 110 C 25 120 15 230 50 265 C 75 250 82 180 85 130 Z" fill="${c}"/>
+                    <path d="M 202 110 C 245 120 255 230 220 265 C 195 250 188 180 185 130 Z" fill="${c}"/>
                 `;
-                hairFront.innerHTML = `
-                    <path d="M 68 85 Q 125 46 182 85 C 180 120 168 125 160 100 C 140 102 135 92 125 92 C 115 92 110 102 90 100 C 82 125 70 120 68 85 Z" fill="${c}"/>
+                hf.innerHTML = `
+                    <path d="M 68 115 C 62 48 208 48 202 115 C 192 140 182 125 168 120 C 150 120 142 110 135 110 C 128 110 120 120 102 120 C 88 125 78 140 68 115 Z" fill="${c}"/>
+                    <ellipse cx="62" cy="115" rx="6" ry="10" fill="#ff477e"/>
+                    <ellipse cx="208" cy="115" rx="6" ry="10" fill="#ff477e"/>
+                    <ellipse cx="135" cy="72" rx="42" ry="5" fill="#ffffff" opacity="0.35"/>
                 `;
-            } else if (appState.hairStyle === 3) {
-                hairBack.innerHTML = `
-                    <ellipse cx="125" cy="110" rx="66" ry="60" fill="${c}"/>
+            } else if (appState.hair === 3) { // بوب كاواي مستدير
+                hb.innerHTML = `
+                    <ellipse cx="135" cy="120" rx="74" ry="68" fill="${c}"/>
                 `;
-                hairFront.innerHTML = `
-                    <path d="M 65 90 Q 125 48 185 90 C 188 125 178 140 165 110 C 145 105 135 90 125 90 C 115 90 105 105 85 110 C 72 140 62 125 65 90 Z" fill="${c}"/>
+                hf.innerHTML = `
+                    <path d="M 66 115 C 60 50 210 50 204 115 C 208 165 198 175 188 140 C 170 122 155 116 135 116 C 115 116 100 122 82 140 C 72 175 62 165 66 115 Z" fill="${c}"/>
+                    <ellipse cx="135" cy="74" rx="40" ry="4.5" fill="#ffffff" opacity="0.35"/>
+                `;
+            } else if (appState.hair === 4) { // كيرلي لطيف
+                hb.innerHTML = `
+                    <circle cx="75" cy="130" r="32" fill="${c}"/>
+                    <circle cx="195" cy="130" r="32" fill="${c}"/>
+                    <circle cx="85" cy="180" r="28" fill="${c}"/>
+                    <circle cx="185" cy="180" r="28" fill="${c}"/>
+                    <circle cx="135" cy="80" r="55" fill="${c}"/>
+                `;
+                hf.innerHTML = `
+                    <path d="M 70 115 C 66 50 204 50 200 115 C 190 125 180 112 165 118 C 150 110 140 115 135 115 C 130 115 120 110 105 118 C 90 112 80 125 70 115 Z" fill="${c}"/>
+                    <circle cx="75" cy="115" r="7" fill="${c}"/>
+                    <circle cx="195" cy="115" r="7" fill="${c}"/>
+                    <ellipse cx="135" cy="72" rx="38" ry="4.5" fill="#ffffff" opacity="0.3"/>
+                `;
+            } else { // بوي ناعم وعصري
+                hb.innerHTML = `
+                    <ellipse cx="135" cy="102" rx="66" ry="58" fill="${c}"/>
+                `;
+                hf.innerHTML = `
+                    <path d="M 68 110 C 64 48 206 48 202 110 C 190 142 178 135 168 120 C 152 135 140 118 135 118 C 130 118 118 135 102 120 C 92 135 80 142 68 110 Z" fill="${c}"/>
+                    <ellipse cx="135" cy="70" rx="36" ry="4" fill="#ffffff" opacity="0.35"/>
                 `;
             }
 
-            const outfitSvg = document.getElementById('svg-outfit');
-            outfitSvg.innerHTML = '';
-
-            if (appState.outfit === 0) {
-                outfitSvg.innerHTML = `
-                    <path d="M 104 160 L 146 160 L 158 215 L 92 215 Z" fill="#ff758f"/>
-                    <path d="M 92 215 Q 125 228 158 215 L 164 225 Q 125 240 86 225 Z" fill="#ff4d6d"/>
-                    <circle cx="125" cy="172" r="3.5" fill="#fff"/>
-                    <circle cx="125" cy="184" r="3.5" fill="#fff"/>
-                    <circle cx="98" cy="165" r="9" fill="#ffb3c6"/>
-                    <circle cx="152" cy="165" r="9" fill="#ffb3c6"/>
+            // =========================
+            // رسم الأزياء الفخمة والمنسقة
+            // =========================
+            if (appState.outfit === 0) { // فستان لوليتا وردي ملكي مع فيونكات وكشاكش
+                out.innerHTML = `
+                    <!-- الصدرية -->
+                    <path d="M 112 175 L 158 175 L 164 212 L 106 212 Z" fill="#ff7aa2"/>
+                    <path d="M 124 175 L 146 175 L 142 212 L 128 212 Z" fill="#ffffff"/>
+                    <circle cx="135" cy="186" r="2.5" fill="#ff477e"/>
+                    <circle cx="135" cy="198" r="2.5" fill="#ff477e"/>
+                    <!-- أكمام منفوخة أميرات -->
+                    <circle cx="106" cy="180" r="11" fill="#ffb3c6"/>
+                    <circle cx="164" cy="180" r="11" fill="#ffb3c6"/>
+                    <!-- تنورة واسعة كلوش مع طبقات كشكش -->
+                    <path d="M 104 212 L 166 212 L 186 260 Q 135 272 84 260 Z" fill="#ff7aa2"/>
+                    <path d="M 84 260 Q 135 272 186 260 L 188 266 Q 135 278 82 266 Z" fill="#ffffff"/>
+                    <!-- فيونكة الحزام -->
+                    <ellipse cx="135" cy="214" rx="8" ry="4.5" fill="#ff477e"/>
                 `;
-            } else if (appState.outfit === 1) {
-                outfitSvg.innerHTML = `
-                    <path d="M 105 160 L 145 160 L 148 185 L 102 185 Z" fill="#ffffff"/>
-                    <polygon points="120,165 130,165 125,178" fill="#e63946"/>
-                    <polygon points="100,185 150,185 162,225 88,225" fill="#1d3557"/>
+            } else if (appState.outfit === 1) { // هودي كيتي أوفر سايز بنفسجي ووردي
+                out.innerHTML = `
+                    <path d="M 102 172 Q 135 168 168 172 L 165 240 Q 135 246 105 240 Z" fill="#cbb2fe"/>
+                    <!-- جيب أمامي للهودي مع رسمة قطة -->
+                    <rect x="117" y="215" width="36" height="20" rx="6" fill="#ffffff"/>
+                    <ellipse cx="135" cy="225" rx="5" ry="3.5" fill="#ff7aa2"/>
+                    <!-- حبال الهودي -->
+                    <line x1="126" y1="182" x2="126" y2="204" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round"/>
+                    <line x1="144" y1="182" x2="144" y2="204" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round"/>
+                    <!-- أكمام الهودي العريضة -->
+                    <rect x="96" y="180" width="16" height="38" rx="8" transform="rotate(18 96 180)" fill="#cbb2fe"/>
+                    <rect x="158" y="180" width="16" height="38" rx="8" transform="rotate(-18 158 180)" fill="#cbb2fe"/>
                 `;
-            } else if (appState.outfit === 2) {
-                outfitSvg.innerHTML = `
-                    <path d="M 95 158 Q 125 152 155 158 L 152 218 Q 125 224 98 218 Z" fill="#c77dff"/>
-                    <circle cx="125" cy="185" r="7" fill="#ffc6ff"/>
-                    <rect x="90" y="165" width="14" height="34" rx="7" transform="rotate(18 90 165)" fill="#c77dff"/>
-                    <rect x="146" y="165" width="14" height="34" rx="7" transform="rotate(-18 146 165)" fill="#c77dff"/>
+            } else if (appState.outfit === 2) { // مريول سيلور أنمي مدرسي
+                out.innerHTML = `
+                    <!-- قميص أبيض -->
+                    <path d="M 112 175 L 158 175 L 160 210 L 110 210 Z" fill="#ffffff"/>
+                    <!-- ياقة السيلور الكحلية مع خطوط بيضاء -->
+                    <polygon points="110,175 160,175 164,195 135,206 106,195" fill="#1d3557"/>
+                    <!-- شريطة عنق حمراء -->
+                    <polygon points="131,192 139,192 143,212 135,204 127,212" fill="#e63946"/>
+                    <!-- تنورة طيات بليسيه -->
+                    <polygon points="106,210 164,210 178 252 92 252" fill="#1d3557"/>
+                    <line x1="102" y1="248" x2="168" y2="248" stroke="#ffffff" stroke-width="2"/>
                 `;
-            } else if (appState.outfit === 3) {
-                outfitSvg.innerHTML = `
-                    <path d="M 106 160 L 144 160 L 150 190 L 100 190 Z" fill="#ffeaa7"/>
-                    <path d="M 96 190 L 154 190 L 168 230 L 82 230 Z" fill="#fab1a0"/>
-                    <circle cx="125" cy="205" r="5" fill="#ff7675"/>
+            } else if (appState.outfit === 3) { // كاجوال توب ستراب وردي وشورت جينز
+                out.innerHTML = `
+                    <!-- توب باستيل ناعم -->
+                    <path d="M 116 180 L 154 180 L 156 210 L 114 210 Z" fill="#ffb4a2"/>
+                    <line x1="123" y1="168" x2="123" y2="180" stroke="#ffb4a2" stroke-width="3"/>
+                    <line x1="147" y1="168" x2="147" y2="180" stroke="#ffb4a2" stroke-width="3"/>
+                    <!-- شورت جينز مع حزام -->
+                    <rect x="112" y="210" width="46" height="24" rx="4" fill="#669bbc"/>
+                    <line x1="135" y1="214" x2="135" y2="234" stroke="#3d5a80" stroke-width="2"/>
+                `;
+            } else if (appState.outfit === 4) { // فستان أميرات براق أزرق ثلجي
+                out.innerHTML = `
+                    <path d="M 112 176 L 158 176 L 164 214 L 106 214 Z" fill="#90e0ef"/>
+                    <!-- ياقة دانتيل بيضاء شفافة -->
+                    <ellipse cx="135" cy="177" rx="22" ry="5" fill="#ffffff"/>
+                    <!-- تنورة ملكية كبيرة مع بريق -->
+                    <path d="M 106 214 L 164 214 L 194 266 Q 135 278 76 266 Z" fill="#00b4d8"/>
+                    <path d="M 114 214 Q 135 258 156 214 Z" fill="#ffffff" opacity="0.6"/>
+                    <circle cx="120" cy="245" r="3" fill="#ffffff"/>
+                    <circle cx="150" cy="245" r="3" fill="#ffffff"/>
+                `;
+            } else { // فستان أصفر ومشمشي لطيف
+                out.innerHTML = `
+                    <path d="M 112 175 L 158 175 L 162 212 L 108 212 Z" fill="#ffeaa7"/>
+                    <ellipse cx="135" cy="186" rx="6" ry="6" fill="#fab1a0"/>
+                    <path d="M 106 212 L 164 212 L 180 256 Q 135 268 90 256 Z" fill="#ffeaa7"/>
+                    <path d="M 90 256 Q 135 268 180 256 L 182 262 Q 135 274 88 262 Z" fill="#ff7675"/>
                 `;
             }
 
-            const accSvg = document.getElementById('svg-acc');
-            accSvg.innerHTML = '';
-
-            if (appState.accessory === 0) {
-                accSvg.innerHTML = `
-                    <g transform="translate(125, 52)">
-                        <path d="M 0 0 C -25 -22 -35 15 -5 5 Z" fill="#ff4d6d"/>
-                        <path d="M 0 0 C 25 -22 35 15 5 5 Z" fill="#ff4d6d"/>
-                        <circle cx="0" cy="2" r="5" fill="#ffe5ec"/>
+            // =========================
+            // رسم الإكسسوارات الفخمة
+            // =========================
+            if (appState.acc === 0) { // آذان قطة مخملية
+                acc.innerHTML = `
+                    <polygon points="85,65 105,25 125,58" fill="#ff7aa2"/>
+                    <polygon points="92,60 105,34 118,55" fill="#ffffff"/>
+                    <polygon points="145,58 165,25 185,65" fill="#ff7aa2"/>
+                    <polygon points="152,55 165,34 178,60" fill="#ffffff"/>
+                `;
+            } else if (appState.acc === 1) { // فيونكة كبيرة فخمة
+                acc.innerHTML = `
+                    <g transform="translate(135, 52)">
+                        <path d="M 0 0 C -35 -26 -46 22 -6 8 Z" fill="#ff477e"/>
+                        <path d="M 0 0 C 35 -26 46 22 6 8 Z" fill="#ff477e"/>
+                        <circle cx="0" cy="3" r="7" fill="#ffffff"/>
                     </g>
                 `;
-            } else if (appState.accessory === 1) {
-                accSvg.innerHTML = `
-                    <polygon points="105,52 112,32 125,44 138,32 145,52" fill="#ffd166" stroke="#f39c12" stroke-width="2"/>
-                    <circle cx="125" cy="42" r="3" fill="#e63946"/>
-                    <text x="125" y="51" font-size="8" font-weight="900" fill="#d35400" text-anchor="middle">16K</text>
+            } else if (appState.acc === 2) { // تاج ذهبي 16K مرصع
+                acc.innerHTML = `
+                    <polygon points="112,52 120,28 135,42 150,28 158,52" fill="#ffd166" stroke="#f39c12" stroke-width="2"/>
+                    <circle cx="135" cy="40" r="3.5" fill="#e63946"/>
+                    <circle cx="120" cy="36" r="2.5" fill="#48cae4"/>
+                    <circle cx="150" cy="36" r="2.5" fill="#48cae4"/>
+                    <text x="135" y="50" font-size="8.5" font-weight="900" fill="#b06400" text-anchor="middle">16K</text>
                 `;
-            } else if (appState.accessory === 2) {
-                accSvg.innerHTML = `
-                    <text x="75" y="80" font-size="20">⭐</text>
-                    <text x="160" y="80" font-size="20">⭐</text>
+            } else if (appState.acc === 3) { // سماعات أذن قطة بستايل ستريمر
+                acc.innerHTML = `
+                    <!-- طوق السماعة -->
+                    <path d="M 72 105 A 64 64 0 0 1 198 105" fill="none" stroke="#ff7aa2" stroke-width="5"/>
+                    <polygon points="90,56 102,32 114,54" fill="#ff7aa2"/>
+                    <polygon points="156,54 168,32 180,56" fill="#ff7aa2"/>
+                    <!-- أغطية الأذن -->
+                    <rect x="64" y="95" width="12" height="25" rx="6" fill="#ff477e"/>
+                    <rect x="194" y="95" width="12" height="25" rx="6" fill="#ff477e"/>
                 `;
-            } else if (appState.accessory === 3) {
-                accSvg.innerHTML = `
-                    <circle cx="100" cy="102" r="17" stroke="#ff4d6d" stroke-width="3" fill="rgba(255,255,255,0.2)"/>
-                    <circle cx="150" cy="102" r="17" stroke="#ff4d6d" stroke-width="3" fill="rgba(255,255,255,0.2)"/>
-                    <line x1="117" y1="102" x2="133" y2="102" stroke="#ff4d6d" stroke-width="3"/>
+            } else if (appState.acc === 4) { // نظارات دائرية وردية
+                acc.innerHTML = `
+                    <circle cx="108" cy="112" r="18" stroke="#ff477e" stroke-width="3" fill="rgba(255,255,255,0.2)"/>
+                    <circle cx="162" cy="112" r="18" stroke="#ff477e" stroke-width="3" fill="rgba(255,255,255,0.2)"/>
+                    <line x1="126" y1="112" x2="144" y2="112" stroke="#ff477e" stroke-width="3"/>
                 `;
+            } else {
+                acc.innerHTML = '';
             }
         }
 
-        function triggerRandom() {
-            appState.hairStyle = Math.floor(Math.random() * dataHairStyles.length);
-            appState.hairColor = dataHairColors[Math.floor(Math.random() * dataHairColors.length)].color;
-            appState.outfit = Math.floor(Math.random() * dataOutfits.length);
-            appState.accessory = Math.floor(Math.random() * dataAccessories.length);
-            appState.skin = dataSkins[Math.floor(Math.random() * dataSkins.length)].color;
-            persistState();
-            updateChibi();
-            renderOptions();
-        }
+        // اختيار عشوائي
+        document.getElementById('btn-rand').addEventListener('click', () => {
+            const colors = ['#422518', '#1c1a24', '#ff7aa2', '#baa0f8', '#ffd166', '#e76f51'];
+            const skins = ['#ffdfd3', '#fcd0b0', '#dca074', '#8a5836'];
 
-        function triggerDownload() {
-            const layers = [
-                document.getElementById('svg-hair-back'),
-                document.getElementById('svg-body'),
-                document.getElementById('svg-outfit'),
-                document.getElementById('svg-hair-front'),
-                document.getElementById('svg-acc')
-            ];
+            appState.hair = Math.floor(Math.random() * 6);
+            appState.hairColor = colors[Math.floor(Math.random() * colors.length)];
+            appState.outfit = Math.floor(Math.random() * 6);
+            appState.acc = Math.floor(Math.random() * 6);
+            appState.skin = skins[Math.floor(Math.random() * skins.length)];
 
-            let combinedContent = '';
-            layers.forEach(l => { if(l) combinedContent += l.innerHTML; });
+            document.querySelectorAll('.opt-btn').forEach(btn => {
+                const type = btn.getAttribute('data-type');
+                const val = btn.getAttribute('data-val');
+                btn.classList.remove('selected');
 
-            const fullSvg = `
-                <svg xmlns="http://www.w3.org/2000/svg" width="500" height="720" viewBox="0 0 250 360">
+                if (type === 'hair' && parseInt(val, 10) === appState.hair) btn.classList.add('selected');
+                if (type === 'color' && val === appState.hairColor) btn.classList.add('selected');
+                if (type === 'outfit' && parseInt(val, 10) === appState.outfit) btn.classList.add('selected');
+                if (type === 'acc' && parseInt(val, 10) === appState.acc) btn.classList.add('selected');
+                if (type === 'skin' && val === appState.skin) btn.classList.add('selected');
+            });
+
+            drawChibi();
+        });
+
+        // تنزيل الصورة
+        document.getElementById('btn-save').addEventListener('click', () => {
+            const svgEl = document.getElementById('main-svg');
+            const svgContent = `
+                <svg xmlns="http://www.w3.org/2000/svg" width="540" height="760" viewBox="0 0 270 380">
                     <defs>
-                        <linearGradient id="bg" x1="0%" y1="0%" x2="0%" y2="100%">
+                        <linearGradient id="bgExp" x1="0%" y1="0%" x2="0%" y2="1">
                             <stop offset="0%" stop-color="#fff0f5"/>
                             <stop offset="100%" stop-color="#ffd6e0"/>
                         </linearGradient>
                     </defs>
-                    <rect width="250" height="360" rx="30" fill="url(#bg)"/>
-                    <text x="125" y="30" font-family="sans-serif" font-weight="bold" font-size="13" fill="#ff5d8f" text-anchor="middle">🎀 Pookie 16K Celebration 🎀</text>
-                    ${combinedContent}
+                    <rect width="270" height="380" rx="30" fill="url(#bgExp)"/>
+                    <text x="135" y="28" font-family="sans-serif" font-weight="bold" font-size="13" fill="#ff5d8f" text-anchor="middle">🎀 Pookie 16K Celebration 🎀</text>
+                    ${svgEl.innerHTML}
                 </svg>
             `;
 
-            const canvas = document.createElement('canvas');
-            canvas.width = 500;
-            canvas.height = 720;
-            const ctx = canvas.getContext('2d');
+            const blob = new Blob([svgContent], { type: 'image/svg+xml;charset=utf-8' });
+            const url = URL.createObjectURL(blob);
             const img = new Image();
-
-            const svgBlob = new Blob([fullSvg], { type: 'image/svg+xml;charset=utf-8' });
-            const url = URL.createObjectURL(svgBlob);
-
             img.onload = () => {
+                const canvas = document.createElement('canvas');
+                canvas.width = 540;
+                canvas.height = 760;
+                const ctx = canvas.getContext('2d');
                 ctx.drawImage(img, 0, 0);
                 URL.revokeObjectURL(url);
-                const pngUrl = canvas.toDataURL('image/png');
-                const downloadLink = document.createElement('a');
-                downloadLink.download = 'my-pookie-chibi-16k.png';
-                downloadLink.href = pngUrl;
-                document.body.appendChild(downloadLink);
-                downloadLink.click();
-                document.body.removeChild(downloadLink);
+
+                const link = document.createElement('a');
+                link.download = 'my-pookie-chibi-16k.png';
+                link.href = canvas.toDataURL('image/png');
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
 
                 const toast = document.getElementById('toast');
                 toast.classList.add('show');
                 setTimeout(() => toast.classList.remove('show'), 2500);
             };
             img.src = url;
-        }
+        });
 
-        // بدء التشغيل
-        renderOptions();
-        updateChibi();
+        // تشغيل أولي
+        drawChibi();
     </script>
 </body>
 </html>
