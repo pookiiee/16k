@@ -103,7 +103,7 @@
         }
 
         .controls {
-            flex: 1.25;
+            flex: 1.35;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -111,7 +111,7 @@
 
         .tab-bar {
             display: flex;
-            gap: 6px;
+            gap: 5px;
             margin-bottom: 12px;
             flex-wrap: wrap;
         }
@@ -120,10 +120,10 @@
             background: #fff;
             border: 2px solid #ffb3c6;
             color: #4a2840;
-            padding: 7px 13px;
+            padding: 6px 11px;
             border-radius: 14px;
             font-weight: 800;
-            font-size: 0.85rem;
+            font-size: 0.82rem;
             cursor: pointer;
             transition: 0.15s;
         }
@@ -175,13 +175,13 @@
         }
 
         .opt-btn .emoji {
-            font-size: 1.8rem;
+            font-size: 1.7rem;
             line-height: 1;
             pointer-events: none;
         }
 
         .opt-btn .txt {
-            font-size: 0.78rem;
+            font-size: 0.75rem;
             font-weight: 800;
             pointer-events: none;
         }
@@ -263,104 +263,95 @@
     </header>
 
     <div class="main-card">
-        <!-- مسرح الرسم التشيبي المتناسق -->
         <div class="stage">
             <div class="chibi-box">
                 <svg id="main-svg" viewBox="0 0 270 380">
                     <!-- 1. الشعر الخلفي -->
                     <g id="slot-hair-back"></g>
 
-                    <!-- 2. جسم الشخصية والوجه الدائري المتناسق -->
+                    <!-- 2. جسم ووجه الشخصية -->
                     <g id="slot-body">
-                        <!-- رقبة -->
                         <rect id="skin-neck" x="127" y="162" width="16" height="18" rx="5" fill="#ffdfd3"/>
-                        
-                        <!-- أرجل صغيرة كيوت -->
                         <rect id="skin-leg1" x="114" y="225" width="16" height="48" rx="8" fill="#ffdfd3"/>
                         <rect id="skin-leg2" x="140" y="225" width="16" height="48" rx="8" fill="#ffdfd3"/>
-                        <!-- أحذية لطيفة بيضاء مدمجة كطبقة أساسية -->
-                        <ellipse cx="122" cy="272" rx="10" ry="5" fill="#ffffff"/>
-                        <ellipse cx="148" cy="272" rx="10" ry="5" fill="#ffffff"/>
-
-                        <!-- جذع الجسم -->
+                        
                         <path id="skin-body-torso" d="M 112 175 Q 135 172 158 175 L 155 230 Q 135 235 115 230 Z" fill="#ffdfd3"/>
-
-                        <!-- أيدي تشيبي ناعمة -->
                         <ellipse id="skin-arm1" cx="104" cy="198" rx="8" ry="22" transform="rotate(18 104 198)" fill="#ffdfd3"/>
                         <ellipse id="skin-arm2" cx="166" cy="198" rx="8" ry="22" transform="rotate(-18 166 198)" fill="#ffdfd3"/>
 
-                        <!-- رأس التشيبي المحكم والدائري -->
+                        <!-- الرأس -->
                         <ellipse id="skin-head" cx="135" cy="108" rx="64" ry="58" fill="#ffdfd3"/>
 
-                        <!-- الخدود الكاواي بلون وردي ناعم وتأثير البلاش -->
-                        <ellipse cx="98" cy="125" rx="11" ry="6.5" fill="#ff8aa6" opacity="0.6"/>
+                        <!-- الخدود -->
+                        <ellipse cx="98" cy="125" rx="11" ry="6.5" fill="#ff8aa6" opacity="0.65"/>
                         <line x1="94" y1="123" x2="92" y2="127" stroke="#ff477e" stroke-width="1.2" stroke-linecap="round"/>
                         <line x1="98" y1="123" x2="96" y2="127" stroke="#ff477e" stroke-width="1.2" stroke-linecap="round"/>
                         <line x1="102" y1="123" x2="100" y2="127" stroke="#ff477e" stroke-width="1.2" stroke-linecap="round"/>
 
-                        <ellipse cx="172" cy="125" rx="11" ry="6.5" fill="#ff8aa6" opacity="0.6"/>
+                        <ellipse cx="172" cy="125" rx="11" ry="6.5" fill="#ff8aa6" opacity="0.65"/>
                         <line x1="168" y1="123" x2="166" y2="127" stroke="#ff477e" stroke-width="1.2" stroke-linecap="round"/>
                         <line x1="172" y1="123" x2="170" y2="127" stroke="#ff477e" stroke-width="1.2" stroke-linecap="round"/>
                         <line x1="176" y1="123" x2="174" y2="127" stroke="#ff477e" stroke-width="1.2" stroke-linecap="round"/>
 
-                        <!-- عيون أنمي واسعة ومشرقة -->
+                        <!-- العيون -->
                         <g class="eyes-group">
-                            <!-- العين اليسرى -->
-                            <ellipse cx="108" cy="112" rx="13" ry="16" fill="#2d132c"/>
-                            <ellipse cx="108" cy="118" rx="9.5" ry="9.5" fill="#801336"/>
-                            <ellipse cx="108" cy="121" rx="6" ry="6" fill="#c72c41"/>
-                            <circle cx="104" cy="104" r="5" fill="#ffffff"/>
-                            <circle cx="112" cy="118" r="2.5" fill="#ffffff"/>
-                            <path d="M 94 100 Q 106 93 119 100" stroke="#2d132c" stroke-width="3" fill="none" stroke-linecap="round"/>
-                            <path d="M 93 100 L 89 96" stroke="#2d132c" stroke-width="2.5" stroke-linecap="round"/>
+                            <ellipse cx="108" cy="115" rx="13" ry="16" fill="#2d132c"/>
+                            <ellipse cx="108" cy="121" rx="9.5" ry="9.5" fill="#801336"/>
+                            <ellipse cx="108" cy="124" rx="6" ry="6" fill="#c72c41"/>
+                            <circle cx="104" cy="107" r="5" fill="#ffffff"/>
+                            <circle cx="112" cy="121" r="2.5" fill="#ffffff"/>
+                            <path d="M 94 103 Q 106 96 119 103" stroke="#2d132c" stroke-width="3" fill="none" stroke-linecap="round"/>
+                            <path d="M 93 103 L 89 99" stroke="#2d132c" stroke-width="2.5" stroke-linecap="round"/>
 
-                            <!-- العين اليمنى -->
-                            <ellipse cx="162" cy="112" rx="13" ry="16" fill="#2d132c"/>
-                            <ellipse cx="162" cy="118" rx="9.5" ry="9.5" fill="#801336"/>
-                            <ellipse cx="162" cy="121" rx="6" ry="6" fill="#c72c41"/>
-                            <circle cx="158" cy="104" r="5" fill="#ffffff"/>
-                            <circle cx="166" cy="118" r="2.5" fill="#ffffff"/>
-                            <path d="M 151 100 Q 164 93 176 100" stroke="#2d132c" stroke-width="3" fill="none" stroke-linecap="round"/>
-                            <path d="M 177 100 L 181 96" stroke="#2d132c" stroke-width="2.5" stroke-linecap="round"/>
+                            <ellipse cx="162" cy="115" rx="13" ry="16" fill="#2d132c"/>
+                            <ellipse cx="162" cy="121" rx="9.5" ry="9.5" fill="#801336"/>
+                            <ellipse cx="162" cy="124" rx="6" ry="6" fill="#c72c41"/>
+                            <circle cx="158" cy="107" r="5" fill="#ffffff"/>
+                            <circle cx="166" cy="121" r="2.5" fill="#ffffff"/>
+                            <path d="M 151 103 Q 164 96 176 103" stroke="#2d132c" stroke-width="3" fill="none" stroke-linecap="round"/>
+                            <path d="M 177 103 L 181 99" stroke="#2d132c" stroke-width="2.5" stroke-linecap="round"/>
                         </g>
 
-                        <!-- فم قطة لطيف (ω) -->
-                        <path d="M 130 132 Q 133 136 135 133 Q 137 136 140 132" stroke="#e05263" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                        <!-- الابتسامة -->
+                        <path d="M 130 133 Q 133 137 135 134 Q 137 137 140 133" stroke="#e05263" stroke-width="2.5" fill="none" stroke-linecap="round"/>
                     </g>
 
-                    <!-- 3. طبقة الملابس -->
+                    <!-- 3. الأحذية -->
+                    <g id="slot-shoes"></g>
+
+                    <!-- 4. الملابس -->
                     <g id="slot-outfit"></g>
 
-                    <!-- 4. طبقة الشعر الأمامي والغرة -->
+                    <!-- 5. الشعر الأمامي والغرة -->
                     <g id="slot-hair-front"></g>
 
-                    <!-- 5. طبقة الإكسسوارات -->
+                    <!-- 6. الإكسسوار -->
                     <g id="slot-acc"></g>
                 </svg>
             </div>
         </div>
 
-        <!-- لوحة الاختيارات والتنسيق -->
         <div class="controls">
             <div class="tab-bar">
                 <button type="button" class="tab-btn active" data-target="panel-hair">💇‍♀️ التسريحة</button>
-                <button type="button" class="tab-btn" data-target="panel-hcolor">🎨 لون الشعر</button>
+                <button type="button" class="tab-btn" data-target="panel-hcolor">🎨 اللون</button>
                 <button type="button" class="tab-btn" data-target="panel-outfit">👗 الأزياء</button>
+                <button type="button" class="tab-btn" data-target="panel-shoes">👠 الأحذية</button>
                 <button type="button" class="tab-btn" data-target="panel-acc">✨ إكسسوار</button>
                 <button type="button" class="tab-btn" data-target="panel-skin">🌸 البشرة</button>
             </div>
 
-            <!-- تسريحات الشعر الستة -->
+            <!-- تسريحات الشعر -->
             <div id="panel-hair" class="tab-panel active">
                 <div class="opt-btn selected" data-type="hair" data-val="0"><span class="emoji">🎀</span><span class="txt">ويفي طويل</span></div>
                 <div class="opt-btn" data-type="hair" data-val="1"><span class="emoji">👱‍♀️</span><span class="txt">كعكتين أنمي</span></div>
-                <div class="opt-btn" data-type="hair" data-val="2"><span class="emoji">👧</span><span class="txt">توين تيل غيمة</span></div>
+                <div class="opt-btn" data-type="hair" data-val="2"><span class="emoji">👧</span><span class="txt">توين تيل</span></div>
                 <div class="opt-btn" data-type="hair" data-val="3"><span class="emoji">💇‍♀️</span><span class="txt">بوب كاواي</span></div>
-                <div class="opt-btn" data-type="hair" data-val="4"><span class="emoji">👩‍🦱</span><span class="txt">كيرلي لطيف</span></div>
-                <div class="opt-btn" data-type="hair" data-val="5"><span class="emoji">✨</span><span class="txt">بوي ناعم</span></div>
+                <div class="opt-btn" data-type="hair" data-val="4"><span class="emoji">👩‍🦱</span><span class="txt">كيرلي ناعم</span></div>
+                <div class="opt-btn" data-type="hair" data-val="5"><span class="emoji">✨</span><span class="txt">بوي عصري</span></div>
             </div>
 
-            <!-- ألوان الشعر -->
+            <!-- لون الشعر -->
             <div id="panel-hcolor" class="tab-panel">
                 <div class="opt-btn selected" data-type="color" data-val="#422518"><span class="color-circle" style="background:#422518"></span><span class="txt">بني غامق</span></div>
                 <div class="opt-btn" data-type="color" data-val="#1c1a24"><span class="color-circle" style="background:#1c1a24"></span><span class="txt">أسود ناعم</span></div>
@@ -370,7 +361,7 @@
                 <div class="opt-btn" data-type="color" data-val="#e76f51"><span class="color-circle" style="background:#e76f51"></span><span class="txt">كراميل وردي</span></div>
             </div>
 
-            <!-- تصاميم الأزياء الستة الفخمة -->
+            <!-- الأزياء -->
             <div id="panel-outfit" class="tab-panel">
                 <div class="opt-btn selected" data-type="outfit" data-val="0"><span class="emoji">🎀</span><span class="txt">فستان لوليتا</span></div>
                 <div class="opt-btn" data-type="outfit" data-val="1"><span class="emoji">🐱</span><span class="txt">هودي قطة</span></div>
@@ -380,17 +371,26 @@
                 <div class="opt-btn" data-type="outfit" data-val="5"><span class="emoji">🌸</span><span class="txt">كيتي باستيل</span></div>
             </div>
 
-            <!-- الإكسسوارات الستة -->
+            <!-- الأحذية -->
+            <div id="panel-shoes" class="tab-panel">
+                <div class="opt-btn selected" data-type="shoes" data-val="0"><span class="emoji">👞</span><span class="txt">مدرسي أسود</span></div>
+                <div class="opt-btn" data-type="shoes" data-val="1"><span class="emoji">🩰</span><span class="txt">لوليتا وردي</span></div>
+                <div class="opt-btn" data-type="shoes" data-val="2"><span class="emoji">👟</span><span class="txt">سنيكرز كاجوال</span></div>
+                <div class="opt-btn" data-type="shoes" data-val="3"><span class="emoji">👢</span><span class="txt">بوت أنيق</span></div>
+                <div class="opt-btn" data-type="shoes" data-val="4"><span class="emoji">🐾</span><span class="txt">خف قطة</span></div>
+            </div>
+
+            <!-- الإكسسوار -->
             <div id="panel-acc" class="tab-panel">
                 <div class="opt-btn selected" data-type="acc" data-val="0"><span class="emoji">🐱</span><span class="txt">آذان قطة</span></div>
                 <div class="opt-btn" data-type="acc" data-val="1"><span class="emoji">🎀</span><span class="txt">فيونكة ضخمة</span></div>
-                <div class="opt-btn" data-type="acc" data-val="2"><span class="emoji">👑</span><span class="txt">تاج ملكي 16K</span></div>
+                <div class="opt-btn" data-type="acc" data-val="2"><span class="emoji">👑</span><span class="txt">تاج 16K</span></div>
                 <div class="opt-btn" data-type="acc" data-val="3"><span class="emoji">🎧</span><span class="txt">سماعات قطة</span></div>
                 <div class="opt-btn" data-type="acc" data-val="4"><span class="emoji">👓</span><span class="txt">نظارات كيوت</span></div>
                 <div class="opt-btn" data-type="acc" data-val="5"><span class="emoji">❌</span><span class="txt">بدون</span></div>
             </div>
 
-            <!-- ألوان البشرة -->
+            <!-- البشرة -->
             <div id="panel-skin" class="tab-panel">
                 <div class="opt-btn selected" data-type="skin" data-val="#ffdfd3"><span class="color-circle" style="background:#ffdfd3"></span><span class="txt">فاتح كوري</span></div>
                 <div class="opt-btn" data-type="skin" data-val="#fcd0b0"><span class="color-circle" style="background:#fcd0b0"></span><span class="txt">خوخي دافئ</span></div>
@@ -405,18 +405,18 @@
         </div>
     </div>
 
-    <div id="toast">تم تنزيل شخصيتك الفخمة بنجاح! 💖</div>
+    <div id="toast">تم تنزيل شخصيتك بنجاح! 💖</div>
 
     <script>
         const appState = {
             hair: 0,
             hairColor: '#422518',
             outfit: 0,
+            shoes: 0,
             acc: 0,
             skin: '#ffdfd3'
         };
 
-        // التبديل بين القوائم
         document.querySelectorAll('.tab-btn').forEach(button => {
             button.addEventListener('click', () => {
                 document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
@@ -429,7 +429,6 @@
             });
         });
 
-        // النقر على الأزرار
         document.querySelectorAll('.opt-btn').forEach(btn => {
             btn.addEventListener('click', () => {
                 const type = btn.getAttribute('data-type');
@@ -442,6 +441,7 @@
                 if (type === 'hair') appState.hair = parseInt(val, 10);
                 if (type === 'color') appState.hairColor = val;
                 if (type === 'outfit') appState.outfit = parseInt(val, 10);
+                if (type === 'shoes') appState.shoes = parseInt(val, 10);
                 if (type === 'acc') appState.acc = parseInt(val, 10);
                 if (type === 'skin') appState.skin = val;
 
@@ -450,7 +450,6 @@
         });
 
         function drawChibi() {
-            // تحديث درجات البشرة
             ['skin-neck', 'skin-body-torso', 'skin-leg1', 'skin-leg2', 'skin-arm1', 'skin-arm2', 'skin-head'].forEach(id => {
                 const el = document.getElementById(id);
                 if (el) el.setAttribute('fill', appState.skin);
@@ -458,210 +457,239 @@
 
             const hb = document.getElementById('slot-hair-back');
             const hf = document.getElementById('slot-hair-front');
+            const sh = document.getElementById('slot-shoes');
             const out = document.getElementById('slot-outfit');
             const acc = document.getElementById('slot-acc');
 
             const c = appState.hairColor;
 
-            // =========================
-            // رسم تسريحات الشعر الفخمة
-            // =========================
-            if (appState.hair === 0) { // ويفي طويل مع خصل منسدلة
+            // ==========================================
+            // رسم تسريحات الشعر (تغطية تامة + عيون مكشوفة)
+            // ==========================================
+            if (appState.hair === 0) { // ويفي طويل
                 hb.innerHTML = `
-                    <path d="M 66 100 C 40 170 50 290 85 320 C 100 290 100 240 92 180 Z" fill="${c}"/>
-                    <path d="M 204 100 C 230 170 220 290 185 320 C 170 290 170 240 178 180 Z" fill="${c}"/>
-                    <path d="M 80 110 C 65 200 80 300 135 330 C 190 300 205 200 190 110 Z" fill="${c}" opacity="0.95"/>
+                    <ellipse cx="135" cy="110" rx="72" ry="66" fill="${c}"/>
+                    <path d="M 64 110 C 35 170 42 290 85 320 C 102 290 98 240 90 180 Z" fill="${c}"/>
+                    <path d="M 206 110 C 235 170 228 290 185 320 C 168 290 172 240 180 180 Z" fill="${c}"/>
+                    <path d="M 75 110 C 60 210 75 300 135 330 C 195 300 210 210 195 110 Z" fill="${c}"/>
                 `;
                 hf.innerHTML = `
-                    <!-- قبعة الشعر العلوية تغطي الرأس بالكامل -->
-                    <path d="M 68 115 C 62 48 208 48 202 115 C 195 140 185 155 178 130 C 160 145 148 118 135 118 C 122 118 110 145 92 130 C 85 155 75 140 68 115 Z" fill="${c}"/>
-                    <!-- خصلة جانبية يمنى ويسرى فوق الأكتاف -->
-                    <path d="M 72 115 Q 65 170 82 205 Q 88 170 82 130 Z" fill="${c}"/>
-                    <path d="M 198 115 Q 205 170 188 205 Q 182 170 188 130 Z" fill="${c}"/>
-                    <!-- لمعة أنمي بيضاوية ناعمة -->
-                    <ellipse cx="135" cy="72" rx="42" ry="5" fill="#ffffff" opacity="0.35"/>
+                    <!-- تغطية كاملة لمحيط الرأس والقمة -->
+                    <path d="M 65 115 C 60 40 210 40 205 115 C 196 110 180 94 165 92 C 145 92 135 88 125 92 C 105 94 88 110 65 115 Z" fill="${c}"/>
+                    <!-- خصل جانبية فوق الأكتاف بعيدة عن العين -->
+                    <path d="M 66 110 Q 56 165 74 195 Q 82 165 76 118 Z" fill="${c}"/>
+                    <path d="M 204 110 Q 214 165 196 195 Q 188 165 194 118 Z" fill="${c}"/>
+                    <ellipse cx="135" cy="68" rx="42" ry="5" fill="#ffffff" opacity="0.35"/>
                 `;
-            } else if (appState.hair === 1) { // كعكتين أنمي مرتفعتين
+            } else if (appState.hair === 1) { // كعكتين أنمي
                 hb.innerHTML = `
-                    <circle cx="68" cy="62" r="28" fill="${c}"/>
-                    <circle cx="202" cy="62" r="28" fill="${c}"/>
-                    <!-- خصلات نازلة خلف الظهر -->
-                    <path d="M 68 85 Q 52 160 70 200 Q 78 150 78 95 Z" fill="${c}"/>
-                    <path d="M 202 85 Q 218 160 200 200 Q 192 150 192 95 Z" fill="${c}"/>
+                    <ellipse cx="135" cy="108" rx="70" ry="65" fill="${c}"/>
+                    <circle cx="64" cy="58" r="30" fill="${c}"/>
+                    <circle cx="206" cy="58" r="30" fill="${c}"/>
+                    <path d="M 66 85 Q 48 160 68 200 Q 76 150 78 95 Z" fill="${c}"/>
+                    <path d="M 204 85 Q 222 160 202 200 Q 194 150 192 95 Z" fill="${c}"/>
                 `;
                 hf.innerHTML = `
-                    <!-- خوذة الرأس -->
-                    <path d="M 69 115 C 65 48 205 48 201 115 C 195 105 170 102 155 118 C 145 102 125 102 115 118 C 100 102 75 105 69 115 Z" fill="${c}"/>
-                    <!-- فيونكات صغيرة تحت الكعكات -->
-                    <circle cx="70" cy="75" r="7" fill="#ff7aa2"/>
-                    <circle cx="200" cy="75" r="7" fill="#ff7aa2"/>
-                    <ellipse cx="135" cy="74" rx="35" ry="4.5" fill="#ffffff" opacity="0.3"/>
+                    <path d="M 66 115 C 60 40 210 40 204 115 C 192 105 175 92 155 92 C 142 88 128 88 115 92 C 95 92 78 105 66 115 Z" fill="${c}"/>
+                    <circle cx="66" cy="74" r="7" fill="#ff7aa2"/>
+                    <circle cx="204" cy="74" r="7" fill="#ff7aa2"/>
+                    <ellipse cx="135" cy="70" rx="36" ry="4.5" fill="#ffffff" opacity="0.3"/>
                 `;
-            } else if (appState.hair === 2) { // توين تيل غيمة كثيفة
+            } else if (appState.hair === 2) { // توين تيل
                 hb.innerHTML = `
-                    <path d="M 68 110 C 25 120 15 230 50 265 C 75 250 82 180 85 130 Z" fill="${c}"/>
-                    <path d="M 202 110 C 245 120 255 230 220 265 C 195 250 188 180 185 130 Z" fill="${c}"/>
+                    <ellipse cx="135" cy="108" rx="70" ry="65" fill="${c}"/>
+                    <path d="M 66 105 C 20 120 10 230 48 265 C 72 250 80 180 82 130 Z" fill="${c}"/>
+                    <path d="M 204 105 C 250 120 260 230 222 265 C 198 250 190 180 188 130 Z" fill="${c}"/>
                 `;
                 hf.innerHTML = `
-                    <path d="M 68 115 C 62 48 208 48 202 115 C 192 140 182 125 168 120 C 150 120 142 110 135 110 C 128 110 120 120 102 120 C 88 125 78 140 68 115 Z" fill="${c}"/>
-                    <ellipse cx="62" cy="115" rx="6" ry="10" fill="#ff477e"/>
-                    <ellipse cx="208" cy="115" rx="6" ry="10" fill="#ff477e"/>
-                    <ellipse cx="135" cy="72" rx="42" ry="5" fill="#ffffff" opacity="0.35"/>
+                    <path d="M 65 115 C 60 40 210 40 205 115 C 195 106 178 92 160 92 C 145 88 125 88 110 92 C 92 92 75 106 65 115 Z" fill="${c}"/>
+                    <ellipse cx="58" cy="112" rx="6" ry="10" fill="#ff477e"/>
+                    <ellipse cx="212" cy="112" rx="6" ry="10" fill="#ff477e"/>
+                    <ellipse cx="135" cy="68" rx="40" ry="5" fill="#ffffff" opacity="0.35"/>
                 `;
-            } else if (appState.hair === 3) { // بوب كاواي مستدير
+            } else if (appState.hair === 3) { // بوب كاواي
                 hb.innerHTML = `
-                    <ellipse cx="135" cy="120" rx="74" ry="68" fill="${c}"/>
+                    <ellipse cx="135" cy="115" rx="76" ry="70" fill="${c}"/>
                 `;
                 hf.innerHTML = `
-                    <path d="M 66 115 C 60 50 210 50 204 115 C 208 165 198 175 188 140 C 170 122 155 116 135 116 C 115 116 100 122 82 140 C 72 175 62 165 66 115 Z" fill="${c}"/>
-                    <ellipse cx="135" cy="74" rx="40" ry="4.5" fill="#ffffff" opacity="0.35"/>
+                    <path d="M 64 115 C 58 40 212 40 206 115 C 208 160 198 175 188 140 C 172 100 155 92 135 92 C 115 92 98 100 82 140 C 72 175 62 160 64 115 Z" fill="${c}"/>
+                    <ellipse cx="135" cy="70" rx="40" ry="4.5" fill="#ffffff" opacity="0.35"/>
                 `;
-            } else if (appState.hair === 4) { // كيرلي لطيف
+            } else if (appState.hair === 4) { // كيرلي
                 hb.innerHTML = `
-                    <circle cx="75" cy="130" r="32" fill="${c}"/>
-                    <circle cx="195" cy="130" r="32" fill="${c}"/>
-                    <circle cx="85" cy="180" r="28" fill="${c}"/>
-                    <circle cx="185" cy="180" r="28" fill="${c}"/>
-                    <circle cx="135" cy="80" r="55" fill="${c}"/>
+                    <ellipse cx="135" cy="108" rx="70" ry="65" fill="${c}"/>
+                    <circle cx="70" cy="130" r="32" fill="${c}"/>
+                    <circle cx="200" cy="130" r="32" fill="${c}"/>
+                    <circle cx="80" cy="180" r="28" fill="${c}"/>
+                    <circle cx="190" cy="180" r="28" fill="${c}"/>
                 `;
                 hf.innerHTML = `
-                    <path d="M 70 115 C 66 50 204 50 200 115 C 190 125 180 112 165 118 C 150 110 140 115 135 115 C 130 115 120 110 105 118 C 90 112 80 125 70 115 Z" fill="${c}"/>
-                    <circle cx="75" cy="115" r="7" fill="${c}"/>
-                    <circle cx="195" cy="115" r="7" fill="${c}"/>
-                    <ellipse cx="135" cy="72" rx="38" ry="4.5" fill="#ffffff" opacity="0.3"/>
+                    <path d="M 66 115 C 60 40 210 40 204 115 C 190 102 175 92 155 92 C 145 88 125 88 115 92 C 95 92 80 102 66 115 Z" fill="${c}"/>
+                    <circle cx="70" cy="112" r="8" fill="${c}"/>
+                    <circle cx="200" cy="112" r="8" fill="${c}"/>
+                    <ellipse cx="135" cy="68" rx="38" ry="4.5" fill="#ffffff" opacity="0.3"/>
                 `;
-            } else { // بوي ناعم وعصري
+            } else { // بوي ناعم
                 hb.innerHTML = `
-                    <ellipse cx="135" cy="102" rx="66" ry="58" fill="${c}"/>
+                    <ellipse cx="135" cy="104" rx="70" ry="64" fill="${c}"/>
                 `;
                 hf.innerHTML = `
-                    <path d="M 68 110 C 64 48 206 48 202 110 C 190 142 178 135 168 120 C 152 135 140 118 135 118 C 130 118 118 135 102 120 C 92 135 80 142 68 110 Z" fill="${c}"/>
-                    <ellipse cx="135" cy="70" rx="36" ry="4" fill="#ffffff" opacity="0.35"/>
+                    <path d="M 65 110 C 60 40 210 40 205 110 C 192 118 178 96 165 92 C 148 92 138 88 135 88 C 132 88 122 92 105 92 C 92 96 78 118 65 110 Z" fill="${c}"/>
+                    <ellipse cx="135" cy="68" rx="36" ry="4" fill="#ffffff" opacity="0.35"/>
                 `;
             }
 
-            // =========================
-            // رسم الأزياء الفخمة والمنسقة
-            // =========================
-            if (appState.outfit === 0) { // فستان لوليتا وردي ملكي مع فيونكات وكشاكش
+            // ==========================================
+            // رسم الأحذية المخصصة
+            // ==========================================
+            if (appState.shoes === 0) { // حذاء مدرسي بكعب أسود مع جوارب بيضاء
+                sh.innerHTML = `
+                    <rect x="113" y="250" width="18" height="18" rx="4" fill="#ffffff"/>
+                    <rect x="139" y="250" width="18" height="18" rx="4" fill="#ffffff"/>
+                    <ellipse cx="122" cy="272" rx="11" ry="6" fill="#1c1a24"/>
+                    <ellipse cx="148" cy="272" rx="11" ry="6" fill="#1c1a24"/>
+                    <rect x="114" y="271" width="6" height="5" fill="#000000"/>
+                    <rect x="150" y="271" width="6" height="5" fill="#000000"/>
+                `;
+            } else if (appState.shoes === 1) { // حذاء لوليتا وردي مع شرايط
+                sh.innerHTML = `
+                    <rect x="113" y="246" width="18" height="22" rx="4" fill="#ffffff"/>
+                    <rect x="139" y="246" width="18" height="22" rx="4" fill="#ffffff"/>
+                    <ellipse cx="122" cy="272" rx="11" ry="6" fill="#ff7aa2"/>
+                    <ellipse cx="148" cy="272" rx="11" ry="6" fill="#ff7aa2"/>
+                    <circle cx="122" cy="268" r="3" fill="#ffffff"/>
+                    <circle cx="148" cy="268" r="3" fill="#ffffff"/>
+                `;
+            } else if (appState.shoes === 2) { // سنيكرز رياضي كاجوال أبيض وزهري
+                sh.innerHTML = `
+                    <rect x="112" y="262" width="20" height="13" rx="5" fill="#ffffff"/>
+                    <rect x="138" y="262" width="20" height="13" rx="5" fill="#ffffff"/>
+                    <path d="M 112 273 L 132 273" stroke="#ff477e" stroke-width="3"/>
+                    <path d="M 138 273 L 158 273" stroke="#ff477e" stroke-width="3"/>
+                `;
+            } else if (appState.shoes === 3) { // بوت بني طويل أنيق
+                sh.innerHTML = `
+                    <rect x="112" y="235" width="20" height="38" rx="5" fill="#6f4e37"/>
+                    <rect x="138" y="235" width="20" height="38" rx="5" fill="#6f4e37"/>
+                    <ellipse cx="122" cy="273" rx="11" ry="5.5" fill="#543d2b"/>
+                    <ellipse cx="148" cy="273" rx="11" ry="5.5" fill="#543d2b"/>
+                `;
+            } else { // خف قطة كاواي
+                sh.innerHTML = `
+                    <ellipse cx="122" cy="271" rx="13" ry="8" fill="#ffd1dc"/>
+                    <ellipse cx="148" cy="271" rx="13" ry="8" fill="#ffd1dc"/>
+                    <!-- آذان صغيرة للخف -->
+                    <polygon points="113,266 117,260 121,266" fill="#ff7aa2"/>
+                    <polygon points="123,266 127,260 131,266" fill="#ff7aa2"/>
+                    <polygon points="139,266 143,260 147,266" fill="#ff7aa2"/>
+                    <polygon points="149,266 153,260 157,266" fill="#ff7aa2"/>
+                `;
+            }
+
+            // ==========================================
+            // رسم الملابس
+            // ==========================================
+            if (appState.outfit === 0) { // فستان لوليتا
                 out.innerHTML = `
-                    <!-- الصدرية -->
                     <path d="M 112 175 L 158 175 L 164 212 L 106 212 Z" fill="#ff7aa2"/>
                     <path d="M 124 175 L 146 175 L 142 212 L 128 212 Z" fill="#ffffff"/>
                     <circle cx="135" cy="186" r="2.5" fill="#ff477e"/>
                     <circle cx="135" cy="198" r="2.5" fill="#ff477e"/>
-                    <!-- أكمام منفوخة أميرات -->
                     <circle cx="106" cy="180" r="11" fill="#ffb3c6"/>
                     <circle cx="164" cy="180" r="11" fill="#ffb3c6"/>
-                    <!-- تنورة واسعة كلوش مع طبقات كشكش -->
-                    <path d="M 104 212 L 166 212 L 186 260 Q 135 272 84 260 Z" fill="#ff7aa2"/>
-                    <path d="M 84 260 Q 135 272 186 260 L 188 266 Q 135 278 82 266 Z" fill="#ffffff"/>
-                    <!-- فيونكة الحزام -->
+                    <path d="M 104 212 L 166 212 L 186 256 Q 135 268 84 256 Z" fill="#ff7aa2"/>
+                    <path d="M 84 256 Q 135 268 186 256 L 188 262 Q 135 274 82 262 Z" fill="#ffffff"/>
                     <ellipse cx="135" cy="214" rx="8" ry="4.5" fill="#ff477e"/>
                 `;
-            } else if (appState.outfit === 1) { // هودي كيتي أوفر سايز بنفسجي ووردي
+            } else if (appState.outfit === 1) { // هودي قطة
                 out.innerHTML = `
                     <path d="M 102 172 Q 135 168 168 172 L 165 240 Q 135 246 105 240 Z" fill="#cbb2fe"/>
-                    <!-- جيب أمامي للهودي مع رسمة قطة -->
                     <rect x="117" y="215" width="36" height="20" rx="6" fill="#ffffff"/>
                     <ellipse cx="135" cy="225" rx="5" ry="3.5" fill="#ff7aa2"/>
-                    <!-- حبال الهودي -->
                     <line x1="126" y1="182" x2="126" y2="204" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round"/>
                     <line x1="144" y1="182" x2="144" y2="204" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round"/>
-                    <!-- أكمام الهودي العريضة -->
                     <rect x="96" y="180" width="16" height="38" rx="8" transform="rotate(18 96 180)" fill="#cbb2fe"/>
                     <rect x="158" y="180" width="16" height="38" rx="8" transform="rotate(-18 158 180)" fill="#cbb2fe"/>
                 `;
-            } else if (appState.outfit === 2) { // مريول سيلور أنمي مدرسي
+            } else if (appState.outfit === 2) { // مريول سيلور
                 out.innerHTML = `
-                    <!-- قميص أبيض -->
                     <path d="M 112 175 L 158 175 L 160 210 L 110 210 Z" fill="#ffffff"/>
-                    <!-- ياقة السيلور الكحلية مع خطوط بيضاء -->
                     <polygon points="110,175 160,175 164,195 135,206 106,195" fill="#1d3557"/>
-                    <!-- شريطة عنق حمراء -->
                     <polygon points="131,192 139,192 143,212 135,204 127,212" fill="#e63946"/>
-                    <!-- تنورة طيات بليسيه -->
-                    <polygon points="106,210 164,210 178 252 92 252" fill="#1d3557"/>
-                    <line x1="102" y1="248" x2="168" y2="248" stroke="#ffffff" stroke-width="2"/>
+                    <polygon points="106,210 164,210 178 250 92 250" fill="#1d3557"/>
+                    <line x1="102" y1="246" x2="168" y2="246" stroke="#ffffff" stroke-width="2"/>
                 `;
-            } else if (appState.outfit === 3) { // كاجوال توب ستراب وردي وشورت جينز
+            } else if (appState.outfit === 3) { // طقم كاجوال
                 out.innerHTML = `
-                    <!-- توب باستيل ناعم -->
                     <path d="M 116 180 L 154 180 L 156 210 L 114 210 Z" fill="#ffb4a2"/>
                     <line x1="123" y1="168" x2="123" y2="180" stroke="#ffb4a2" stroke-width="3"/>
                     <line x1="147" y1="168" x2="147" y2="180" stroke="#ffb4a2" stroke-width="3"/>
-                    <!-- شورت جينز مع حزام -->
                     <rect x="112" y="210" width="46" height="24" rx="4" fill="#669bbc"/>
                     <line x1="135" y1="214" x2="135" y2="234" stroke="#3d5a80" stroke-width="2"/>
                 `;
-            } else if (appState.outfit === 4) { // فستان أميرات براق أزرق ثلجي
+            } else if (appState.outfit === 4) { // فستان أميرة
                 out.innerHTML = `
                     <path d="M 112 176 L 158 176 L 164 214 L 106 214 Z" fill="#90e0ef"/>
-                    <!-- ياقة دانتيل بيضاء شفافة -->
                     <ellipse cx="135" cy="177" rx="22" ry="5" fill="#ffffff"/>
-                    <!-- تنورة ملكية كبيرة مع بريق -->
-                    <path d="M 106 214 L 164 214 L 194 266 Q 135 278 76 266 Z" fill="#00b4d8"/>
-                    <path d="M 114 214 Q 135 258 156 214 Z" fill="#ffffff" opacity="0.6"/>
-                    <circle cx="120" cy="245" r="3" fill="#ffffff"/>
-                    <circle cx="150" cy="245" r="3" fill="#ffffff"/>
+                    <path d="M 106 214 L 164 214 L 194 262 Q 135 274 76 262 Z" fill="#00b4d8"/>
+                    <path d="M 114 214 Q 135 254 156 214 Z" fill="#ffffff" opacity="0.6"/>
+                    <circle cx="120" cy="242" r="3" fill="#ffffff"/>
+                    <circle cx="150" cy="242" r="3" fill="#ffffff"/>
                 `;
-            } else { // فستان أصفر ومشمشي لطيف
+            } else { // فستان مشمشي
                 out.innerHTML = `
                     <path d="M 112 175 L 158 175 L 162 212 L 108 212 Z" fill="#ffeaa7"/>
                     <ellipse cx="135" cy="186" rx="6" ry="6" fill="#fab1a0"/>
-                    <path d="M 106 212 L 164 212 L 180 256 Q 135 268 90 256 Z" fill="#ffeaa7"/>
-                    <path d="M 90 256 Q 135 268 180 256 L 182 262 Q 135 274 88 262 Z" fill="#ff7675"/>
+                    <path d="M 106 212 L 164 212 L 180 254 Q 135 266 90 254 Z" fill="#ffeaa7"/>
+                    <path d="M 90 254 Q 135 266 180 254 L 182 260 Q 135 272 88 260 Z" fill="#ff7675"/>
                 `;
             }
 
-            // =========================
-            // رسم الإكسسوارات الفخمة
-            // =========================
-            if (appState.acc === 0) { // آذان قطة مخملية
+            // ==========================================
+            // رسم الإكسسوار
+            // ==========================================
+            if (appState.acc === 0) { // آذان قطة
                 acc.innerHTML = `
-                    <polygon points="85,65 105,25 125,58" fill="#ff7aa2"/>
-                    <polygon points="92,60 105,34 118,55" fill="#ffffff"/>
-                    <polygon points="145,58 165,25 185,65" fill="#ff7aa2"/>
-                    <polygon points="152,55 165,34 178,60" fill="#ffffff"/>
+                    <polygon points="85,60 105,20 125,53" fill="#ff7aa2"/>
+                    <polygon points="92,55 105,29 118,50" fill="#ffffff"/>
+                    <polygon points="145,53 165,20 185,60" fill="#ff7aa2"/>
+                    <polygon points="152,50 165,29 178,55" fill="#ffffff"/>
                 `;
-            } else if (appState.acc === 1) { // فيونكة كبيرة فخمة
+            } else if (appState.acc === 1) { // فيونكة ضخمة
                 acc.innerHTML = `
-                    <g transform="translate(135, 52)">
+                    <g transform="translate(135, 48)">
                         <path d="M 0 0 C -35 -26 -46 22 -6 8 Z" fill="#ff477e"/>
                         <path d="M 0 0 C 35 -26 46 22 6 8 Z" fill="#ff477e"/>
                         <circle cx="0" cy="3" r="7" fill="#ffffff"/>
                     </g>
                 `;
-            } else if (appState.acc === 2) { // تاج ذهبي 16K مرصع
+            } else if (appState.acc === 2) { // تاج 16K
                 acc.innerHTML = `
-                    <polygon points="112,52 120,28 135,42 150,28 158,52" fill="#ffd166" stroke="#f39c12" stroke-width="2"/>
-                    <circle cx="135" cy="40" r="3.5" fill="#e63946"/>
-                    <circle cx="120" cy="36" r="2.5" fill="#48cae4"/>
-                    <circle cx="150" cy="36" r="2.5" fill="#48cae4"/>
-                    <text x="135" y="50" font-size="8.5" font-weight="900" fill="#b06400" text-anchor="middle">16K</text>
+                    <polygon points="112,48 120,24 135,38 150,24 158,48" fill="#ffd166" stroke="#f39c12" stroke-width="2"/>
+                    <circle cx="135" cy="36" r="3.5" fill="#e63946"/>
+                    <circle cx="120" cy="32" r="2.5" fill="#48cae4"/>
+                    <circle cx="150" cy="32" r="2.5" fill="#48cae4"/>
+                    <text x="135" y="46" font-size="8.5" font-weight="900" fill="#b06400" text-anchor="middle">16K</text>
                 `;
-            } else if (appState.acc === 3) { // سماعات أذن قطة بستايل ستريمر
+            } else if (appState.acc === 3) { // سماعات قطة
                 acc.innerHTML = `
-                    <!-- طوق السماعة -->
                     <path d="M 72 105 A 64 64 0 0 1 198 105" fill="none" stroke="#ff7aa2" stroke-width="5"/>
-                    <polygon points="90,56 102,32 114,54" fill="#ff7aa2"/>
-                    <polygon points="156,54 168,32 180,56" fill="#ff7aa2"/>
-                    <!-- أغطية الأذن -->
+                    <polygon points="90,52 102,28 114,50" fill="#ff7aa2"/>
+                    <polygon points="156,50 168,28 180,52" fill="#ff7aa2"/>
                     <rect x="64" y="95" width="12" height="25" rx="6" fill="#ff477e"/>
                     <rect x="194" y="95" width="12" height="25" rx="6" fill="#ff477e"/>
                 `;
-            } else if (appState.acc === 4) { // نظارات دائرية وردية
+            } else if (appState.acc === 4) { // نظارات
                 acc.innerHTML = `
-                    <circle cx="108" cy="112" r="18" stroke="#ff477e" stroke-width="3" fill="rgba(255,255,255,0.2)"/>
-                    <circle cx="162" cy="112" r="18" stroke="#ff477e" stroke-width="3" fill="rgba(255,255,255,0.2)"/>
-                    <line x1="126" y1="112" x2="144" y2="112" stroke="#ff477e" stroke-width="3"/>
+                    <circle cx="108" cy="115" r="18" stroke="#ff477e" stroke-width="3" fill="rgba(255,255,255,0.2)"/>
+                    <circle cx="162" cy="115" r="18" stroke="#ff477e" stroke-width="3" fill="rgba(255,255,255,0.2)"/>
+                    <line x1="126" y1="115" x2="144" y2="115" stroke="#ff477e" stroke-width="3"/>
                 `;
             } else {
                 acc.innerHTML = '';
             }
         }
 
-        // اختيار عشوائي
         document.getElementById('btn-rand').addEventListener('click', () => {
             const colors = ['#422518', '#1c1a24', '#ff7aa2', '#baa0f8', '#ffd166', '#e76f51'];
             const skins = ['#ffdfd3', '#fcd0b0', '#dca074', '#8a5836'];
@@ -669,6 +697,7 @@
             appState.hair = Math.floor(Math.random() * 6);
             appState.hairColor = colors[Math.floor(Math.random() * colors.length)];
             appState.outfit = Math.floor(Math.random() * 6);
+            appState.shoes = Math.floor(Math.random() * 5);
             appState.acc = Math.floor(Math.random() * 6);
             appState.skin = skins[Math.floor(Math.random() * skins.length)];
 
@@ -680,6 +709,7 @@
                 if (type === 'hair' && parseInt(val, 10) === appState.hair) btn.classList.add('selected');
                 if (type === 'color' && val === appState.hairColor) btn.classList.add('selected');
                 if (type === 'outfit' && parseInt(val, 10) === appState.outfit) btn.classList.add('selected');
+                if (type === 'shoes' && parseInt(val, 10) === appState.shoes) btn.classList.add('selected');
                 if (type === 'acc' && parseInt(val, 10) === appState.acc) btn.classList.add('selected');
                 if (type === 'skin' && val === appState.skin) btn.classList.add('selected');
             });
@@ -687,7 +717,6 @@
             drawChibi();
         });
 
-        // تنزيل الصورة
         document.getElementById('btn-save').addEventListener('click', () => {
             const svgEl = document.getElementById('main-svg');
             const svgContent = `
@@ -729,7 +758,6 @@
             img.src = url;
         });
 
-        // تشغيل أولي
         drawChibi();
     </script>
 </body>
