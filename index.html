@@ -1,0 +1,2211 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎀 Pookie Chibi Deluxe 🎀 | احتفال 16K</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Tajawal:wght@500;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #ff5d8f;
+            --primary-hover: #ff3370;
+            --primary-light: #fff0f5;
+            --primary-border: #ffb3c6;
+            --accent: #9d4edd;
+            --accent-light: #f3e8ff;
+            --bg-color: #ffd6e0;
+            --card-bg: rgba(255, 255, 255, 0.95);
+            --text: #442238;
+            --text-muted: #835b75;
+            --shadow-soft: 0 14px 40px rgba(255, 93, 143, 0.22);
+            --shadow-btn: 0 5px 16px rgba(255, 93, 143, 0.3);
+            --radius-main: 32px;
+            --radius-card: 22px;
+            --radius-sm: 14px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Fredoka', 'Tajawal', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+            user-select: none;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            background-image: 
+                radial-gradient(var(--primary-border) 2px, transparent 2px),
+                radial-gradient(#ffcad4 1.5px, transparent 1.5px);
+            background-size: 32px 32px, 16px 16px;
+            background-position: 0 0, 16px 16px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 16px;
+            color: var(--text);
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Floating background decorative bubbles */
+        .bg-sparkle {
+            position: absolute;
+            pointer-events: none;
+            opacity: 0.45;
+            animation: floatSlow 6s ease-in-out infinite alternate;
+            z-index: 0;
+        }
+        @keyframes floatSlow {
+            0% { transform: translateY(0) rotate(0deg); }
+            100% { transform: translateY(-24px) rotate(15deg); }
+        }
+
+        /* Top Header */
+        header {
+            text-align: center;
+            margin-bottom: 16px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .title-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        h1 {
+            font-size: 2.35rem;
+            font-weight: 900;
+            color: #ffffff;
+            text-shadow: 
+                3px 3px 0 var(--primary),
+                -1.5px -1.5px 0 var(--primary),
+                1.5px -1.5px 0 var(--primary),
+                -1.5px 1.5px 0 var(--primary),
+                0 6px 15px rgba(255, 93, 143, 0.45);
+            letter-spacing: -0.5px;
+        }
+
+        .badge-celebration {
+            background: linear-gradient(135deg, #fff 0%, #fff0f5 100%);
+            color: var(--primary);
+            padding: 6px 20px;
+            border-radius: 24px;
+            font-weight: 800;
+            font-size: 0.92rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            margin-top: 6px;
+            border: 2px dashed var(--primary-border);
+            box-shadow: 0 4px 12px rgba(255, 93, 143, 0.18);
+            animation: pulseSubtle 3s infinite ease-in-out;
+        }
+        @keyframes pulseSubtle {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.03); }
+        }
+
+        /* Header Quick Actions */
+        .top-tools {
+            position: absolute;
+            top: 15px;
+            left: 20px;
+            display: flex;
+            gap: 8px;
+            z-index: 10;
+        }
+        .tool-btn {
+            background: rgba(255, 255, 255, 0.92);
+            border: 2px solid var(--primary-border);
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+            transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        .tool-btn:hover {
+            transform: scale(1.12) rotate(6deg);
+            border-color: var(--primary);
+            background: #fff;
+        }
+
+        /* Main Master Container */
+        .main-app {
+            background: var(--card-bg);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-radius: var(--radius-main);
+            padding: 24px;
+            box-shadow: var(--shadow-soft);
+            display: grid;
+            grid-template-columns: 390px 1fr;
+            gap: 26px;
+            max-width: 1040px;
+            width: 100%;
+            border: 5px solid #ffffff;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Stage Column */
+        .stage-column {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .stage-box {
+            position: relative;
+            width: 100%;
+            height: 470px;
+            border-radius: var(--radius-card);
+            border: 4px solid #fff;
+            box-shadow: inset 0 3px 15px rgba(0,0,0,0.04), 0 8px 25px rgba(255, 93, 143, 0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            transition: background 0.4s ease;
+        }
+
+        /* Canvas Wrapper & SVG */
+        .chibi-avatar-wrapper {
+            position: relative;
+            width: 330px;
+            height: 440px;
+            cursor: pointer;
+            animation: chibiBreathe 4s ease-in-out infinite;
+            transform-origin: bottom center;
+        }
+        @keyframes chibiBreathe {
+            0%, 100% { transform: translateY(0) scale(1); }
+            50% { transform: translateY(-8px) scale(1.008); }
+        }
+
+        .chibi-avatar-wrapper:active {
+            transform: scale(0.96);
+            transition: transform 0.1s;
+        }
+
+        #chibi-svg {
+            width: 100%;
+            height: 100%;
+            filter: drop-shadow(0 8px 16px rgba(110, 45, 75, 0.15));
+        }
+
+        /* Animated Blinking */
+        @keyframes eyesBlink {
+            0%, 95%, 100% { transform: scaleY(1); }
+            97% { transform: scaleY(0.06); }
+        }
+        .anim-eyes {
+            transform-origin: 200px 154px;
+            animation: eyesBlink 4.2s infinite;
+        }
+
+        /* Ahoge bounce */
+        @keyframes ahogeWiggle {
+            0%, 100% { transform: rotate(0deg); }
+            35% { transform: rotate(4deg); }
+            70% { transform: rotate(-4deg); }
+        }
+        .anim-ahoge {
+            transform-origin: 200px 95px;
+            animation: ahogeWiggle 3.2s ease-in-out infinite;
+        }
+
+        /* Pet floating */
+        @keyframes petHover {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px) rotate(3deg); }
+        }
+        .anim-pet {
+            animation: petHover 2.6s ease-in-out infinite;
+        }
+
+        /* Floating Badge / Name Plate */
+        .nameplate-container {
+            display: flex;
+            align-items: center;
+            background: #fff;
+            border: 2px solid var(--primary-border);
+            border-radius: 18px;
+            padding: 6px 12px;
+            box-shadow: 0 4px 10px rgba(255, 93, 143, 0.1);
+            gap: 8px;
+        }
+        .nameplate-input {
+            border: none;
+            outline: none;
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--text);
+            width: 100%;
+            background: transparent;
+        }
+        .nameplate-input::placeholder {
+            color: #d19fb5;
+            font-weight: 600;
+        }
+
+        /* Quick Stage Action Bar */
+        .stage-quick-actions {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .btn-quick {
+            border: none;
+            padding: 10px;
+            border-radius: var(--radius-sm);
+            font-weight: 800;
+            font-size: 0.9rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 7px;
+            transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        .btn-quick:active {
+            transform: scale(0.94);
+        }
+        .btn-rand-all {
+            background: linear-gradient(135deg, #ffe5ec 0%, #ffc2d1 100%);
+            color: #6a1b4d;
+            box-shadow: 0 4px 12px rgba(255, 112, 166, 0.2);
+        }
+        .btn-rand-all:hover {
+            background: linear-gradient(135deg, #ffd1dc 0%, #ffafcc 100%);
+        }
+        .btn-reset-all {
+            background: #f8f9fa;
+            color: var(--text-muted);
+            border: 1.5px solid #eee;
+        }
+        .btn-reset-all:hover {
+            background: #f1f3f5;
+            color: var(--text);
+        }
+
+        /* Right Column: Wardrobe & Controls */
+        .controls-column {
+            display: flex;
+            flex-direction: column;
+            min-width: 0;
+        }
+
+        /* Category Nav Tabs */
+        .category-scroll-bar {
+            display: flex;
+            gap: 7px;
+            overflow-x: auto;
+            padding-bottom: 10px;
+            scrollbar-width: thin;
+            scrollbar-color: var(--primary-border) transparent;
+        }
+        .category-scroll-bar::-webkit-scrollbar {
+            height: 5px;
+        }
+        .category-scroll-bar::-webkit-scrollbar-thumb {
+            background: var(--primary-border);
+            border-radius: 10px;
+        }
+
+        .cat-tab {
+            background: #ffffff;
+            border: 2px solid var(--primary-border);
+            color: var(--text-muted);
+            padding: 8px 14px;
+            border-radius: 16px;
+            font-weight: 800;
+            font-size: 0.86rem;
+            cursor: pointer;
+            white-space: nowrap;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+            box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+        }
+        .cat-tab:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+            transform: translateY(-2px);
+        }
+        .cat-tab.active {
+            background: var(--primary) !important;
+            color: #ffffff !important;
+            border-color: var(--primary) !important;
+            box-shadow: 0 5px 14px rgba(255, 93, 143, 0.35);
+        }
+
+        /* Options Grid View */
+        .panel-container {
+            flex: 1;
+            min-height: 310px;
+            position: relative;
+        }
+
+        .items-panel {
+            display: none;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            max-height: 340px;
+            overflow-y: auto;
+            padding: 6px 4px 10px 4px;
+            scrollbar-width: thin;
+            scrollbar-color: var(--primary-border) transparent;
+        }
+        .items-panel::-webkit-scrollbar {
+            width: 6px;
+        }
+        .items-panel::-webkit-scrollbar-thumb {
+            background: var(--primary-border);
+            border-radius: 10px;
+        }
+
+        .items-panel.active {
+            display: grid !important;
+            animation: fadeInGrid 0.25s ease-out;
+        }
+        @keyframes fadeInGrid {
+            from { opacity: 0; transform: translateY(6px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Item Choice Card */
+        .item-card {
+            background: #ffffff;
+            border: 2.5px solid #ffe3ec;
+            border-radius: var(--radius-card);
+            padding: 12px 6px;
+            text-align: center;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 7px;
+            transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+            box-shadow: 0 3px 8px rgba(0,0,0,0.03);
+            position: relative;
+        }
+        .item-card:hover {
+            transform: translateY(-4px);
+            border-color: #ff9ebb;
+            box-shadow: 0 6px 16px rgba(255, 93, 143, 0.15);
+        }
+        .item-card:active {
+            transform: scale(0.94);
+        }
+        .item-card.selected {
+            border-color: var(--primary) !important;
+            background: #fff3f6 !important;
+            box-shadow: 0 0 0 3px rgba(255, 93, 143, 0.25), 0 8px 18px rgba(255, 93, 143, 0.18);
+        }
+        .item-card.selected::after {
+            content: "✓";
+            position: absolute;
+            top: 6px;
+            right: 8px;
+            background: var(--primary);
+            color: #fff;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            font-size: 0.65rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+        }
+
+        .item-card .card-emoji {
+            font-size: 2.1rem;
+            line-height: 1;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.08));
+        }
+        .item-card .card-title {
+            font-size: 0.8rem;
+            font-weight: 800;
+            color: var(--text);
+            line-height: 1.2;
+        }
+        .item-card .card-badge {
+            font-size: 0.65rem;
+            font-weight: 800;
+            color: var(--primary);
+            background: #ffe8ef;
+            padding: 2px 7px;
+            border-radius: 8px;
+        }
+
+        /* Color Swatches Panel */
+        .swatches-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+            gap: 12px;
+            padding: 10px 4px;
+        }
+        .swatch-card {
+            background: #fff;
+            border: 2px solid #ffe3ec;
+            border-radius: 18px;
+            padding: 12px 6px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+            transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        .swatch-card:hover {
+            transform: translateY(-3px);
+            border-color: var(--primary);
+        }
+        .swatch-card.selected {
+            border-color: var(--primary);
+            background: #fff3f6;
+            box-shadow: 0 0 0 2px var(--primary);
+        }
+        .swatch-circle {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            border: 3px solid #fff;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+        }
+        .swatch-name {
+            font-size: 0.76rem;
+            font-weight: 800;
+            color: var(--text);
+        }
+
+        /* Export & Download Hub */
+        .bottom-action-bar {
+            display: grid;
+            grid-template-columns: 1.4fr 1fr 1fr;
+            gap: 10px;
+            margin-top: 16px;
+            padding-top: 14px;
+            border-top: 2px dashed #ffd1dc;
+        }
+
+        .btn-act {
+            border: none;
+            padding: 13px 12px;
+            border-radius: var(--radius-card);
+            font-weight: 800;
+            font-size: 0.95rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            transition: all 0.22s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        .btn-act:hover {
+            transform: translateY(-3px);
+        }
+        .btn-act:active {
+            transform: scale(0.94);
+        }
+
+        .btn-download-hd {
+            background: linear-gradient(135deg, #ff5d8f 0%, #ff3370 100%);
+            color: #ffffff;
+            box-shadow: var(--shadow-btn);
+        }
+        .btn-download-hd:hover {
+            box-shadow: 0 7px 20px rgba(255, 93, 143, 0.45);
+        }
+
+        .btn-download-pfp {
+            background: linear-gradient(135deg, #b5179e 0%, #7209b7 100%);
+            color: #ffffff;
+            box-shadow: 0 4px 14px rgba(114, 9, 183, 0.25);
+        }
+        .btn-download-pfp:hover {
+            box-shadow: 0 7px 20px rgba(114, 9, 183, 0.4);
+        }
+
+        .btn-copy-clip {
+            background: #ffffff;
+            color: var(--text);
+            border: 2px solid var(--primary-border);
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+        }
+        .btn-copy-clip:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+
+        /* Toast Popup */
+        #toast-notice {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%) translateY(70px);
+            background: rgba(45, 19, 36, 0.94);
+            backdrop-filter: blur(8px);
+            color: #ffffff;
+            padding: 12px 28px;
+            border-radius: 30px;
+            font-weight: 800;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+            transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.3s;
+            opacity: 0;
+            pointer-events: none;
+            z-index: 9999;
+            border: 1.5px solid rgba(255, 93, 143, 0.4);
+        }
+        #toast-notice.show {
+            transform: translateX(-50%) translateY(0);
+            opacity: 1;
+        }
+
+        /* Floating Sparkle Effect on Click */
+        .sparkle-pop {
+            position: fixed;
+            pointer-events: none;
+            font-size: 1.5rem;
+            animation: popAndFade 0.75s ease-out forwards;
+            z-index: 10000;
+        }
+        @keyframes popAndFade {
+            0% { transform: scale(0.3) rotate(0deg); opacity: 1; }
+            50% { transform: scale(1.3) translateY(-25px) rotate(20deg); opacity: 0.9; }
+            100% { transform: scale(0.8) translateY(-45px) rotate(40deg); opacity: 0; }
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 900px) {
+            .main-app {
+                grid-template-columns: 1fr;
+                gap: 20px;
+                padding: 16px;
+            }
+            .stage-box {
+                height: 420px;
+            }
+            .chibi-avatar-wrapper {
+                width: 280px;
+                height: 380px;
+            }
+            .bottom-action-bar {
+                grid-template-columns: 1fr;
+            }
+            h1 {
+                font-size: 1.9rem;
+            }
+            .top-tools {
+                position: static;
+                justify-content: center;
+                margin-bottom: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Floating Background Particles -->
+    <div class="bg-sparkle" style="top: 10%; left: 8%; font-size: 2.2rem;">✨</div>
+    <div class="bg-sparkle" style="top: 25%; right: 7%; font-size: 2.8rem; animation-delay: 1.2s;">🌸</div>
+    <div class="bg-sparkle" style="top: 75%; left: 10%; font-size: 2rem; animation-delay: 2.4s;">💖</div>
+    <div class="bg-sparkle" style="top: 85%; right: 12%; font-size: 2.4rem; animation-delay: 3s;">🎀</div>
+    <div class="bg-sparkle" style="top: 50%; right: 4%; font-size: 1.8rem; animation-delay: 1.8s;">🧁</div>
+
+    <!-- Quick Audio & Help Buttons -->
+    <div class="top-tools">
+        <button class="tool-btn" id="btn-sound" title="تشغيل / كتم المؤثرات الصوتية">🔊</button>
+        <button class="tool-btn" id="btn-snap" title="لقطة سريعة">📸</button>
+    </div>
+
+    <!-- Header Section -->
+    <header>
+        <div class="title-wrapper">
+            <h1>🎀 Pookie Chibi Deluxe 🎀</h1>
+        </div>
+        <div class="badge-celebration">
+            <span>🎉</span>
+            <span>احتفالاً بوصول 16,000 عضوة مبدعة في السيرفر!</span>
+            <span>💖</span>
+        </div>
+    </header>
+
+    <!-- Main App Container -->
+    <main class="main-app">
+
+        <!-- Left Column: Character Stage -->
+        <div class="stage-column">
+            
+            <!-- Stage Box (Background + Chibi Avatar) -->
+            <div class="stage-box" id="stage-bg-card">
+                
+                <div class="chibi-avatar-wrapper" id="avatar-click-zone" title="اضغطي علي لدغدغتي وسماع صوت لطيف! ✨">
+                    
+                    <svg id="chibi-svg" width="400" height="500" viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <radialGradient id="blushRadial" cx="50%" cy="50%" r="50%">
+                                <stop offset="0%" stop-color="#ff477e" stop-opacity="0.55"/>
+                                <stop offset="60%" stop-color="#ff7aa2" stop-opacity="0.3"/>
+                                <stop offset="100%" stop-color="#ff7aa2" stop-opacity="0"/>
+                            </radialGradient>
+
+                            <filter id="softShadow" x="-10%" y="-10%" width="120%" height="120%">
+                                <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#4a1525" flood-opacity="0.12"/>
+                            </filter>
+                        </defs>
+
+                        <!-- 0. أجنحة / تأثيرات خلفية (Back Accessories) -->
+                        <g id="slot-back-acc"></g>
+
+                        <!-- 1. الشعر الخلفي (Back Hair) -->
+                        <g id="slot-hair-back"></g>
+
+                        <!-- 2. الحيوان الأليف / المرافق (Companion Pet) -->
+                        <g id="slot-pet" class="anim-pet"></g>
+
+                        <!-- 3. الجسم والجلد (Base Chibi Anatomy) -->
+                        <g id="slot-body">
+                            <!-- الرقبة -->
+                            <rect id="node-skin-neck" x="189" y="215" width="22" height="26" rx="8" fill="#ffe2d6"/>
+                            <!-- ظل أسفل الرأس على الرقبة -->
+                            <ellipse cx="200" cy="223" rx="14" ry="4" fill="#000000" opacity="0.08"/>
+
+                            <!-- الساقين والقدمين -->
+                            <g id="slot-legs">
+                                <rect id="node-skin-leg-l" x="172" y="295" width="23" height="74" rx="11" fill="#ffe2d6"/>
+                                <rect id="node-skin-leg-r" x="205" y="295" width="23" height="74" rx="11" fill="#ffe2d6"/>
+                            </g>
+
+                            <!-- الجذع (Torso) -->
+                            <path id="node-skin-torso" d="M 166 230 Q 200 226 234 230 L 230 305 Q 200 312 170 305 Z" fill="#ffe2d6"/>
+
+                            <!-- الذراعين (Cute posing arms) -->
+                            <g id="slot-arms-back">
+                                <path id="node-skin-arm-l" d="M 168 234 C 145 248 135 275 145 292 C 152 288 160 262 174 246 Z" fill="#ffe2d6"/>
+                                <path id="node-skin-arm-r" d="M 232 234 C 255 248 265 275 255 292 C 248 288 240 262 226 246 Z" fill="#ffe2d6"/>
+                            </g>
+
+                            <!-- الرأس الفاتن (Big Kawaii Chibi Head) -->
+                            <g filter="url(#softShadow)">
+                                <ellipse id="node-skin-head" cx="200" cy="150" rx="88" ry="78" fill="#ffe2d6"/>
+                            </g>
+
+                            <!-- الأذنين اللطيفتين -->
+                            <ellipse id="node-skin-ear-l" cx="114" cy="156" rx="12" ry="14" fill="#ffe2d6"/>
+                            <ellipse id="node-skin-ear-r" cx="286" cy="156" rx="12" ry="14" fill="#ffe2d6"/>
+                            <ellipse cx="115" cy="156" rx="6" ry="8" fill="#ff8aa6" opacity="0.45"/>
+                            <ellipse cx="285" cy="156" rx="6" ry="8" fill="#ff8aa6" opacity="0.45"/>
+
+                            <!-- الخدود الوردية ولمعات الكاواي (Blush & Sparkles) -->
+                            <g id="slot-blush">
+                                <circle cx="150" cy="172" r="18" fill="url(#blushRadial)"/>
+                                <circle cx="250" cy="172" r="18" fill="url(#blushRadial)"/>
+                                <path d="M 143 170 L 138 177 M 149 169 L 144 178 M 155 170 L 151 178" stroke="#ff477e" stroke-width="1.6" stroke-linecap="round" opacity="0.75"/>
+                                <path d="M 245 170 L 241 177 M 251 169 L 247 178 M 257 170 L 253 178" stroke="#ff477e" stroke-width="1.6" stroke-linecap="round" opacity="0.75"/>
+                                <circle cx="137" cy="166" r="2.5" fill="#ffffff" opacity="0.9"/>
+                                <circle cx="263" cy="166" r="2.5" fill="#ffffff" opacity="0.9"/>
+                            </g>
+
+                            <!-- الأنف الصغير واللطيف جداً -->
+                            <ellipse cx="200" cy="166" rx="2.5" ry="1.8" fill="#e2738a"/>
+
+                            <!-- مجموعة العيون والرموش والبريق (Animated Anime Eyes) -->
+                            <g id="slot-eyes" class="anim-eyes"></g>
+
+                            <!-- الفم والتعابير (Expressions) -->
+                            <g id="slot-mouth"></g>
+
+                            <!-- استكرات وملصقات الوجه (Face stickers/Bandage/Stars) -->
+                            <g id="slot-face-deco"></g>
+                        </g>
+
+                        <!-- 4. الأحذية والجوارب (Shoes & Socks) -->
+                        <g id="slot-shoes"></g>
+
+                        <!-- 5. الملابس والفساتين (Outfits & Dresses) -->
+                        <g id="slot-outfit"></g>
+
+                        <!-- 6. كفوف اليدين فوق الملابس -->
+                        <g id="slot-hands">
+                            <circle id="node-skin-hand-l" cx="145" cy="292" r="9.5" fill="#ffe2d6"/>
+                            <circle id="node-skin-hand-r" cx="255" cy="292" r="9.5" fill="#ffe2d6"/>
+                        </g>
+
+                        <!-- 7. الأغراض المحمولة باليد (Handheld item) -->
+                        <g id="slot-handheld"></g>
+
+                        <!-- 8. الشعر الأمامي والغرة (Front Hair & Bangs) -->
+                        <g id="slot-hair-front"></g>
+
+                        <!-- 9. إكسسوارات الرأس (Head Accessories: Ears, Bows, Crown) -->
+                        <g id="slot-head-acc"></g>
+
+                        <!-- 10. بريق وتأثيرات أمامية (Front Sparkles) -->
+                        <g id="slot-sparkle-fx"></g>
+                    </svg>
+
+                </div>
+
+            </div>
+
+            <!-- Name Tag Editor -->
+            <div class="nameplate-container">
+                <span style="font-size: 1.1rem;">🏷️</span>
+                <input type="text" id="avatar-name-input" class="nameplate-input" placeholder="اكتبي اسم البوكي أو اسمك في السيرفر..." value="Pookie 16K Queen 👑" maxlength="28">
+            </div>
+
+            <!-- Quick Stage Action Buttons -->
+            <div class="stage-quick-actions">
+                <button type="button" class="btn-quick btn-rand-all" id="btn-quick-rand">
+                    <span>🎲</span>
+                    <span>تنسيق عشوائي مدهش</span>
+                </button>
+                <button type="button" class="btn-quick btn-reset-all" id="btn-quick-reset">
+                    <span>🔄</span>
+                    <span>إعادة ضبط للشكل الأساسي</span>
+                </button>
+            </div>
+
+        </div>
+
+        <!-- Right Column: Wardrobe Tabs & Grids -->
+        <div class="controls-column">
+            
+            <!-- Navigation Category Tabs -->
+            <div class="category-scroll-bar" id="category-tabs">
+                <button type="button" class="cat-tab active" data-tab="tab-hair">💇‍♀️ التسريحة</button>
+                <button type="button" class="cat-tab" data-tab="tab-hcolor">🎨 لون الشعر</button>
+                <button type="button" class="cat-tab" data-tab="tab-face">👀 الوجه والعيون</button>
+                <button type="button" class="cat-tab" data-tab="tab-outfit">👗 الأزياء والفساتين</button>
+                <button type="button" class="cat-tab" data-tab="tab-shoes">👠 الأحذية والجوارب</button>
+                <button type="button" class="cat-tab" data-tab="tab-acc">👑 إكسسوارات الرأس</button>
+                <button type="button" class="cat-tab" data-tab="tab-hand">🧋 أغراض اليد والمرافق</button>
+                <button type="button" class="cat-tab" data-tab="tab-bg">🏞️ الخلفيات والأجواء</button>
+                <button type="button" class="cat-tab" data-tab="tab-skin">🌸 درجات البشرة</button>
+            </div>
+
+            <!-- Panels Container -->
+            <div class="panel-container">
+                <div id="tab-hair" class="items-panel active"></div>
+                <div id="tab-hcolor" class="items-panel"></div>
+                <div id="tab-face" class="items-panel"></div>
+                <div id="tab-outfit" class="items-panel"></div>
+                <div id="tab-shoes" class="items-panel"></div>
+                <div id="tab-acc" class="items-panel"></div>
+                <div id="tab-hand" class="items-panel"></div>
+                <div id="tab-bg" class="items-panel"></div>
+                <div id="tab-skin" class="items-panel"></div>
+            </div>
+
+            <!-- Bottom Action Hub: HD Download & PFP Export -->
+            <div class="bottom-action-bar">
+                <button type="button" class="btn-act btn-download-hd" id="btn-save-full" title="تحميل البطاقة الاحتفالية الكاملة بدقة عالية جداً">
+                    <span>💾</span>
+                    <span>حفظ كبطاقة احتفالية HD</span>
+                </button>
+                <button type="button" class="btn-act btn-download-pfp" id="btn-save-pfp" title="تصدير كصورة شخصية دائرية مناسبة للديسكورد والواتساب">
+                    <span>✨</span>
+                    <span>أفاتار ديسكورد PFP</span>
+                </button>
+                <button type="button" class="btn-act btn-copy-clip" id="btn-copy-png" title="نسخ الصورة مباشرة للحافظة للصقها في الديسكورد فوراً">
+                    <span>📋</span>
+                    <span>نسخ للحافظة</span>
+                </button>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Toast Notice Container -->
+    <div id="toast-notice">
+        <span id="toast-icon">💖</span>
+        <span id="toast-msg">تم حفظ شخصيتك البوكي بنجاح!</span>
+    </div>
+
+    <!-- Application Script -->
+    <script>
+        /* ============================================================
+           POOKIE CHIBI DELUXE - Core Engine & Interactive State
+           ============================================================ */
+
+        // Global State
+        const state = {
+            hairStyle: 0,
+            hairColor: '#4a2835',
+            eyeStyle: 0,
+            eyeColor: '#7b2cbf',
+            mouthStyle: 0,
+            outfit: 0,
+            shoes: 0,
+            headAcc: 2, // Default: 16K Crown
+            handheld: 4, // Default: 16K Balloon
+            pet: 0,
+            bgStyle: 3, // Default: 16K Celebration Stage
+            skinTone: '#ffe2d6',
+            soundEnabled: true,
+            name: "Pookie 16K Queen 👑"
+        };
+
+        // Sound Synthesizer via Web Audio API
+        class SoundEngine {
+            constructor() {
+                this.ctx = null;
+            }
+            init() {
+                if (!this.ctx) {
+                    const AudioContext = window.AudioContext || window.webkitAudioContext;
+                    this.ctx = new AudioContext();
+                }
+                if (this.ctx.state === 'suspended') {
+                    this.ctx.resume();
+                }
+            }
+            pop() {
+                if (!state.soundEnabled) return;
+                try {
+                    this.init();
+                    const osc = this.ctx.createOscillator();
+                    const gain = this.ctx.createGain();
+                    osc.type = 'sine';
+                    osc.frequency.setValueAtTime(580, this.ctx.currentTime);
+                    osc.frequency.exponentialRampToValueAtTime(860, this.ctx.currentTime + 0.08);
+                    gain.gain.setValueAtTime(0.12, this.ctx.currentTime);
+                    gain.gain.exponentialRampToValueAtTime(0.001, this.ctx.currentTime + 0.08);
+                    osc.connect(gain);
+                    gain.connect(this.ctx.destination);
+                    osc.start();
+                    osc.stop(this.ctx.currentTime + 0.09);
+                } catch(e) {}
+            }
+            sparkle() {
+                if (!state.soundEnabled) return;
+                try {
+                    this.init();
+                    const notes = [523.25, 659.25, 783.99, 1046.50, 1318.51];
+                    notes.forEach((freq, idx) => {
+                        const osc = this.ctx.createOscillator();
+                        const gain = this.ctx.createGain();
+                        osc.type = 'triangle';
+                        osc.frequency.setValueAtTime(freq, this.ctx.currentTime + idx * 0.05);
+                        gain.gain.setValueAtTime(0.08, this.ctx.currentTime + idx * 0.05);
+                        gain.gain.exponentialRampToValueAtTime(0.001, this.ctx.currentTime + idx * 0.05 + 0.18);
+                        osc.connect(gain);
+                        gain.connect(this.ctx.destination);
+                        osc.start(this.ctx.currentTime + idx * 0.05);
+                        osc.stop(this.ctx.currentTime + idx * 0.05 + 0.2);
+                    });
+                } catch(e) {}
+            }
+            snap() {
+                if (!state.soundEnabled) return;
+                try {
+                    this.init();
+                    const osc = this.ctx.createOscillator();
+                    const gain = this.ctx.createGain();
+                    osc.type = 'square';
+                    osc.frequency.setValueAtTime(800, this.ctx.currentTime);
+                    osc.frequency.exponentialRampToValueAtTime(200, this.ctx.currentTime + 0.06);
+                    gain.gain.setValueAtTime(0.15, this.ctx.currentTime);
+                    gain.gain.exponentialRampToValueAtTime(0.001, this.ctx.currentTime + 0.08);
+                    osc.connect(gain);
+                    gain.connect(this.ctx.destination);
+                    osc.start();
+                    osc.stop(this.ctx.currentTime + 0.09);
+                } catch(e) {}
+            }
+            giggle() {
+                if (!state.soundEnabled) return;
+                try {
+                    this.init();
+                    [650, 780, 880, 780, 980].forEach((freq, i) => {
+                        const osc = this.ctx.createOscillator();
+                        const gain = this.ctx.createGain();
+                        osc.type = 'sine';
+                        osc.frequency.setValueAtTime(freq, this.ctx.currentTime + i * 0.06);
+                        gain.gain.setValueAtTime(0.12, this.ctx.currentTime + i * 0.06);
+                        gain.gain.exponentialRampToValueAtTime(0.001, this.ctx.currentTime + i * 0.06 + 0.08);
+                        osc.connect(gain);
+                        gain.connect(this.ctx.destination);
+                        osc.start(this.ctx.currentTime + i * 0.06);
+                        osc.stop(this.ctx.currentTime + i * 0.06 + 0.09);
+                    });
+                } catch(e) {}
+            }
+        }
+        const sfx = new SoundEngine();
+
+        // Database of Content Items
+        const DB = {
+            hairStyles: [
+                { id: 0, name: "ويفي ملكي طويل", emoji: "🎀", desc: "خصل متموجة رومانسية" },
+                { id: 1, name: "كعكتين فضاء كاواي", emoji: "🍡", desc: "أودانغو مع ربطات ناعمة" },
+                { id: 2, name: "توين تيل أنمي", emoji: "👧", desc: "شعر مربوط كلاسيكي" },
+                { id: 3, name: "هيمي كت أنيق", emoji: "✨", desc: "قصة الأميرات اليابانية" },
+                { id: 4, name: "بوب ناعم فلورا", emoji: "💇‍♀️", desc: "شعر قصير كوري كيوت" },
+                { id: 5, name: "ضفائر كوكيت ناعمة", emoji: "🎀", desc: "ضفيرتين مع فيونكات وردية" },
+                { id: 6, name: "ذيل حصان جانبي", emoji: "👱‍♀️", desc: "ستايل أيدول مرح" },
+                { id: 7, name: "كيرلي سحابي كثيف", emoji: "👩‍🦱", desc: "خصلات متموجة غنية" }
+            ],
+            hairColors: [
+                { hex: "#4a2835", name: "شوكولاتة داكنة" },
+                { hex: "#1f1d2b", name: "أسود ليلي ناعم" },
+                { hex: "#ff70a6", name: "وردي باستيل كاندي" },
+                { hex: "#b58463", name: "كراميل دافئ" },
+                { hex: "#ffd166", name: "أشقر عسلي باستيل" },
+                { hex: "#a594f9", name: "لافندر حالم" },
+                { hex: "#70d6ff", name: "سماوي سحري" },
+                { hex: "#e76f51", name: "مشمشي خوخي" },
+                { hex: "#eae2b7", name: "فانيليا بلاتيني" },
+                { hex: "#3a0ca3", name: "كحلي مجري" }
+            ],
+            eyeColors: [
+                { hex: "#7b2cbf", name: "جمشت بنفسجي" },
+                { hex: "#3a86ff", name: "سافاير أزرق" },
+                { hex: "#ff006e", name: "ياقوتي وردي" },
+                { hex: "#38b000", name: "زمردي مشرق" },
+                { hex: "#fb5607", name: "عسلي دافئ" },
+                { hex: "#2b2d42", name: "أسود ناعم" }
+            ],
+            eyeStyles: [
+                { id: 0, name: "عيون أنمي لامعة", emoji: "✨" },
+                { id: 1, name: "غمزة لطيفة 😉", emoji: "😉" },
+                { id: 2, name: "عيون قلوب الحب", emoji: "😍" },
+                { id: 3, name: "ابتسامة ناعمة ^-^", emoji: "😊" },
+                { id: 4, name: "عيون نجوم متلألئة", emoji: "🤩" }
+            ],
+            mouthStyles: [
+                { id: 0, name: "ابتسامة قطة :3", emoji: "🐱" },
+                { id: 1, name: "ابتسامة ناعمة وردية", emoji: "🌸" },
+                { id: 2, name: "فرحة وضحك مفتوح", emoji: "😄" },
+                { id: 3, name: "بوز خجل لطيف", emoji: "😗" }
+            ],
+            outfits: [
+                { id: 0, name: "فستان لوليتا كوكيت", emoji: "🎀", desc: "دانتيل وردي مع أشرطة لؤلؤية" },
+                { id: 1, name: "زي أكاديمية سيلور", emoji: "🏫", desc: "زي مدرسي ياباني أنيق" },
+                { id: 2, name: "هودي قطة أوفرسايز", emoji: "🐱", desc: "دافئ ناعم بآذان قطة وجيوب" },
+                { id: 3, name: "فستان نجمة الأيدول", emoji: "⭐", desc: "طبقات متدرجة مرصعة بنجوم" },
+                { id: 4, name: "كارديجان شتوي + كاروهات", emoji: "🧶", desc: "ستايل بناتي دافئ مع ياقة" },
+                { id: 5, name: "فستان كافيه الخادمة", emoji: "☕", desc: "مريول أبيض مع فيونكة صدر" },
+                { id: 6, name: "سلوبت الفراولة الكيوت", emoji: "🍓", desc: "شورت جينز خفيف مع كشكش" },
+                { id: 7, name: "طقم فيري سايبر يوتوبيا", emoji: "🔮", desc: "أكمام منفصلة مع تنورة لامعة" }
+            ],
+            shoes: [
+                { id: 0, name: "ماري جين لوليتا بشرائط", emoji: "🩰", desc: "جوارب بكشكش وفيونكات" },
+                { id: 1, name: "سنيكرز بلاتفورم باستيل", emoji: "👟", desc: "حذاء رياضي كاجوال لطيف" },
+                { id: 2, name: "بوت جلدي أنيق", emoji: "👢", desc: "بوت كلاسيكي بلون بني شوكولا" },
+                { id: 3, name: "خف دب الباندا المنفوش", emoji: "🐾", desc: "فرو فائق النعومة مريح" },
+                { id: 4, name: "حذاء كعب أسود كلاسيكي", emoji: "👞", desc: "جوارب بيضاء طويلة ومثالية" }
+            ],
+            headAccs: [
+                { id: 0, name: "آذان قطة وردية ناعمة", emoji: "🐱", desc: "مع خصلات شعر خفيفة" },
+                { id: 1, name: "فيونكة كوكيت حريرية ضخمة", emoji: "🎀", desc: "تتدلى بنعومة على الرأس" },
+                { id: 2, name: "تاج احتفال 16K الذهبي", emoji: "👑", desc: "مرصع بالألماس والياقوت" },
+                { id: 3, name: "سماعات قطة جيمنج RGB", emoji: "🎧", desc: "بإضاءة نيون ناعمة" },
+                { id: 4, name: "نظارات دائرية نيرد كيوت", emoji: "👓", desc: "إطار ذهبي ناعم وشفاف" },
+                { id: 5, name: "طوق ملاك مضيء هالوو", emoji: "😇", desc: "حلقة نور ذهبية عائمة" },
+                { id: 6, name: "مشابك كرز فراولة", emoji: "🍒", desc: "مشابك شعر ناعمة على الجانب" },
+                { id: 7, name: "بدون إكسسوار رأس", emoji: "❌", desc: "شعر طبيعي بدون إضافات" }
+            ],
+            handhelds: [
+                { id: 0, name: "شاي بوبا الفراولة 🧋", emoji: "🧋", desc: "مع حبات التابيوكا والمصاصة" },
+                { id: 1, name: "جهاز سويتش باستيل 🎮", emoji: "🎮", desc: "كونسول ألعاب كاندي بينك" },
+                { id: 2, name: "عصا النجوم السحرية 🪄", emoji: "🪄", desc: "تطلق بريقاً ساحراً" },
+                { id: 3, name: "علبة حليب الفراولة 🍓", emoji: "🥛", desc: "حليب كوري شهير ولطيف" },
+                { id: 4, name: "بالون 16K الذهبي المتطاير 🎈", emoji: "🎈", desc: "بالون هيليوم احتفالي لامع" },
+                { id: 5, name: "دمية الأرنب المنفوش 🐰", emoji: "🧸", desc: "دبدوب محشو شديد النعومة" },
+                { id: 6, name: "بدون شيء باليد", emoji: "✋", desc: "أيدي حرة ومسترخية" }
+            ],
+            pets: [
+                { id: 0, name: "دبدوب ملاك طائر صغير 🧸", emoji: "👼" },
+                { id: 1, name: "قطة بيضاء نائمة 🐱", emoji: "🐾" },
+                { id: 2, name: "أرنوب باستيل نطاط 🐰", emoji: "🥕" },
+                { id: 3, name: "بدون مرافق أليف", emoji: "❌" }
+            ],
+            backgrounds: [
+                { 
+                    id: 0, 
+                    name: "غرفة نوم كاواي دريم", 
+                    emoji: "🛏️", 
+                    gradient: "linear-gradient(180deg, #fce1e4 0%, #fcf4dd 100%)",
+                    decorColor: "#ffccd5"
+                },
+                { 
+                    id: 1, 
+                    name: "حديقة الساكورا الوردية", 
+                    emoji: "🌸", 
+                    gradient: "linear-gradient(180deg, #ffd6e0 0%, #ffefef 55%, #c8e6c9 100%)",
+                    decorColor: "#ff9ebb"
+                },
+                { 
+                    id: 2, 
+                    name: "سماء الليل والمجرة الساحرة", 
+                    emoji: "🌌", 
+                    gradient: "linear-gradient(180deg, #240046 0%, #5a189a 60%, #9d4edd 100%)",
+                    decorColor: "#e0aaff"
+                },
+                { 
+                    id: 3, 
+                    name: "مسرح احتفال السيرفر 16K", 
+                    emoji: "🎉", 
+                    gradient: "linear-gradient(180deg, #ffe5ec 0%, #ffc2d1 50%, #e8dff5 100%)",
+                    decorColor: "#ff758f"
+                },
+                { 
+                    id: 4, 
+                    name: "كافيه الحلويات والمارشملو", 
+                    emoji: "🧁", 
+                    gradient: "linear-gradient(180deg, #fff1e6 0%, #fde2e4 60%, #fad2e1 100%)",
+                    decorColor: "#f7aef8"
+                },
+                { 
+                    id: 5, 
+                    name: "استوديو ناعم للصورة الرمزية", 
+                    emoji: "🤍", 
+                    gradient: "linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%)",
+                    decorColor: "#dee2e6"
+                }
+            ],
+            skins: [
+                { hex: "#ffe2d6", name: "فاتح كوري حريري" },
+                { hex: "#fed0bb", name: "خوخي وردي دافئ" },
+                { hex: "#f0b892", name: "حنطي ناعم عسلي" },
+                { hex: "#d89669", name: "برونزي مائل للدفء" },
+                { hex: "#8d5b4c", name: "شوكولاتة عميقة فاخرة" },
+                { hex: "#ffeff5", name: "بورسلين باربي وردي" }
+            ]
+        };
+
+        /* ============================================================
+           Tab UI Building & Switching Logic
+           ============================================================ */
+        function initTabs() {
+            const tabs = document.querySelectorAll('.cat-tab');
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    tabs.forEach(t => t.classList.remove('active'));
+                    document.querySelectorAll('.items-panel').forEach(p => p.classList.remove('active'));
+                    
+                    tab.classList.add('active');
+                    const targetId = tab.getAttribute('data-tab');
+                    const targetPanel = document.getElementById(targetId);
+                    if (targetPanel) {
+                        targetPanel.classList.add('active');
+                        sfx.pop();
+                    }
+                });
+            });
+        }
+
+        // Render Grids dynamically
+        function renderAllPanels() {
+            // 1. Hairstyles
+            const hairPanel = document.getElementById('tab-hair');
+            hairPanel.innerHTML = DB.hairStyles.map(h => `
+                <div class="item-card ${state.hairStyle === h.id ? 'selected' : ''}" onclick="selectHair(${h.id})">
+                    <span class="card-emoji">${h.emoji}</span>
+                    <span class="card-title">${h.name}</span>
+                    <span class="card-badge">${h.desc}</span>
+                </div>
+            `).join('');
+
+            // 2. Hair Colors
+            const hcolorPanel = document.getElementById('tab-hcolor');
+            hcolorPanel.innerHTML = `
+                <div class="swatches-grid" style="grid-column: 1 / -1;">
+                    ${DB.hairColors.map(c => `
+                        <div class="swatch-card ${state.hairColor === c.hex ? 'selected' : ''}" onclick="selectHairColor('${c.hex}')">
+                            <div class="swatch-circle" style="background:${c.hex};"></div>
+                            <span class="swatch-name">${c.name}</span>
+                        </div>
+                    `).join('')}
+                </div>
+            `;
+
+            // 3. Face & Expressions
+            const facePanel = document.getElementById('tab-face');
+            let faceHTML = `
+                <div style="grid-column: 1 / -1; font-weight:800; color:var(--text); font-size:0.88rem; margin:4px 0;">✨ شكل العيون والتعابير:</div>
+            `;
+            faceHTML += DB.eyeStyles.map(e => `
+                <div class="item-card ${state.eyeStyle === e.id ? 'selected' : ''}" onclick="selectEyeStyle(${e.id})">
+                    <span class="card-emoji">${e.emoji}</span>
+                    <span class="card-title">${e.name}</span>
+                </div>
+            `).join('');
+
+            faceHTML += `
+                <div style="grid-column: 1 / -1; font-weight:800; color:var(--text); font-size:0.88rem; margin:10px 0 4px 0;">🎨 لون حدقة العين:</div>
+                <div class="swatches-grid" style="grid-column: 1 / -1;">
+                    ${DB.eyeColors.map(ec => `
+                        <div class="swatch-card ${state.eyeColor === ec.hex ? 'selected' : ''}" onclick="selectEyeColor('${ec.hex}')">
+                            <div class="swatch-circle" style="background:${ec.hex};"></div>
+                            <span class="swatch-name">${ec.name}</span>
+                        </div>
+                    `).join('')}
+                </div>
+            `;
+
+            faceHTML += `
+                <div style="grid-column: 1 / -1; font-weight:800; color:var(--text); font-size:0.88rem; margin:10px 0 4px 0;">👄 شكل الفم والابتسامة:</div>
+            `;
+            faceHTML += DB.mouthStyles.map(m => `
+                <div class="item-card ${state.mouthStyle === m.id ? 'selected' : ''}" onclick="selectMouth(${m.id})">
+                    <span class="card-emoji">${m.emoji}</span>
+                    <span class="card-title">${m.name}</span>
+                </div>
+            `).join('');
+            facePanel.innerHTML = faceHTML;
+
+            // 4. Outfits
+            const outfitPanel = document.getElementById('tab-outfit');
+            outfitPanel.innerHTML = DB.outfits.map(o => `
+                <div class="item-card ${state.outfit === o.id ? 'selected' : ''}" onclick="selectOutfit(${o.id})">
+                    <span class="card-emoji">${o.emoji}</span>
+                    <span class="card-title">${o.name}</span>
+                    <span class="card-badge">${o.desc}</span>
+                </div>
+            `).join('');
+
+            // 5. Shoes
+            const shoesPanel = document.getElementById('tab-shoes');
+            shoesPanel.innerHTML = DB.shoes.map(s => `
+                <div class="item-card ${state.shoes === s.id ? 'selected' : ''}" onclick="selectShoes(${s.id})">
+                    <span class="card-emoji">${s.emoji}</span>
+                    <span class="card-title">${s.name}</span>
+                    <span class="card-badge">${s.desc}</span>
+                </div>
+            `).join('');
+
+            // 6. Head Accessories
+            const accPanel = document.getElementById('tab-acc');
+            accPanel.innerHTML = DB.headAccs.map(a => `
+                <div class="item-card ${state.headAcc === a.id ? 'selected' : ''}" onclick="selectHeadAcc(${a.id})">
+                    <span class="card-emoji">${a.emoji}</span>
+                    <span class="card-title">${a.name}</span>
+                    <span class="card-badge">${a.desc}</span>
+                </div>
+            `).join('');
+
+            // 7. Handheld & Pet
+            const handPanel = document.getElementById('tab-hand');
+            let handHTML = `
+                <div style="grid-column: 1 / -1; font-weight:800; color:var(--text); font-size:0.88rem; margin:4px 0;">🧋 ما تحمله بيدها:</div>
+            `;
+            handHTML += DB.handhelds.map(item => `
+                <div class="item-card ${state.handheld === item.id ? 'selected' : ''}" onclick="selectHandheld(${item.id})">
+                    <span class="card-emoji">${item.emoji}</span>
+                    <span class="card-title">${item.name}</span>
+                </div>
+            `).join('');
+
+            handHTML += `
+                <div style="grid-column: 1 / -1; font-weight:800; color:var(--text); font-size:0.88rem; margin:10px 0 4px 0;">🐾 الحيوان الأليف المرافق:</div>
+            `;
+            handHTML += DB.pets.map(p => `
+                <div class="item-card ${state.pet === p.id ? 'selected' : ''}" onclick="selectPet(${p.id})">
+                    <span class="card-emoji">${p.emoji}</span>
+                    <span class="card-title">${p.name}</span>
+                </div>
+            `).join('');
+            handPanel.innerHTML = handHTML;
+
+            // 8. Backgrounds
+            const bgPanel = document.getElementById('tab-bg');
+            bgPanel.innerHTML = DB.backgrounds.map(b => `
+                <div class="item-card ${state.bgStyle === b.id ? 'selected' : ''}" onclick="selectBg(${b.id})">
+                    <span class="card-emoji">${b.emoji}</span>
+                    <span class="card-title">${b.name}</span>
+                </div>
+            `).join('');
+
+            // 9. Skin Tones
+            const skinPanel = document.getElementById('tab-skin');
+            skinPanel.innerHTML = `
+                <div class="swatches-grid" style="grid-column: 1 / -1;">
+                    ${DB.skins.map(sk => `
+                        <div class="swatch-card ${state.skinTone === sk.hex ? 'selected' : ''}" onclick="selectSkin('${sk.hex}')">
+                            <div class="swatch-circle" style="background:${sk.hex};"></div>
+                            <span class="swatch-name">${sk.name}</span>
+                        </div>
+                    `).join('')}
+                </div>
+            `;
+        }
+
+        // Selection Handlers
+        window.selectHair = function(id) { state.hairStyle = id; sfx.pop(); renderAllPanels(); drawChibi(); };
+        window.selectHairColor = function(hex) { state.hairColor = hex; sfx.pop(); renderAllPanels(); drawChibi(); };
+        window.selectEyeStyle = function(id) { state.eyeStyle = id; sfx.pop(); renderAllPanels(); drawChibi(); };
+        window.selectEyeColor = function(hex) { state.eyeColor = hex; sfx.pop(); renderAllPanels(); drawChibi(); };
+        window.selectMouth = function(id) { state.mouthStyle = id; sfx.pop(); renderAllPanels(); drawChibi(); };
+        window.selectOutfit = function(id) { state.outfit = id; sfx.pop(); renderAllPanels(); drawChibi(); };
+        window.selectShoes = function(id) { state.shoes = id; sfx.pop(); renderAllPanels(); drawChibi(); };
+        window.selectHeadAcc = function(id) { state.headAcc = id; sfx.pop(); renderAllPanels(); drawChibi(); };
+        window.selectHandheld = function(id) { state.handheld = id; sfx.pop(); renderAllPanels(); drawChibi(); };
+        window.selectPet = function(id) { state.pet = id; sfx.pop(); renderAllPanels(); drawChibi(); };
+        window.selectBg = function(id) { state.bgStyle = id; sfx.pop(); renderAllPanels(); updateBackground(); };
+        window.selectSkin = function(hex) { state.skinTone = hex; sfx.pop(); renderAllPanels(); drawChibi(); };
+
+        /* ============================================================
+           Background Atmosphere Manager
+           ============================================================ */
+        function updateBackground() {
+            const bgCard = document.getElementById('stage-bg-card');
+            const bg = DB.backgrounds.find(b => b.id === state.bgStyle) || DB.backgrounds[0];
+            bgCard.style.background = bg.gradient;
+
+            // Update SVG background ornaments
+            const backAccSlot = document.getElementById('slot-back-acc');
+            if (state.bgStyle === 3) { // 16K Celebration Party
+                backAccSlot.innerHTML = `
+                    <g opacity="0.85">
+                        <circle cx="65" cy="90" r="32" fill="#ff758f" opacity="0.8"/>
+                        <path d="M 65 122 Q 65 180 85 220" stroke="#ffb3c6" stroke-width="1.8" fill="none"/>
+                        <circle cx="95" cy="70" r="28" fill="#ffd166" opacity="0.85"/>
+                        <path d="M 95 98 Q 85 160 88 220" stroke="#ffe3a8" stroke-width="1.8" fill="none"/>
+                        <circle cx="335" cy="85" r="32" fill="#c77dff" opacity="0.8"/>
+                        <path d="M 335 117 Q 320 175 315 220" stroke="#e0aaff" stroke-width="1.8" fill="none"/>
+                        <circle cx="305" cy="65" r="26" fill="#ff9ebb" opacity="0.85"/>
+                        <path d="M 305 91 Q 312 160 312 220" stroke="#ffccd5" stroke-width="1.8" fill="none"/>
+
+                        <path d="M 40 40 Q 60 70 45 100 T 55 140" stroke="#ff477e" stroke-width="3" fill="none" stroke-linecap="round"/>
+                        <path d="M 360 40 Q 340 70 355 100 T 345 140" stroke="#7209b7" stroke-width="3" fill="none" stroke-linecap="round"/>
+                        <polygon points="120,40 128,45 120,50" fill="#ffd166"/>
+                        <polygon points="280,35 288,40 280,45" fill="#48cae4"/>
+                        <circle cx="70" cy="170" r="4" fill="#ff477e"/>
+                        <circle cx="330" cy="170" r="4" fill="#ffb703"/>
+                    </g>
+                `;
+            } else if (state.bgStyle === 1) { // Sakura Blossom Breeze
+                backAccSlot.innerHTML = `
+                    <g opacity="0.75">
+                        <path d="M 70 80 C 60 70 80 55 90 70 C 100 85 75 90 70 80 Z" fill="#ffb3c6" transform="rotate(25 70 80)"/>
+                        <path d="M 320 110 C 310 100 330 85 340 100 C 350 115 325 120 320 110 Z" fill="#ffccd5" transform="rotate(-30 320 110)"/>
+                        <path d="M 50 200 C 40 190 60 175 70 190 C 80 205 55 210 50 200 Z" fill="#ffb3c6" transform="rotate(45 50 200)"/>
+                        <path d="M 350 240 C 340 230 360 215 370 230 C 380 245 355 250 350 240 Z" fill="#ffcad4" transform="rotate(-15 350 240)"/>
+                    </g>
+                `;
+            } else if (state.bgStyle === 2) { // Galaxy & Moon
+                backAccSlot.innerHTML = `
+                    <g opacity="0.8">
+                        <circle cx="70" cy="70" r="32" fill="#ffeaa7" opacity="0.85"/>
+                        <circle cx="82" cy="65" r="28" fill="#240046" opacity="0.9"/>
+                        <text x="320" y="70" font-size="22" fill="#ffd166">✦</text>
+                        <text x="350" y="140" font-size="16" fill="#e0aaff">★</text>
+                        <text x="50" y="160" font-size="18" fill="#ffd166">✦</text>
+                    </g>
+                `;
+            } else {
+                backAccSlot.innerHTML = '';
+            }
+        }
+
+        /* ============================================================
+           High-Quality Vector Rendering Engine (SVG)
+           ============================================================ */
+        function drawChibi() {
+            // 1. Skin update
+            const skinNodes = [
+                'node-skin-neck', 'node-skin-torso', 'node-skin-head', 
+                'node-skin-ear-l', 'node-skin-ear-r', 'node-skin-leg-l', 
+                'node-skin-leg-r', 'node-skin-arm-l', 'node-skin-arm-r',
+                'node-skin-hand-l', 'node-skin-hand-r'
+            ];
+            skinNodes.forEach(id => {
+                const el = document.getElementById(id);
+                if (el) el.setAttribute('fill', state.skinTone);
+            });
+
+            const hb = document.getElementById('slot-hair-back');
+            const hf = document.getElementById('slot-hair-front');
+            const eyes = document.getElementById('slot-eyes');
+            const mouth = document.getElementById('slot-mouth');
+            const shoes = document.getElementById('slot-shoes');
+            const outfit = document.getElementById('slot-outfit');
+            const headAcc = document.getElementById('slot-head-acc');
+            const hand = document.getElementById('slot-handheld');
+            const pet = document.getElementById('slot-pet');
+
+            const hc = state.hairColor;
+            const ec = state.eyeColor;
+
+            // ==========================================
+            // 2. Eyes & Expressions Rendering
+            // ==========================================
+            if (state.eyeStyle === 0) { // Classic High-Detail Anime Sparkle Eyes
+                eyes.innerHTML = `
+                    <ellipse cx="160" cy="154" rx="17" ry="21" fill="#1b1b2f"/>
+                    <ellipse cx="160" cy="162" rx="13" ry="13" fill="${ec}"/>
+                    <circle cx="155" cy="144" r="6.5" fill="#ffffff"/>
+                    <circle cx="166" cy="162" r="3.5" fill="#ffffff"/>
+                    <ellipse cx="160" cy="166" rx="9" ry="5" fill="#ffffff" opacity="0.3"/>
+                    <path d="M 141 142 Q 158 132 178 142" stroke="#1b1b2f" stroke-width="4.5" fill="none" stroke-linecap="round"/>
+                    <path d="M 139 143 L 133 138" stroke="#1b1b2f" stroke-width="3" stroke-linecap="round"/>
+
+                    <ellipse cx="240" cy="154" rx="17" ry="21" fill="#1b1b2f"/>
+                    <ellipse cx="240" cy="162" rx="13" ry="13" fill="${ec}"/>
+                    <circle cx="235" cy="144" r="6.5" fill="#ffffff"/>
+                    <circle cx="246" cy="162" r="3.5" fill="#ffffff"/>
+                    <ellipse cx="240" cy="166" rx="9" ry="5" fill="#ffffff" opacity="0.3"/>
+                    <path d="M 222 142 Q 242 132 259 142" stroke="#1b1b2f" stroke-width="4.5" fill="none" stroke-linecap="round"/>
+                    <path d="M 261 143 L 267 138" stroke="#1b1b2f" stroke-width="3" stroke-linecap="round"/>
+
+                    <path d="M 146 128 Q 160 123 174 127" stroke="${hc}" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.85"/>
+                    <path d="M 226 127 Q 240 123 254 128" stroke="${hc}" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.85"/>
+                `;
+            } else if (state.eyeStyle === 1) { // Cute Wink 😉
+                eyes.innerHTML = `
+                    <ellipse cx="160" cy="154" rx="17" ry="21" fill="#1b1b2f"/>
+                    <ellipse cx="160" cy="162" rx="13" ry="13" fill="${ec}"/>
+                    <circle cx="155" cy="144" r="6.5" fill="#ffffff"/>
+                    <circle cx="166" cy="162" r="3.5" fill="#ffffff"/>
+                    <path d="M 141 142 Q 158 132 178 142" stroke="#1b1b2f" stroke-width="4.5" fill="none" stroke-linecap="round"/>
+                    <path d="M 139 143 L 133 138" stroke="#1b1b2f" stroke-width="3" stroke-linecap="round"/>
+
+                    <path d="M 223 158 Q 240 144 257 158" stroke="#1b1b2f" stroke-width="5" fill="none" stroke-linecap="round"/>
+                    <path d="M 256 156 L 263 151" stroke="#1b1b2f" stroke-width="3.5" stroke-linecap="round"/>
+
+                    <path d="M 146 128 Q 160 123 174 127" stroke="${hc}" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                    <path d="M 226 127 Q 240 123 254 128" stroke="${hc}" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                `;
+            } else if (state.eyeStyle === 2) { // Heart Eyes 😍
+                eyes.innerHTML = `
+                    <g transform="translate(160, 154) scale(0.95)">
+                        <path d="M 0 -8 C -18 -26 -28 10 0 25 C 28 10 18 -26 0 -8 Z" fill="#ff1493"/>
+                        <circle cx="-5" cy="-2" r="3" fill="#ffffff"/>
+                    </g>
+                    <g transform="translate(240, 154) scale(0.95)">
+                        <path d="M 0 -8 C -18 -26 -28 10 0 25 C 28 10 18 -26 0 -8 Z" fill="#ff1493"/>
+                        <circle cx="-5" cy="-2" r="3" fill="#ffffff"/>
+                    </g>
+                    <path d="M 141 138 Q 158 128 178 138" stroke="#1b1b2f" stroke-width="4.2" fill="none" stroke-linecap="round"/>
+                    <path d="M 222 138 Q 242 128 259 138" stroke="#1b1b2f" stroke-width="4.2" fill="none" stroke-linecap="round"/>
+                `;
+            } else if (state.eyeStyle === 3) { // Happy closed anime smile ^ - ^
+                eyes.innerHTML = `
+                    <path d="M 143 158 Q 160 142 177 158" stroke="#1b1b2f" stroke-width="5" fill="none" stroke-linecap="round"/>
+                    <path d="M 176 156 L 182 151" stroke="#1b1b2f" stroke-width="3" stroke-linecap="round"/>
+
+                    <path d="M 223 158 Q 240 142 257 158" stroke="#1b1b2f" stroke-width="5" fill="none" stroke-linecap="round"/>
+                    <path d="M 256 156 L 262 151" stroke="#1b1b2f" stroke-width="3" stroke-linecap="round"/>
+
+                    <path d="M 146 127 Q 160 120 174 126" stroke="${hc}" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                    <path d="M 226 126 Q 240 120 254 127" stroke="${hc}" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                `;
+            } else { // Star Eyes 🤩
+                eyes.innerHTML = `
+                    <ellipse cx="160" cy="154" rx="17" ry="21" fill="#1b1b2f"/>
+                    <ellipse cx="160" cy="162" rx="13" ry="13" fill="${ec}"/>
+                    <text x="160" y="162" font-size="20" fill="#ffd166" text-anchor="middle" dominant-baseline="central">★</text>
+                    <path d="M 141 142 Q 158 132 178 142" stroke="#1b1b2f" stroke-width="4.5" fill="none" stroke-linecap="round"/>
+
+                    <ellipse cx="240" cy="154" rx="17" ry="21" fill="#1b1b2f"/>
+                    <ellipse cx="240" cy="162" rx="13" ry="13" fill="${ec}"/>
+                    <text x="240" y="162" font-size="20" fill="#ffd166" text-anchor="middle" dominant-baseline="central">★</text>
+                    <path d="M 222 142 Q 242 132 259 142" stroke="#1b1b2f" stroke-width="4.5" fill="none" stroke-linecap="round"/>
+                `;
+            }
+
+            // ==========================================
+            // 3. Mouth Rendering
+            // ==========================================
+            if (state.mouthStyle === 0) { // Cute Kitty Mouth :3
+                mouth.innerHTML = `
+                    <path d="M 192 176 Q 196 182 200 177 Q 204 182 208 176" stroke="#e05263" stroke-width="2.8" fill="none" stroke-linecap="round"/>
+                `;
+            } else if (state.mouthStyle === 1) { // Soft Sweet Smile
+                mouth.innerHTML = `
+                    <path d="M 194 176 Q 200 183 206 176" stroke="#d94862" stroke-width="2.8" fill="none" stroke-linecap="round"/>
+                `;
+            } else if (state.mouthStyle === 2) { // Open Joyful Smile with cute teeth & tongue
+                mouth.innerHTML = `
+                    <path d="M 192 174 Q 200 190 208 174 Z" fill="#9e2a2b"/>
+                    <path d="M 194 180 Q 200 190 206 180 Z" fill="#ff758f"/>
+                    <path d="M 192 174 Q 200 178 208 174" stroke="#d94862" stroke-width="2.5" fill="none"/>
+                `;
+            } else { // Cute Pout
+                mouth.innerHTML = `
+                    <ellipse cx="200" cy="177" rx="3.5" ry="4" fill="#d94862"/>
+                `;
+            }
+
+            // ==========================================
+            // 4. Hairstyles Rendering (Front & Back)
+            // ==========================================
+            const ahogeElem = `<path class="anim-ahoge" d="M 200 100 Q 188 70 205 50 Q 215 72 201 98" fill="${hc}"/>`;
+            const shineElem = `<ellipse cx="200" cy="106" rx="55" ry="6" fill="#ffffff" opacity="0.35"/>`;
+
+            if (state.hairStyle === 0) { // ويفي ملكي طويل
+                hb.innerHTML = `
+                    <ellipse cx="200" cy="155" rx="98" ry="90" fill="${hc}"/>
+                    <path d="M 102 160 C 65 240 70 390 135 435 C 160 390 152 320 140 240 Z" fill="${hc}"/>
+                    <path d="M 298 160 C 335 240 330 390 265 435 C 240 390 248 320 260 240 Z" fill="${hc}"/>
+                    <path d="M 120 160 C 90 280 120 420 200 450 C 280 420 310 280 280 160 Z" fill="${hc}"/>
+                `;
+                hf.innerHTML = `
+                    <path d="M 104 160 C 98 60 302 60 296 160 C 282 152 260 130 240 128 C 215 128 200 122 185 128 C 158 130 135 152 104 160 Z" fill="${hc}"/>
+                    <path d="M 105 150 Q 90 225 115 270 Q 126 225 118 160 Z" fill="${hc}"/>
+                    <path d="M 295 150 Q 310 225 285 270 Q 274 225 282 160 Z" fill="${hc}"/>
+                    ${shineElem}
+                    ${ahogeElem}
+                `;
+            } else if (state.hairStyle === 1) { // كعكتين فضاء كاواي
+                hb.innerHTML = `
+                    <ellipse cx="200" cy="152" rx="95" ry="88" fill="${hc}"/>
+                    <circle cx="106" cy="84" r="42" fill="${hc}"/>
+                    <circle cx="294" cy="84" r="42" fill="${hc}"/>
+                    <ellipse cx="106" cy="74" rx="20" ry="8" fill="#ffffff" opacity="0.25"/>
+                    <ellipse cx="294" cy="74" rx="20" ry="8" fill="#ffffff" opacity="0.25"/>
+                    <circle cx="108" cy="106" r="10" fill="#ff70a6"/>
+                    <circle cx="292" cy="106" r="10" fill="#ff70a6"/>
+                    <path d="M 108 120 Q 85 220 110 275 Q 122 210 125 135 Z" fill="${hc}"/>
+                    <path d="M 292 120 Q 315 220 290 275 Q 278 210 275 135 Z" fill="${hc}"/>
+                `;
+                hf.innerHTML = `
+                    <path d="M 106 160 C 100 62 300 62 294 160 C 275 146 250 128 225 128 C 210 122 190 122 175 128 C 150 128 125 146 106 160 Z" fill="${hc}"/>
+                    ${shineElem}
+                    ${ahogeElem}
+                `;
+            } else if (state.hairStyle === 2) { // توين تيل أنمي
+                hb.innerHTML = `
+                    <ellipse cx="200" cy="152" rx="95" ry="88" fill="${hc}"/>
+                    <path d="M 105 148 C 45 170 30 310 82 360 C 115 340 125 240 128 175 Z" fill="${hc}"/>
+                    <path d="M 295 148 C 355 170 370 310 318 360 C 285 340 275 240 272 175 Z" fill="${hc}"/>
+                    <ellipse cx="94" cy="158" rx="8" ry="14" fill="#ff477e"/>
+                    <ellipse cx="306" cy="158" rx="8" ry="14" fill="#ff477e"/>
+                `;
+                hf.innerHTML = `
+                    <path d="M 105 160 C 98 60 302 60 295 160 C 280 148 255 128 230 128 C 210 122 190 122 170 128 C 145 128 120 148 105 160 Z" fill="${hc}"/>
+                    ${shineElem}
+                    ${ahogeElem}
+                `;
+            } else if (state.hairStyle === 3) { // هيمي كت أنيق
+                hb.innerHTML = `
+                    <ellipse cx="200" cy="160" rx="100" ry="92" fill="${hc}"/>
+                    <rect x="110" y="160" width="180" height="270" rx="20" fill="${hc}"/>
+                `;
+                hf.innerHTML = `
+                    <path d="M 102 160 C 96 60 304 60 298 160 C 275 145 250 127 200 127 C 150 127 125 145 102 160 Z" fill="${hc}"/>
+                    <path d="M 104 150 L 126 150 L 126 235 L 104 235 Z" fill="${hc}"/>
+                    <path d="M 274 150 L 296 150 L 296 235 L 274 235 Z" fill="${hc}"/>
+                    ${shineElem}
+                    ${ahogeElem}
+                `;
+            } else if (state.hairStyle === 4) { // بوب ناعم فلورا
+                hb.innerHTML = `
+                    <ellipse cx="200" cy="160" rx="104" ry="96" fill="${hc}"/>
+                `;
+                hf.innerHTML = `
+                    <path d="M 102 160 C 94 60 306 60 298 160 C 300 220 286 240 274 195 C 250 140 230 128 200 128 C 170 128 150 140 126 195 C 114 240 100 220 102 160 Z" fill="${hc}"/>
+                    ${shineElem}
+                    ${ahogeElem}
+                `;
+            } else if (state.hairStyle === 5) { // ضفائر كوكيت ناعمة
+                hb.innerHTML = `
+                    <ellipse cx="200" cy="155" rx="96" ry="90" fill="${hc}"/>
+                    <g transform="translate(108, 170)">
+                        <circle cx="0" cy="20" r="14" fill="${hc}"/>
+                        <circle cx="2" cy="45" r="13" fill="${hc}"/>
+                        <circle cx="6" cy="70" r="12" fill="${hc}"/>
+                        <circle cx="10" cy="95" r="11" fill="${hc}"/>
+                        <circle cx="14" cy="120" r="9" fill="${hc}"/>
+                        <ellipse cx="14" cy="115" rx="6" ry="10" fill="#ff70a6"/>
+                    </g>
+                    <g transform="translate(292, 170)">
+                        <circle cx="0" cy="20" r="14" fill="${hc}"/>
+                        <circle cx="-2" cy="45" r="13" fill="${hc}"/>
+                        <circle cx="-6" cy="70" r="12" fill="${hc}"/>
+                        <circle cx="-10" cy="95" r="11" fill="${hc}"/>
+                        <circle cx="-14" cy="120" r="9" fill="${hc}"/>
+                        <ellipse cx="-14" cy="115" rx="6" ry="10" fill="#ff70a6"/>
+                    </g>
+                `;
+                hf.innerHTML = `
+                    <path d="M 104 160 C 98 60 302 60 296 160 C 275 148 250 128 225 128 C 210 122 190 122 175 128 C 150 128 125 148 104 160 Z" fill="${hc}"/>
+                    ${shineElem}
+                    ${ahogeElem}
+                `;
+            } else if (state.hairStyle === 6) { // ذيل حصان جانبي أيدول
+                hb.innerHTML = `
+                    <ellipse cx="200" cy="152" rx="95" ry="88" fill="${hc}"/>
+                    <path d="M 292 135 C 360 145 375 285 325 345 C 300 330 288 230 285 165 Z" fill="${hc}"/>
+                    <circle cx="295" cy="138" r="11" fill="#ff477e"/>
+                `;
+                hf.innerHTML = `
+                    <path d="M 105 160 C 98 60 302 60 295 160 C 280 148 255 128 230 128 C 210 122 190 122 170 128 C 145 128 120 148 105 160 Z" fill="${hc}"/>
+                    <path d="M 106 150 Q 95 210 115 250 Q 124 205 118 160 Z" fill="${hc}"/>
+                    ${shineElem}
+                    ${ahogeElem}
+                `;
+            } else { // كيرلي سحابي
+                hb.innerHTML = `
+                    <ellipse cx="200" cy="155" rx="95" ry="90" fill="${hc}"/>
+                    <circle cx="105" cy="180" r="42" fill="${hc}"/>
+                    <circle cx="295" cy="180" r="42" fill="${hc}"/>
+                    <circle cx="118" cy="250" r="38" fill="${hc}"/>
+                    <circle cx="282" cy="250" r="38" fill="${hc}"/>
+                    <circle cx="135" cy="310" r="32" fill="${hc}"/>
+                    <circle cx="265" cy="310" r="32" fill="${hc}"/>
+                `;
+                hf.innerHTML = `
+                    <path d="M 106 160 C 98 60 302 60 294 160 C 275 146 250 128 225 128 C 210 122 190 122 175 128 C 150 128 125 146 106 160 Z" fill="${hc}"/>
+                    <circle cx="106" cy="155" r="12" fill="${hc}"/>
+                    <circle cx="294" cy="155" r="12" fill="${hc}"/>
+                    ${shineElem}
+                    ${ahogeElem}
+                `;
+            }
+
+            // ==========================================
+            // 5. Shoes & Socks Rendering
+            // ==========================================
+            if (state.shoes === 0) { // ماري جين لوليتا مع جوارب دانتيل
+                shoes.innerHTML = `
+                    <rect x="170" y="325" width="27" height="32" rx="4" fill="#ffffff"/>
+                    <rect x="203" y="325" width="27" height="32" rx="4" fill="#ffffff"/>
+                    <ellipse cx="183" cy="325" rx="14" ry="4" fill="#ffcad4"/>
+                    <ellipse cx="216" cy="325" rx="14" ry="4" fill="#ffcad4"/>
+                    <ellipse cx="183" cy="365" rx="15" ry="8" fill="#ff70a6"/>
+                    <ellipse cx="217" cy="365" rx="15" ry="8" fill="#ff70a6"/>
+                    <line x1="172" y1="360" x2="194" y2="360" stroke="#ffffff" stroke-width="2.5"/>
+                    <line x1="206" y1="360" x2="228" y2="360" stroke="#ffffff" stroke-width="2.5"/>
+                    <circle cx="183" cy="360" r="2.5" fill="#ffffff"/>
+                    <circle cx="217" cy="360" r="2.5" fill="#ffffff"/>
+                `;
+            } else if (state.shoes === 1) { // سنيكرز بلاتفورم كاجوال
+                shoes.innerHTML = `
+                    <rect x="171" y="338" width="25" height="18" rx="4" fill="#ffffff"/>
+                    <rect x="204" y="338" width="25" height="18" rx="4" fill="#ffffff"/>
+                    <rect x="168" y="352" width="30" height="18" rx="7" fill="#ffffff"/>
+                    <rect x="202" y="352" width="30" height="18" rx="7" fill="#ffffff"/>
+                    <path d="M 168 366 L 198 366" stroke="#ff477e" stroke-width="4" stroke-linecap="round"/>
+                    <path d="M 202 366 L 232 366" stroke="#ff477e" stroke-width="4" stroke-linecap="round"/>
+                    <line x1="174" y1="358" x2="192" y2="358" stroke="#ff9ebb" stroke-width="2"/>
+                    <line x1="208" y1="358" x2="226" y2="358" stroke="#ff9ebb" stroke-width="2"/>
+                `;
+            } else if (state.shoes === 2) { // بوت بني أنيق
+                shoes.innerHTML = `
+                    <rect x="170" y="308" width="27" height="58" rx="6" fill="#7f4f24"/>
+                    <rect x="203" y="308" width="27" height="58" rx="6" fill="#7f4f24"/>
+                    <ellipse cx="183" cy="365" rx="15" ry="7.5" fill="#582f0e"/>
+                    <ellipse cx="217" cy="365" rx="15" ry="7.5" fill="#582f0e"/>
+                    <line x1="174" y1="324" x2="192" y2="324" stroke="#a68a64" stroke-width="2"/>
+                    <line x1="174" y1="334" x2="192" y2="334" stroke="#a68a64" stroke-width="2"/>
+                    <line x1="208" y1="324" x2="226" y2="324" stroke="#a68a64" stroke-width="2"/>
+                    <line x1="208" y1="334" x2="226" y2="334" stroke="#a68a64" stroke-width="2"/>
+                `;
+            } else if (state.shoes === 3) { // خف دب الباندا المنفوش
+                shoes.innerHTML = `
+                    <ellipse cx="183" cy="362" rx="18" ry="11" fill="#ffffff" stroke="#ffb3c6" stroke-width="2"/>
+                    <ellipse cx="217" cy="362" rx="18" ry="11" fill="#ffffff" stroke="#ffb3c6" stroke-width="2"/>
+                    <circle cx="170" cy="354" r="5" fill="#2b2d42"/>
+                    <circle cx="196" cy="354" r="5" fill="#2b2d42"/>
+                    <circle cx="204" cy="354" r="5" fill="#2b2d42"/>
+                    <circle cx="230" cy="354" r="5" fill="#2b2d42"/>
+                    <circle cx="178" cy="362" r="2.5" fill="#2b2d42"/>
+                    <circle cx="188" cy="362" r="2.5" fill="#2b2d42"/>
+                    <circle cx="212" cy="362" r="2.5" fill="#2b2d42"/>
+                    <circle cx="222" cy="362" r="2.5" fill="#2b2d42"/>
+                    <ellipse cx="183" cy="366" rx="2.5" ry="1.8" fill="#ff758f"/>
+                    <ellipse cx="217" cy="366" rx="2.5" ry="1.8" fill="#ff758f"/>
+                `;
+            } else { // حذاء كلاسيكي أسود مع جوارب عالية
+                shoes.innerHTML = `
+                    <rect x="171" y="280" width="25" height="78" rx="6" fill="#ffffff"/>
+                    <rect x="204" y="280" width="25" height="78" rx="6" fill="#ffffff"/>
+                    <line x1="171" y1="286" x2="196" y2="286" stroke="#ff477e" stroke-width="2.5"/>
+                    <line x1="204" y1="286" x2="229" y2="286" stroke="#ff477e" stroke-width="2.5"/>
+                    <ellipse cx="183" cy="365" rx="15" ry="8" fill="#1b1b2f"/>
+                    <ellipse cx="217" cy="365" rx="15" ry="8" fill="#1b1b2f"/>
+                    <rect x="172" y="364" width="7" height="5" fill="#000"/>
+                    <rect x="221" y="364" width="7" height="5" fill="#000"/>
+                    <circle cx="183" cy="361" r="2.5" fill="#ffd166"/>
+                    <circle cx="217" cy="361" r="2.5" fill="#ffd166"/>
+                `;
+            }
+
+            // ==========================================
+            // 6. Outfits & Fashion Rendering
+            // ==========================================
+            if (state.outfit === 0) { // فستان لوليتا كوكيت الوردي
+                outfit.innerHTML = `
+                    <path d="M 166 230 L 234 230 L 242 278 L 158 278 Z" fill="#ff70a6"/>
+                    <path d="M 184 230 L 216 230 L 212 278 L 188 278 Z" fill="#ffffff"/>
+                    <line x1="190" y1="242" x2="210" y2="242" stroke="#ff477e" stroke-width="2"/>
+                    <line x1="191" y1="254" x2="209" y2="254" stroke="#ff477e" stroke-width="2"/>
+                    <line x1="192" y1="266" x2="208" y2="266" stroke="#ff477e" stroke-width="2"/>
+                    <circle cx="158" cy="236" r="14" fill="#ffb3c6"/>
+                    <circle cx="242" cy="236" r="14" fill="#ffb3c6"/>
+                    <circle cx="158" cy="236" r="12" fill="#ffffff" opacity="0.4"/>
+                    <circle cx="242" cy="236" r="12" fill="#ffffff" opacity="0.4"/>
+                    <path d="M 156 278 L 244 278 L 272 338 Q 200 354 128 338 Z" fill="#ff70a6"/>
+                    <path d="M 128 338 Q 200 354 272 338 L 275 346 Q 200 362 125 346 Z" fill="#ffffff"/>
+                    <ellipse cx="200" cy="280" rx="10" ry="5.5" fill="#ff477e"/>
+                    <circle cx="200" cy="280" r="3.5" fill="#ffffff"/>
+                `;
+            } else if (state.outfit === 1) { // زي أكاديمية سيلور الياباني
+                outfit.innerHTML = `
+                    <path d="M 166 230 L 234 230 L 238 276 L 162 276 Z" fill="#ffffff"/>
+                    <polygon points="164,230 236,230 242,256 200,270 158,256" fill="#1d3557"/>
+                    <line x1="168" y1="234" x2="232" y2="234" stroke="#ffffff" stroke-width="1.8"/>
+                    <polygon points="194,250 206,250 212,278 200,268 188,278" fill="#e63946"/>
+                    <polygon points="160,276 240,276 256,328 144,328" fill="#1d3557"/>
+                    <line x1="148" y1="322" x2="252" y2="322" stroke="#ffffff" stroke-width="2.5"/>
+                `;
+            } else if (state.outfit === 2) { // هودي قطة دافئ أوفرسايز
+                outfit.innerHTML = `
+                    <path d="M 152 226 Q 200 220 248 226 L 244 322 Q 200 330 156 322 Z" fill="#cbb2fe"/>
+                    <rect x="174" y="286" width="52" height="26" rx="8" fill="#ffffff"/>
+                    <ellipse cx="200" cy="298" rx="6.5" ry="4.5" fill="#ff70a6"/>
+                    <circle cx="193" cy="292" r="2.2" fill="#ff70a6"/>
+                    <circle cx="200" cy="290" r="2.2" fill="#ff70a6"/>
+                    <circle cx="207" cy="292" r="2.2" fill="#ff70a6"/>
+                    <line x1="188" y1="238" x2="188" y2="268" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+                    <line x1="212" y1="238" x2="212" y2="268" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+                    <rect x="144" y="235" width="22" height="52" rx="10" transform="rotate(20 144 235)" fill="#cbb2fe"/>
+                    <rect x="234" y="235" width="22" height="52" rx="10" transform="rotate(-20 234 235)" fill="#cbb2fe"/>
+                `;
+            } else if (state.outfit === 3) { // فستان نجمة الأيدول الساحرة
+                outfit.innerHTML = `
+                    <path d="M 166 230 L 234 230 L 240 276 L 160 276 Z" fill="#48cae4"/>
+                    <ellipse cx="200" cy="232" rx="34" ry="6" fill="#ffd166"/>
+                    <circle cx="200" cy="245" r="4" fill="#ffd166"/>
+                    <path d="M 158 276 L 242 276 L 275 336 Q 200 352 125 336 Z" fill="#0096c7"/>
+                    <path d="M 166 276 Q 200 326 234 276 Z" fill="#caf0f8" opacity="0.6"/>
+                    <text x="150" y="322" font-size="14" fill="#ffd166">✦</text>
+                    <text x="200" y="332" font-size="16" fill="#ffd166">★</text>
+                    <text x="250" y="322" font-size="14" fill="#ffd166">✦</text>
+                    <ellipse cx="200" cy="276" rx="12" ry="6" fill="#ffd166"/>
+                `;
+            } else if (state.outfit === 4) { // كارديجان شتوي مع تنورة كاروهات
+                outfit.innerHTML = `
+                    <polygon points="190,230 200,242 210,230 200,234" fill="#ffffff"/>
+                    <path d="M 160 232 L 240 232 L 236 285 L 164 285 Z" fill="#ffb4a2"/>
+                    <circle cx="200" cy="248" r="3" fill="#ffffff"/>
+                    <circle cx="200" cy="262" r="3" fill="#ffffff"/>
+                    <circle cx="200" cy="276" r="3" fill="#ffffff"/>
+                    <polygon points="162,285 238,285 252,330 148,330" fill="#6d597a"/>
+                    <line x1="152" y1="305" x2="248" y2="305" stroke="#e56b6f" stroke-width="2"/>
+                    <line x1="150" y1="320" x2="250" y2="320" stroke="#b56576" stroke-width="2"/>
+                `;
+            } else if (state.outfit === 5) { // فستان كافيه الخادمة
+                outfit.innerHTML = `
+                    <path d="M 164 230 L 236 230 L 240 278 L 160 278 Z" fill="#2b2d42"/>
+                    <path d="M 180 230 L 220 230 L 214 278 L 186 278 Z" fill="#ffffff"/>
+                    <path d="M 174 230 Q 180 255 178 278" stroke="#ffffff" stroke-width="4" fill="none"/>
+                    <path d="M 226 230 Q 220 255 222 278" stroke="#ffffff" stroke-width="4" fill="none"/>
+                    <path d="M 158 278 L 242 278 L 268 335 Q 200 350 132 335 Z" fill="#2b2d42"/>
+                    <path d="M 172 278 L 228 278 L 242 328 Q 200 340 158 328 Z" fill="#ffffff"/>
+                    <circle cx="200" cy="280" r="4" fill="#ff70a6"/>
+                `;
+            } else if (state.outfit === 6) { // سلوبت الفراولة الكيوت
+                outfit.innerHTML = `
+                    <path d="M 166 230 L 234 230 L 236 276 L 164 276 Z" fill="#fff0f3"/>
+                    <line x1="168" y1="240" x2="232" y2="240" stroke="#ff4d6d" stroke-width="2.5"/>
+                    <line x1="166" y1="252" x2="234" y2="252" stroke="#ff4d6d" stroke-width="2.5"/>
+                    <line x1="180" y1="230" x2="180" y2="276" stroke="#ff758f" stroke-width="7" stroke-linecap="round"/>
+                    <line x1="220" y1="230" x2="220" y2="276" stroke="#ff758f" stroke-width="7" stroke-linecap="round"/>
+                    <circle cx="180" cy="254" r="3.5" fill="#ffd166"/>
+                    <circle cx="220" cy="254" r="3.5" fill="#ffd166"/>
+                    <path d="M 164 276 L 236 276 L 248 325 L 152 325 Z" fill="#ff758f"/>
+                    <rect x="185" y="278" width="30" height="22" rx="5" fill="#ffffff"/>
+                    <polygon points="196,284 204,284 200,294" fill="#ff4d6d"/>
+                    <circle cx="200" cy="283" r="2" fill="#52b788"/>
+                `;
+            } else { // طقم فيري سايبر يوتوبيا
+                outfit.innerHTML = `
+                    <path d="M 168 234 L 232 234 L 228 274 L 172 274 Z" fill="#7209b7"/>
+                    <line x1="174" y1="250" x2="226" y2="250" stroke="#4cc9f0" stroke-width="3"/>
+                    <polygon points="166,278 234,278 255,326 145,326" fill="#4361ee"/>
+                    <line x1="148" y1="320" x2="252" y2="320" stroke="#f72585" stroke-width="3"/>
+                    <circle cx="200" cy="278" r="4" fill="#4cc9f0"/>
+                `;
+            }
+
+            // ==========================================
+            // 7. Head Accessories Rendering
+            // ==========================================
+            if (state.headAcc === 0) { // آذان قطة وردية
+                headAcc.innerHTML = `
+                    <polygon points="128,88 152,32 180,78" fill="#ff70a6"/>
+                    <polygon points="138,82 152,44 170,74" fill="#ffffff"/>
+                    <polygon points="220,78 248,32 272,88" fill="#ff70a6"/>
+                    <polygon points="230,74 248,44 262,82" fill="#ffffff"/>
+                `;
+            } else if (state.headAcc === 1) { // فيونكة كوكيت حريرية ضخمة
+                headAcc.innerHTML = `
+                    <g transform="translate(200, 72)">
+                        <path d="M 0 0 C -48 -36 -62 30 -8 12 Z" fill="#ff477e"/>
+                        <path d="M 0 0 C 48 -36 62 30 8 12 Z" fill="#ff477e"/>
+                        <path d="M -8 10 Q -25 50 -18 90" stroke="#ff477e" stroke-width="5" fill="none" stroke-linecap="round"/>
+                        <path d="M 8 10 Q 25 50 18 90" stroke="#ff477e" stroke-width="5" fill="none" stroke-linecap="round"/>
+                        <circle cx="0" cy="4" r="9" fill="#ffffff"/>
+                        <circle cx="0" cy="4" r="6" fill="#ff70a6"/>
+                    </g>
+                `;
+            } else if (state.headAcc === 2) { // تاج احتفال 16K الذهبي الفاخر
+                headAcc.innerHTML = `
+                    <g transform="translate(200, 75)">
+                        <circle cx="0" cy="-20" r="28" fill="#ffd166" opacity="0.25"/>
+                        <polygon points="-40,10 -32,-22 -12,-4 0,-30 12,-4 32,-22 40,10" fill="#ffd166" stroke="#d48b00" stroke-width="2.5"/>
+                        <circle cx="0" cy="-26" r="5" fill="#e63946"/>
+                        <circle cx="-32" cy="-18" r="3.5" fill="#48cae4"/>
+                        <circle cx="32" cy="-18" r="3.5" fill="#48cae4"/>
+                        <circle cx="-12" cy="-2" r="3" fill="#7209b7"/>
+                        <circle cx="12" cy="-2" r="3" fill="#7209b7"/>
+                        <rect x="-38" y="2" width="76" height="15" rx="5" fill="#e6a100" stroke="#a46300" stroke-width="1.8"/>
+                        <text x="0" y="14" font-family="'Fredoka', sans-serif" font-size="12.5" font-weight="900" fill="#ffffff" text-anchor="middle" letter-spacing="1">16K ★</text>
+                    </g>
+                `;
+            } else if (state.headAcc === 3) { // سماعات قطة جيمنج بإضاءة RGB
+                headAcc.innerHTML = `
+                    <path d="M 112 150 A 90 90 0 0 1 288 150" fill="none" stroke="#ff70a6" stroke-width="7" stroke-linecap="round"/>
+                    <polygon points="135,76 150,42 168,72" fill="#ff70a6"/>
+                    <polygon points="140,72 150,50 162,70" fill="#48cae4"/>
+                    <polygon points="232,72 250,42 265,76" fill="#ff70a6"/>
+                    <polygon points="238,70 250,50 260,72" fill="#48cae4"/>
+                    <rect x="100" y="135" width="16" height="34" rx="8" fill="#ff477e"/>
+                    <rect x="284" y="135" width="16" height="34" rx="8" fill="#ff477e"/>
+                    <circle cx="108" cy="152" r="4" fill="#ffffff"/>
+                    <circle cx="292" cy="152" r="4" fill="#ffffff"/>
+                `;
+            } else if (state.headAcc === 4) { // نظارات دائرية نيرد كيوت
+                headAcc.innerHTML = `
+                    <circle cx="160" cy="154" r="23" stroke="#e07a5f" stroke-width="3" fill="rgba(255,255,255,0.22)"/>
+                    <circle cx="240" cy="154" r="23" stroke="#e07a5f" stroke-width="3" fill="rgba(255,255,255,0.22)"/>
+                    <line x1="183" y1="154" x2="217" y2="154" stroke="#e07a5f" stroke-width="3"/>
+                    <line x1="148" y1="145" x2="158" y2="135" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+                    <line x1="228" y1="145" x2="238" y2="135" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+                `;
+            } else if (state.headAcc === 5) { // طوق ملاك مضيء هالوو
+                headAcc.innerHTML = `
+                    <ellipse cx="200" cy="45" rx="55" ry="12" fill="none" stroke="#ffd166" stroke-width="6"/>
+                    <ellipse cx="200" cy="45" rx="55" ry="12" fill="none" stroke="#ffffff" stroke-width="2"/>
+                    <circle cx="200" cy="45" r="3" fill="#ffffff"/>
+                `;
+            } else if (state.headAcc === 6) { // مشابك كرز فراولة على الجانب
+                headAcc.innerHTML = `
+                    <circle cx="120" cy="120" r="7" fill="#e63946"/>
+                    <circle cx="132" cy="125" r="7" fill="#e63946"/>
+                    <path d="M 120 113 Q 126 102 135 106 Q 133 115 132 118" stroke="#52b788" stroke-width="2.5" fill="none"/>
+                    <circle cx="126" cy="103" r="3" fill="#52b788"/>
+                `;
+            } else {
+                headAcc.innerHTML = '';
+            }
+
+            // ==========================================
+            // 8. Handheld Items Rendering
+            // ==========================================
+            if (state.handheld === 0) { // شاي بوبا الفراولة 🧋
+                hand.innerHTML = `
+                    <g transform="translate(245, 270)">
+                        <path d="M 0 0 L 22 0 L 18 36 L 4 36 Z" fill="rgba(255,255,255,0.7)" stroke="#ffb3c6" stroke-width="1.8"/>
+                        <path d="M 2 10 L 20 10 L 17 34 L 5 34 Z" fill="#ff70a6"/>
+                        <circle cx="8" cy="29" r="2.5" fill="#3a1c28"/>
+                        <circle cx="14" cy="29" r="2.5" fill="#3a1c28"/>
+                        <circle cx="11" cy="24" r="2.5" fill="#3a1c28"/>
+                        <line x1="11" y1="-8" x2="11" y2="28" stroke="#9d4edd" stroke-width="3.5" stroke-linecap="round"/>
+                        <ellipse cx="11" cy="0" rx="11" ry="3.5" fill="#ffffff"/>
+                    </g>
+                `;
+            } else if (state.handheld === 1) { // جهاز سويتش باستيل 🎮
+                hand.innerHTML = `
+                    <g transform="translate(230, 275) rotate(-15)">
+                        <rect x="0" y="0" width="34" height="22" rx="4" fill="#1b1b2f"/>
+                        <rect x="4" y="3" width="26" height="16" rx="2" fill="#48cae4"/>
+                        <rect x="-8" y="0" width="8" height="22" rx="3" fill="#ff70a6"/>
+                        <rect x="34" y="0" width="8" height="22" rx="3" fill="#70d6ff"/>
+                        <circle cx="-4" cy="7" r="2" fill="#ffffff"/>
+                        <circle cx="38" cy="14" r="2" fill="#ffffff"/>
+                    </g>
+                `;
+            } else if (state.handheld === 2) { // عصا النجوم السحرية 🪄
+                hand.innerHTML = `
+                    <g transform="translate(248, 240) rotate(20)">
+                        <line x1="0" y1="10" x2="0" y2="65" stroke="#ffd166" stroke-width="4" stroke-linecap="round"/>
+                        <polygon points="0,0 4,8 12,8 6,13 8,21 0,16 -8,21 -6,13 -12,8 -4,8" fill="#ff70a6" stroke="#ff0054" stroke-width="1.5"/>
+                        <circle cx="0" cy="11" r="3.5" fill="#ffffff"/>
+                    </g>
+                `;
+            } else if (state.handheld === 3) { // علبة حليب الفراولة الكورية 🍓
+                hand.innerHTML = `
+                    <g transform="translate(245, 272)">
+                        <rect x="0" y="8" width="20" height="26" rx="3" fill="#ffffff" stroke="#ffccd5" stroke-width="1.5"/>
+                        <polygon points="0,8 10,0 20,8" fill="#ffb3c6"/>
+                        <circle cx="10" cy="20" r="4.5" fill="#ff477e"/>
+                        <text x="10" y="30" font-size="6" font-weight="bold" fill="#ff477e" text-anchor="middle">MILK</text>
+                    </g>
+                `;
+            } else if (state.handheld === 4) { // بالون احتفال 16K الذهبي المتطاير 🎈
+                hand.innerHTML = `
+                    <g transform="translate(255, 140)">
+                        <path d="M 0 50 Q 15 95 -4 145" stroke="#ffd166" stroke-width="1.8" fill="none"/>
+                        <circle cx="0" cy="18" r="34" fill="#ffd166" stroke="#d48b00" stroke-width="2.5"/>
+                        <ellipse cx="-10" cy="6" rx="8" ry="14" fill="#ffffff" opacity="0.45" transform="rotate(-30 -10 6)"/>
+                        <text x="0" y="24" font-family="'Fredoka', sans-serif" font-size="16" font-weight="900" fill="#9e6200" text-anchor="middle">16K</text>
+                    </g>
+                `;
+            } else if (state.handheld === 5) { // دمية الأرنب المنفوش 🐰
+                hand.innerHTML = `
+                    <g transform="translate(240, 270)">
+                        <ellipse cx="14" cy="20" rx="14" ry="16" fill="#ffffff" stroke="#ffccd5" stroke-width="1.5"/>
+                        <ellipse cx="8" cy="2" rx="4" ry="11" fill="#ffffff" stroke="#ffccd5" stroke-width="1.5"/>
+                        <ellipse cx="8" cy="2" rx="2" ry="7" fill="#ffb3c6"/>
+                        <ellipse cx="20" cy="2" rx="4" ry="11" fill="#ffffff" stroke="#ffccd5" stroke-width="1.5"/>
+                        <ellipse cx="20" cy="2" rx="2" ry="7" fill="#ffb3c6"/>
+                        <circle cx="10" cy="16" r="2" fill="#2b2d42"/>
+                        <circle cx="18" cy="16" r="2" fill="#2b2d42"/>
+                        <polygon points="13,19 15,19 14,21" fill="#ff477e"/>
+                    </g>
+                `;
+            } else {
+                hand.innerHTML = '';
+            }
+
+            // ==========================================
+            // 9. Companion Pet Rendering
+            // ==========================================
+            if (state.pet === 0) { // دبدوب ملاك طائر صغير
+                pet.innerHTML = `
+                    <g transform="translate(68, 230)">
+                        <path d="M 0 10 C -18 0 -22 25 0 20 Z" fill="#ffffff" stroke="#e0aaff" stroke-width="1.5"/>
+                        <ellipse cx="15" cy="24" rx="16" ry="14" fill="#d4a373"/>
+                        <circle cx="15" cy="12" r="13" fill="#d4a373"/>
+                        <circle cx="4" cy="3" r="4.5" fill="#d4a373"/>
+                        <circle cx="26" cy="3" r="4.5" fill="#d4a373"/>
+                        <ellipse cx="15" cy="-2" rx="10" ry="3" fill="none" stroke="#ffd166" stroke-width="2.5"/>
+                        <circle cx="11" cy="11" r="1.8" fill="#2b2d42"/>
+                        <circle cx="19" cy="11" r="1.8" fill="#2b2d42"/>
+                        <circle cx="7" cy="15" r="2.5" fill="#ff70a6" opacity="0.6"/>
+                        <circle cx="23" cy="15" r="2.5" fill="#ff70a6" opacity="0.6"/>
+                        <ellipse cx="15" cy="15" rx="2" ry="1.5" fill="#603808"/>
+                    </g>
+                `;
+            } else if (state.pet === 1) { // قطة بيضاء نائمة لطيفة
+                pet.innerHTML = `
+                    <g transform="translate(62, 335)">
+                        <ellipse cx="20" cy="20" rx="22" ry="15" fill="#ffffff" stroke="#ffccd5" stroke-width="1.8"/>
+                        <polygon points="6,12 2,4 12,9" fill="#ffb3c6"/>
+                        <polygon points="28,9 38,4 34,12" fill="#ffb3c6"/>
+                        <path d="M 12 18 Q 16 22 20 18" stroke="#4a2840" stroke-width="1.8" fill="none"/>
+                        <path d="M 22 18 Q 26 22 30 18" stroke="#4a2840" stroke-width="1.8" fill="none"/>
+                        <text x="32" y="6" font-size="10" font-weight="bold" fill="#ff70a6">zZ</text>
+                    </g>
+                `;
+            } else if (state.pet === 2) { // أرنوب باستيل نطاط
+                pet.innerHTML = `
+                    <g transform="translate(65, 305)">
+                        <ellipse cx="18" cy="26" rx="16" ry="18" fill="#ffe5ec" stroke="#ffb3c6" stroke-width="1.5"/>
+                        <ellipse cx="12" cy="5" rx="5" ry="14" fill="#ffe5ec" stroke="#ffb3c6" stroke-width="1.5"/>
+                        <ellipse cx="12" cy="5" rx="2.5" ry="9" fill="#ff70a6"/>
+                        <ellipse cx="24" cy="5" rx="5" ry="14" fill="#ffe5ec" stroke="#ffb3c6" stroke-width="1.5"/>
+                        <ellipse cx="24" cy="5" rx="2.5" ry="9" fill="#ff70a6"/>
+                        <circle cx="13" cy="22" r="2" fill="#2b2d42"/>
+                        <circle cx="23" cy="22" r="2" fill="#2b2d42"/>
+                        <polygon points="17,26 19,26 18,28" fill="#ff477e"/>
+                    </g>
+                `;
+            } else {
+                pet.innerHTML = '';
+            }
+        }
+
+        /* ============================================================
+           Randomizer & Reset Engine
+           ============================================================ */
+        function randomizeCharacter() {
+            state.hairStyle = Math.floor(Math.random() * DB.hairStyles.length);
+            state.hairColor = DB.hairColors[Math.floor(Math.random() * DB.hairColors.length)].hex;
+            state.eyeStyle = Math.floor(Math.random() * DB.eyeStyles.length);
+            state.eyeColor = DB.eyeColors[Math.floor(Math.random() * DB.eyeColors.length)].hex;
+            state.mouthStyle = Math.floor(Math.random() * DB.mouthStyles.length);
+            state.outfit = Math.floor(Math.random() * DB.outfits.length);
+            state.shoes = Math.floor(Math.random() * DB.shoes.length);
+            state.headAcc = Math.floor(Math.random() * DB.headAccs.length);
+            state.handheld = Math.floor(Math.random() * DB.handhelds.length);
+            state.pet = Math.floor(Math.random() * DB.pets.length);
+            state.bgStyle = Math.floor(Math.random() * DB.backgrounds.length);
+            state.skinTone = DB.skins[Math.floor(Math.random() * DB.skins.length)].hex;
+
+            sfx.sparkle();
+            renderAllPanels();
+            updateBackground();
+            drawChibi();
+            showToast("✨ تم إنشاء تنسيق عشوائي مدهش وساحر!");
+        }
+
+        function resetCharacter() {
+            state.hairStyle = 0;
+            state.hairColor = '#4a2835';
+            state.eyeStyle = 0;
+            state.eyeColor = '#7b2cbf';
+            state.mouthStyle = 0;
+            state.outfit = 0;
+            state.shoes = 0;
+            state.headAcc = 2; // 16K Crown
+            state.handheld = 4; // 16K Balloon
+            state.pet = 0;
+            state.bgStyle = 3;
+            state.skinTone = '#ffe2d6';
+
+            sfx.pop();
+            renderAllPanels();
+            updateBackground();
+            drawChibi();
+            showToast("🔄 تم إعادة ضبط الشخصية للبراءة الأولى!");
+        }
+
+        /* ============================================================
+           Toast Message Hub
+           ============================================================ */
+        let toastTimeout = null;
+        function showToast(text, icon = "💖") {
+            const toast = document.getElementById('toast-notice');
+            const msg = document.getElementById('toast-msg');
+            const ico = document.getElementById('toast-icon');
+            if (!toast || !msg) return;
+
+            msg.innerText = text;
+            ico.innerText = icon;
+            toast.classList.add('show');
+
+            if (toastTimeout) clearTimeout(toastTimeout);
+            toastTimeout = setTimeout(() => {
+                toast.classList.remove('show');
+            }, 3000);
+        }
+
+        /* ============================================================
+           Interactive Poke / Click Feedback
+           ============================================================ */
+        function setupInteractiveCanvas() {
+            const avatarZone = document.getElementById('avatar-click-zone');
+            if (!avatarZone) return;
+
+            avatarZone.addEventListener('click', (e) => {
+                sfx.giggle();
+
+                // Sparkle pop animation on cursor
+                const spark = document.createElement('div');
+                spark.className = 'sparkle-pop';
+                const emojis = ['💖', '✨', '🌸', '🎀', '🧁', '⭐'];
+                spark.innerText = emojis[Math.floor(Math.random() * emojis.length)];
+                spark.style.left = `${e.clientX - 15}px`;
+                spark.style.top = `${e.clientY - 25}px`;
+                document.body.appendChild(spark);
+                setTimeout(() => spark.remove(), 750);
+            });
+        }
+
+        /* ============================================================
+           HD Canvas Snapshot & Export Engine
+           ============================================================ */
+        function exportImage(type = 'full') {
+            sfx.snap();
+            showToast("⏳ جاري تجهيز وتحميل تصميمك بأعلى جودة...", "📸");
+
+            const svgEl = document.getElementById('chibi-svg');
+            const svgXML = new XMLSerializer().serializeToString(svgEl);
+
+            const canvas = document.createElement('canvas');
+            const ctx = canvas.getContext('2d');
+            const userName = document.getElementById('avatar-name-input').value.trim() || "Pookie Chibi";
+
+            if (type === 'pfp') { // Square Profile Picture (Avatar)
+                canvas.width = 600;
+                canvas.height = 600;
+
+                const grad = ctx.createLinearGradient(0, 0, 0, 600);
+                grad.addColorStop(0, '#fff0f5');
+                grad.addColorStop(1, '#ffd6e0');
+                ctx.fillStyle = grad;
+                ctx.fillRect(0, 0, 600, 600);
+
+                ctx.beginPath();
+                ctx.arc(300, 300, 280, 0, Math.PI * 2);
+                ctx.strokeStyle = '#ff5d8f';
+                ctx.lineWidth = 10;
+                ctx.stroke();
+
+                const img = new Image();
+                const svgBlob = new Blob([svgXML], { type: 'image/svg+xml;charset=utf-8' });
+                const url = URL.createObjectURL(svgBlob);
+
+                img.onload = () => {
+                    ctx.drawImage(img, -70, -30, 740, 925);
+                    URL.revokeObjectURL(url);
+                    triggerDownload(canvas, `pookie-pfp-16k-${Date.now()}.png`);
+                };
+                img.src = url;
+
+            } else { // Full Celebratory Card HD
+                canvas.width = 800;
+                canvas.height = 1050;
+
+                const grad = ctx.createLinearGradient(0, 0, 0, 1050);
+                grad.addColorStop(0, '#fff5f8');
+                grad.addColorStop(0.4, '#ffe5ec');
+                grad.addColorStop(1, '#ffd1dc');
+                ctx.fillStyle = grad;
+                if (ctx.roundRect) {
+                    ctx.beginPath();
+                    ctx.roundRect(0, 0, 800, 1050, 40);
+                    ctx.fill();
+                } else {
+                    ctx.fillRect(0, 0, 800, 1050);
+                }
+
+                ctx.strokeStyle = '#ffffff';
+                ctx.lineWidth = 18;
+                ctx.stroke();
+
+                ctx.fillStyle = '#ff5d8f';
+                ctx.font = 'bold 36px "Fredoka", "Tajawal", sans-serif';
+                ctx.textAlign = 'center';
+                ctx.fillText("🎀 POOKIE 16,000 CELEBRATION 🎀", 400, 75);
+
+                ctx.fillStyle = '#7a3e5c';
+                ctx.font = 'bold 22px "Tajawal", sans-serif';
+                ctx.fillText("✨ احتفال وصول سيرفرنا لـ 16,000 عضوة مبدعة ✨", 400, 115);
+
+                const img = new Image();
+                const svgBlob = new Blob([svgXML], { type: 'image/svg+xml;charset=utf-8' });
+                const url = URL.createObjectURL(svgBlob);
+
+                img.onload = () => {
+                    ctx.drawImage(img, 60, 130, 680, 850);
+                    URL.revokeObjectURL(url);
+
+                    ctx.fillStyle = 'rgba(255, 255, 255, 0.92)';
+                    ctx.beginPath();
+                    if (ctx.roundRect) {
+                        ctx.roundRect(150, 960, 500, 56, 28);
+                    } else {
+                        ctx.rect(150, 960, 500, 56);
+                    }
+                    ctx.fill();
+                    ctx.strokeStyle = '#ffb3c6';
+                    ctx.lineWidth = 4;
+                    ctx.stroke();
+
+                    ctx.fillStyle = '#ff3370';
+                    ctx.font = '900 24px "Tajawal", "Fredoka", sans-serif';
+                    ctx.fillText(userName, 400, 998);
+
+                    triggerDownload(canvas, `pookie-chibi-16k-${Date.now()}.png`);
+                };
+                img.src = url;
+            }
+        }
+
+        function triggerDownload(canvas, filename) {
+            const link = document.createElement('a');
+            link.download = filename;
+            link.href = canvas.toDataURL('image/png');
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            showToast("💖 تم تنزيل تصميمك بجهازك بنجاح! مبروك 16K!");
+        }
+
+        async function copyToClipboard() {
+            sfx.pop();
+            const svgEl = document.getElementById('chibi-svg');
+            const svgXML = new XMLSerializer().serializeToString(svgEl);
+
+            const canvas = document.createElement('canvas');
+            canvas.width = 600;
+            canvas.height = 750;
+            const ctx = canvas.getContext('2d');
+
+            ctx.fillStyle = '#ffffff';
+            ctx.fillRect(0, 0, 600, 750);
+
+            const img = new Image();
+            const svgBlob = new Blob([svgXML], { type: 'image/svg+xml;charset=utf-8' });
+            const url = URL.createObjectURL(svgBlob);
+
+            img.onload = async () => {
+                ctx.drawImage(img, 0, 0, 600, 750);
+                URL.revokeObjectURL(url);
+
+                try {
+                    canvas.toBlob(async (blob) => {
+                        await navigator.clipboard.write([
+                            new ClipboardItem({ 'image/png': blob })
+                        ]);
+                        showToast("📋 تم نسخ الصورة للحافظة! يمكنك لصقها بالديسكورد الآن (Ctrl+V)!");
+                    });
+                } catch(err) {
+                    showToast("⚠️ الحافظة غير مدعومة مباشرة، جاري تنزيل الصورة بدلاً منها!");
+                    triggerDownload(canvas, 'pookie-chibi.png');
+                }
+            };
+            img.src = url;
+        }
+
+        /* ============================================================
+           Application Bootstrapper
+           ============================================================ */
+        function startApp() {
+            initTabs();
+            renderAllPanels();
+            updateBackground();
+            drawChibi();
+            setupInteractiveCanvas();
+
+            const soundBtn = document.getElementById('btn-sound');
+            if (soundBtn) {
+                soundBtn.addEventListener('click', () => {
+                    state.soundEnabled = !state.soundEnabled;
+                    soundBtn.innerText = state.soundEnabled ? '🔊' : '🔇';
+                    showToast(state.soundEnabled ? "تم تفعيل المؤثرات الصوتية 🎵" : "تم كتم الصوت 🔇");
+                });
+            }
+
+            const snapBtn = document.getElementById('btn-snap');
+            if (snapBtn) snapBtn.addEventListener('click', () => exportImage('full'));
+
+            document.getElementById('btn-quick-rand').addEventListener('click', randomizeCharacter);
+            document.getElementById('btn-quick-reset').addEventListener('click', resetCharacter);
+            document.getElementById('btn-save-full').addEventListener('click', () => exportImage('full'));
+            document.getElementById('btn-save-pfp').addEventListener('click', () => exportImage('pfp'));
+            document.getElementById('btn-copy-png').addEventListener('click', copyToClipboard);
+
+            document.getElementById('avatar-name-input').addEventListener('input', (e) => {
+                state.name = e.target.value;
+            });
+        }
+
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', startApp);
+        } else {
+            startApp();
+        }
+    </script>
+</body>
+</html>
